@@ -1,0 +1,77 @@
+Date:20/05/2026
+
+A software application is a collection of programs
+A software program is a collection of instructions 
+An instruction is a command given to the computer to perform a task.
+
+An application is software designed to perform specific tasks for users.
+
+Examples:
+- WhatsApp
+- YouTube
+- Amazon
+- Instagram
+
+Types of websites
+1.Personal Website
+2.Photo Sharing Website
+3.Blog
+4.Informational Website
+5.Social Media Website 
+6.Educational Website
+7.Portfolio Website
+8.Non-Profit Website
+9.Magazine and News Website
+
+Why Web Application are needed?
+1.Cross platform support (i.e laptop desktop tablet mobile)
+2.No Installation required (i.e Web apps open instantly using URL)
+3.Easy maintenance and updates(i.e Server update once all user automatically get the latest version) 
+4.Lower Development Cost (i.e Single codespace works everywhere)
+5.SEO and Searchability (i.e Google search or browser search)
+6.Instant Accessibility (i.e Anyone with internet + browser can use it)
+7.Faster Deployment (i.e Netlify Vercel Github)
+8.Easier for beginners and companies
+
+Software Application Life Cycle:
+1.Requirements Gathering
+2.Designing
+3.Development
+4.Testing
+5.Build and Deploy
+6.A URL will be generated and we will buy an domain name for it.
+7.Publish
+8.Support and Maintenance
+
+Requirements->Planning->Designing->Development->Testing->Deployment->Maintenance
+
+Front End Part   Back End Part  DataBase
+
+ HTML            Python         SQL
+ CSS             Java           MYSQL
+ JS      <-API-> PHP            Oracle
+ React           GO             MongoDB
+                 .NET
+                 GO
+                 RUBY 
+
+BE->HTML JS
+|
+v
+DOM -> Webpage
+
+DOM:DOM (Document Object Model) is a tree-like structure created by the browser from HTML elements. JavaScript uses DOM to manipulate webpage content dynamically.
+
+Flow of the HTML Document 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+</head>
+<body>
+<h1></h1>
+<p></p>
+</body>
+</html>
+
