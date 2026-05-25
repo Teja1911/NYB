@@ -1,0 +1,38 @@
+Browser Engine 
+purpose of the browser engine workflow 
+how browser reads websites
+how html/css/js become visible webpages
+how pages are rendered on screen
+URL
+ ↓
+Browser Request
+ ↓
+HTML Received
+ ↓
+DOM Created
+ ↓
+CSS Applied
+ ↓
+Render Tree Created
+ ↓
+Layout Calculation
+ ↓
+Painting
+ ↓
+Website Visible
+browser does not directly display the html
+1.Reads HTML
+2.Converts into DOM
+3.Reads CSS
+4.Build Render Tree
+5.Calculates positions
+6.Paints pixels on screen
+
+DOM?
+DOM is:
+A tree like represensation of HTML
+created by browser
+used by JavaScript to manipulate webpage
+
+Usimg the JavaScript we can interact with the DOM 
+tag+content+attribute is called as a element.
