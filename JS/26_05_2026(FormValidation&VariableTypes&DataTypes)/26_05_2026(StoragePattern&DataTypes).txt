@@ -1,0 +1,46 @@
+In Java Script the Storage Patterns 
+
+1.Variables Temporary storage
+It will store only a single value 
+2.Arrays Multiple values
+It will store multiple values
+3.Objects Key-Value Storage
+It will store in key-value format
+4.Local Storage - Permanent Browser Storage
+It will store permanently when the browser refresh or closed the data will be present in the local storage
+5.Session Storage - Temporary Session Storage
+It will store the data until the browser tab closes
+
+//Java Script Data Types
+//1.Primitive Data Types
+//2.Non Primitive Data Types or Reference Data Types
+
+//Primitive Data Types
+// 1.String
+// 2.Number
+// 3.Boolean
+// 4.Undefined
+// 5.Null
+// 6.Symbol
+// 7.Big Int
+
+//Non-Primitive Data Types
+// 1.Objects
+// 2.Arrays
+// 3.Functions
+
+//Primitive Data Types Stores a single value , immutable , Stored by Value
+//String is Sequence of Characters it will be represented in ' ', " " , ` `
+//Number are used for Integers , Decimals , Negative Numbers
+//Boolean has only two values true or false
+//Undefined Variable declared but no value is assigned
+//Null Intentionally empty value
+//Symbol Used for unique identifiers
+//Big Int used for very large integer values
+
+//Non-Primitive Data Types Mutable values can be changed stored by reference complex data
+//Objects stores key-value pairs
+//Arrays Special Type of Object stores the multiple values
+//Functions are also objects in JavaScript
+
+//typeof is used to identify the which data type as been used for the particular variable
