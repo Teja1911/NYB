@@ -55,7 +55,8 @@ function hello(){
 }
 hello()
 function hi(){
-    co
+    console.log("hi")
+    return "hi";
 }
 
 //typeof is used to identify the which data type as been used for the particular variable
@@ -69,3 +70,4 @@ console.log(`Type of data: ${typeof(big)} and Variable data: ${big}`)//Output: 1
 console.log(`Type of data: ${typeof(employee)} and Variable data: ${employee}`)//Output: [Object Object]
 console.log(`Type of data: ${typeof(fruits)} and Variable data: ${fruits}`)//Output: Apple,Banana,Mango
 console.log(`Type of data: ${typeof(hello)} and Variable data: ${hello()}`)//Output: undefined because function does not have any return statement so function will not return any value so javascript automatically gives undefined 
+console.log(`Type of data: ${typeof(hi)} and Variable data: ${hi()}`)//Output: it will return data because we use the return statement in the function
