@@ -1,0 +1,11 @@
+Here is my observation the variable declaration is about three types var let const 
+ES6 are let and const 
+In these var is old method which is used declare the variables 
+Now a days let keyword is using to declare the variable 
+We can redeclare the same variable in the var not in let and const 
+we can reassign the value to var , let and not const 
+we can initialization to let var and not const 
+we can have the web hoisting for var it will make the confusion to the developers and let and const will be initialized but they will present temporary dead zone 
+we can have the web hoisting for normal function it will considered has same hierarchy tree and it will execute the code but not in the anonyms function and arrow function
+In Recursive function if we want to print/display the values then there is no need of return statement 
+If we want to calculate and store to the value then we need the return statement

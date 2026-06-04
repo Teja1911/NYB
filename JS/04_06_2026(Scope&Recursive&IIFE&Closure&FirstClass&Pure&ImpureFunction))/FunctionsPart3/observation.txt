@@ -1,0 +1,50 @@
+Advantages of Recursive Function
+Cleaner Code easy to understand the complex loops
+suitable for graphs and tree problems like File Systems , DOM traversal , Binary Trees
+Reduces the complex logic many mathematical problems becomes simpler
+
+Disadvantages of Recursive Function
+More Memory Usage
+Stack Overflow Risk
+Slower Than Loops 
+
+Closure 
+A inner Function remembers and can access the variables from its outer function even after the outer function execution completes  
+
+
+First Class Function
+Function can be :
+Stored in Variable 
+Be Passed as a argument
+Be Returned from the another function 
+
+Returning the function is first Class
+remembering the outer function is closure 
+
+Advantages of first class function 
+Reusable code 
+callbacks
+event handling 
+functional programming 
+higher order functions 
+
+Advantages of closure 
+Data privacy 
+State management 
+Avoid Global Variables 
+Memory of previous value 
+
+Limitations of closure
+More memory consumption 
+can caused memory leaks if overused 
+Harder to debug for beginners 
+
+Pure Function 
+Always returns same output for the same input 
+Does not modify the external variables 
+Has no side effects
+
+Impure Function 
+Depends on external Variable
+Modifies data outside the function 
+same input may produce different outputs 
