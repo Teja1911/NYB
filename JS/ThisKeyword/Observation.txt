@@ -1,0 +1,5 @@
+Feature                   call()        apply()    bind()
+Executes Immediately      Yes           Yes        No
+Returns New Function      No            No         Yes
+Arguments                 Individual    Array      Individual
+Change This               Yes           Yes        Yes
