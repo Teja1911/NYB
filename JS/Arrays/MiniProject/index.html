@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student Management System</h1>
+    <!-- <div class="box">
+        <h2>Student Names</h2>
+        <p id="names"></p>
+    </div>
+    <div class="box">
+        <h2>Total Marks</h2>
+        <div id="total"></div>
+    </div>
+    <div class="box">
+        <h2>Top Performance</h2>
+        <p id="toppers"></p>
+    </div>
+    <div class="box">
+        <h2>Any Failed Student?</h2>
+        <p id="failed"></p>
+    </div>
+    <div class="box">
+        <h2>All Students Passed?</h2>
+        <p id="passed"></p>
+    </div>
+    <div class="box">
+        <h2>Unique Subjects</h2>
+        <p id="subjects"></p>
+    </div>
+    <div class="box">
+        <h2>Student Ranking</h2>
+        <ol id="ranking"></ol>
+    </div> -->
+    <h2>Search Student</h2>
+    <input type="text" id="searchStudent" placeholder="Enter Student Name">
+    <button onclick="searchStudent()">Search</button>
+    <p id="studentResult"></p>
+    <h2>Search Subject</h2>
+    <input type="text" id="searchSubject" placeholder="Enter Subject">
+    <button onclick="searchSubject()">Search</button>
+    <p id="subjectResult"></p>
+    
+    <h2>Student Record</h2>
+    <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Total</th>
+                <th>Average</th>
+            </tr>
+        </thead>
+        <tbody id="studentTable"></tbody>
+    </table><br>
+    <h2>Add Student</h2>
+    <input  id="studentName" placeholder="Student Name">
+    <input id="mark1" placeholder="Mark 1">
+    <input id="mark2" placeholder="Mark 2">
+    <input  id="mark3" placeholder="Mark 3">
+    <button onclick="addStudent()">Add Student</button><br>
+    <h2>Remove Student</h2>
+    <input type="text" id="removeStudent" placeholder="Student Name">
+    <button onclick="removeStudent()">Remove</button>
+    <script src="./index.js"></script>
+</body>
+</html>
