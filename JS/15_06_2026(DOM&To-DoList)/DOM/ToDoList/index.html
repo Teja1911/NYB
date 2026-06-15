@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>To-Do List Application</h1>
+
+        <div class="input-section">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter Task"
+            >
+
+            <button id="addBtn">
+                Add Task
+            </button>
+
+        </div>
+
+        <div class="search-section">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search Task"
+            >
+
+            <button id="searchBtn">
+                Search
+            </button>
+
+        </div>
+
+        <p id="searchResult"></p>
+
+        <h3>
+            Total Tasks :
+            <span id="taskCount">0</span>
+        </h3>
+
+        <ul id="taskList">
+
+        </ul>
+
+    </div>
+
+    <script src="./index.js"></script>
+
+</body>
+</html>
