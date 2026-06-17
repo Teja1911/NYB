@@ -1,0 +1,7 @@
+Differences:
+Synchronous         Asynchronous
+Line by line        Executes later     
+Blocking            Non Blocking
+Waits               Doesn't Wait
+Simpler Flow        Uses callbacks/Promises
+
