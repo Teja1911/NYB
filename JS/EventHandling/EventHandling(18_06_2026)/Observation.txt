@@ -1,0 +1,40 @@
+| Normal Event        | Throttling                  | Debouncing                |
+| ------------------- | --------------------------- | ------------------------- |
+| Executes every time | Executes at fixed intervals | Executes after user stops |
+| High API calls      | Controlled API calls        | Single API call           |
+| Less efficient      | Better                      | Best for search           |
+
+Difference Between Throttling and Debouncing?
+Throttling
+↓
+Execute every interval
+
+Debouncing
+↓
+Execute after user stops
+
+What is a Callback Function?
+
+A function passed as an argument to another function and executed later.
+
+
+
+What is Throttling?
+
+Limits execution to once within a specified interval.
+
+Real Time Uses
+Infinite Scrolling
+Live Maps
+Window Resize
+Gaming Controls
+
+What is Debouncing?
+
+Delays execution until activity stops for a specified duration.
+
+Real Time Usage
+Google Search
+Amazon Search
+Chat Applications
+Form Validation
