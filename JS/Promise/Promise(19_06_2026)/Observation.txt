@@ -1,0 +1,444 @@
+Callback vs Promise 
+| Callback                 | Promise              |
+| ------------------------ | -------------------- |
+| Old approach             | Modern approach      |
+| Nested functions         | Chaining             |
+| Callback hell issue      | Solves callback hell |
+| Error handling difficult | Uses catch           |
+| Used in events           | Used in APIs         |
+
+| Method                 | Meaning     |
+| ---------------------- | ----------- |
+| parentElement          | Move Up     |
+| children               | Move Down   |
+| firstElementChild      | First Child |
+| lastElementChild       | Last Child  |
+| nextElementSibling     | Move Right  |
+| previousElementSibling | Move Left   |
+
+What is DOM Traversing 
+DOM Traversing is process of navigating the html elements that are already exists in the DOM tree
+When web page loads browser will convert the html elements into tree-like structure is called DOM.
+
+parentElement
+The parentElement property returns the immediate parent element of the selected element.
+Suppose:
+User clicks Delete button.
+You need to delete the entire product card.
+event.target.parentElement.remove();
+Here:
+Button
+  ↓
+Parent Product Card
+is removed.
+
+children
+The children property returns all child elements of an element.
+Suppose a product card contains:
+Product Name
+Price
+Button
+You may need all elements together.
+Instead of selecting each element separately:
+name
+price
+button
+you can retrieve all children at once.
+
+firstElementChild
+Returns the first child element.
+In an e-commerce card:
+First child = Product Name
+So:
+card.firstElementChild.textContent
+gives product name.
+
+nextElementSibling
+Returns the next element at the same level.
+Suppose:
+Product Name
+Product Price
+are next to each other.
+Clicking name:
+name.nextElementSibling
+can fetch price.
+
+Creating the DOM elements dynamically 
+Normally we can write in the html
+What if the product data comes from 
+API
+Database
+UserInput
+We don't know beforehand how many products exist.
+Therefore we create elements dynamically using JavaScript.
+Amazon doesn't manually write:
+10000 products
+in HTML.
+Products arrive from APIs.
+JavaScript creates product cards dynamically.
+
+createElement()
+exists only in memory 
+Not visible on the page 
+Why isn't visible?
+Because the browser knows it exists.
+But it hasn't been inserted into the DOM yet.
+Think:
+You bought a chair.
+Chair is in warehouse.
+Not yet placed in room.
+Adding Elements to DOM
+These where appendChild()
+This will physically enter the elements into the webpage 
+
+Event Listener
+Web pages would be static without events 
+What is addEventListener?
+It tells the browser:
+When this event happens,
+run this function.
+i.e onClick can only one function only
+Event Listener are more flexible
+
+What is DOM Traversing?
+DOM Traversing is the process of navigating between related elements in the DOM tree such as parent, child, and sibling elements. It is useful when we don't have a direct reference to an element but can access it through a related element. In real-world applications, DOM Traversing is commonly used in dynamic components such as product cards, tables, and forms where user actions occur on child elements but information must be retrieved from parent or sibling elements.
+
+What is Dynamic DOM Creation?
+Dynamic DOM Creation is the process of creating HTML elements at runtime using JavaScript instead of hardcoding them in HTML. This is commonly used when data comes from APIs, databases, or user input. Methods such as createElement(), appendChild(), and append() allow us to build and insert elements dynamically into the DOM.
+
+What are Event Listeners?
+Event Listeners are mechanisms that allow JavaScript to respond to browser or user-generated events such as clicks, input changes, form submissions, and keyboard interactions. The addEventListener() method attaches a callback function to an element and executes that function whenever the specified event occurs. This enables interactive and dynamic web
+
+Asynchronous JavaScript
+What Problem Does It Solve?
+JavaScript is single-threaded, meaning it can execute only one task at a time.
+Until the loop completes:
+Browser freezes
+User cannot click
+UI becomes unresponsive
+This creates a poor user experience.
+Why Is It Needed?
+Many operations take time:
+API Calls
+Database Requests
+File Uploads
+Image Loading
+Timers
+We don't want the browser to stop working while waiting.
+Instead:
+Start Task
+Continue Other Work
+Execute Result Later
+This is asynchronous programming.
+Real-Time Usage
+Google Search
+Payment Processing
+File Upload
+Fetching Products
+Loading User Data
+Advantages 
+Non Blocking Execution
+Better user experience
+Faster applications
+Limitations
+More complex than synchronous code
+can create callback hell
+
+setTimeout()
+What Problem Does It Solve?
+Sometimes we need to execute code after a delay.
+Example:
+Show Offer After 5 Seconds
+Auto Logout After 10 Minutes
+Display Notification Later
+Why Is It Needed?
+Without setTimeout:
+showOffer();
+Offer appears immediately.
+Business requirement:
+Show after 5 seconds
+How It Works?
+setTimeout(
+callback,
+5000
+);
+Browser:
+Stores callback
+Starts timer
+After 5 sec
+Executes callback
+Real-Time Usage
+OTP Expiry
+Auto Logout
+Discount Popup
+Chat Notifications
+Advantages
+Easy delayed execution
+Limitations
+Runs only once
+Not precise under heavy load
+Difference
+setTimeout	setInterval
+Runs once	Runs repeatedly
+
+setInterval()
+What Problem Does It Solve?
+Need to repeatedly execute code.
+Why Needed?
+Examples:
+Digital Clock
+Live Stock Prices
+Game Updates
+Countdown Timer
+How It Works?
+setInterval(
+callback,
+1000
+);
+Every second:
+Execute
+Wait
+Execute
+Wait
+Execute
+Real-Time Usage
+Live Dashboard
+Sports Score Updates
+Weather Updates
+Advantages
+Automatic repetition
+Limitations
+Can cause memory issues if not stopped
+Continues forever
+
+clearTimeout()
+Problem Solved
+Cancel scheduled execution.
+Example:
+User closes popup
+No need to show offer
+Usage
+let id =
+setTimeout(...);
+clearTimeout(id);
+Real-Time Example
+Cancel Auto Logout
+Cancel Reminder
+
+clearInterval()
+Problem Solved
+Stop repeating execution.
+Example:
+Stop Timer
+Pause Game
+Stop Live Updates
+Usage:
+clearInterval(
+intervalId
+);
+
+Event Bubbling
+Problem It Solves
+Allows events to travel upward through ancestors.
+Example:
+<div>
+   <button>
+      Buy
+   </button>
+</div>
+Click:
+Button
+ ↑
+Div
+ ↑
+Body
+Why Needed?
+Parent elements can respond to child events.
+How It Works?
+Default browser behavior:
+Target
+ ↑
+Parent
+ ↑
+Grandparent
+Real-Time Usage
+Product Cards
+Navigation Menus
+Tables
+Advantage
+Enables Event Delegation
+Limitation
+Can trigger unwanted parent events
+Solution:
+event.stopPropagation();
+
+Event Capturing
+Problem Solved
+Allows parent elements to intercept events before children.
+Flow:
+Body
+ ↓
+Div
+ ↓
+Button
+Why Needed?
+Security checks
+Analytics tracking
+Global event handling
+Difference
+Bubbling	    Capturing
+Bottom → Top	Top → Bottom
+Default	        Need true
+
+Event Delegation
+Problem Solved
+Avoid attaching listeners to every child element.
+Without Delegation
+button1.addEventListener()
+button2.addEventListener()
+button3.addEventListener()
+100 products:
+100 listeners
+With Delegation
+parent.addEventListener()
+Only:
+1 listener
+Why Needed?
+Dynamic elements.
+Real-Time Usage
+Amazon Product Cards
+Gmail Emails
+Shopping Cart
+How It Works?
+Uses:
+Event Bubbling
+Parent receives child event.
+Advantages
+Better performance
+Less memory
+Works for dynamic content
+Limitations
+Not suitable when every child needs very different logic
+
+Normal Events
+Examples:
+click
+input
+change
+submit
+mouseover
+keydown
+Why Needed?
+Without events:
+Websites become static
+No interaction.
+Real-Time Usage
+Login Button
+Search Box
+Forms
+Shopping Cart
+ 
+Callback Functions
+Problem Solved
+Execute code after another task completes.
+Without Callback
+Task A
+Task B
+No relationship.
+With Callback
+Task A Complete
+       ↓
+Execute Task B
+Real-Time Usage
+Payment Success
+File Download
+API Response
+Button Click
+Advantages
+Flexible
+Reusable
+Limitations
+Callback Hell
+
+Throttling
+Problem Solved
+User actions may fire too many events.
+Example:
+Scroll
+Scroll
+Scroll
+Scroll
+Thousands of events.
+Why Needed?
+Reduce execution frequency.
+How It Works?
+Allow execution:
+Once Every 1 Second
+Real-Time Usage
+Infinite Scroll
+Resize Window
+Games
+Maps
+Advantage
+Better performance
+Limitation
+May skip intermediate events
+Difference
+Normal Event
+100 Scrolls
+=
+100 Calls
+Throttled
+100 Scrolls
+=
+5 Calls
+
+Debouncing
+Problem Solved
+Avoid unnecessary executions until user stops interacting.
+Search Example
+Typing:
+m
+mo
+mob
+mobi
+mobil
+mobile
+Without debounce:
+6 API Calls
+With debounce:
+1 API Call
+How It Works?
+Every keystroke:
+Cancel Previous Timer
+Start New Timer
+When user stops:
+Execute Function
+Real-Time Usage
+Google Search
+Amazon Search
+Live Validation
+Advantages
+Fewer API calls
+Better performance
+Limitations
+Slight delay before execution
+
+Difference Between Throttling and Debouncing
+Throttling	                Debouncing
+Executes at fixed intervals	Executes after user stops
+Best for scroll	            Best for search
+Guarantees execution	    May delay execution
+
+Asynchronous JavaScript
+Allows time-consuming operations to run without blocking the main thread.
+Event Bubbling
+Event propagates from child to parent elements and is the foundation of Event Delegation.
+Event Delegation
+A design pattern where a single parent listener manages events for multiple child elements using event bubbling.
+Callback Function
+A function passed as an argument and executed after another operation completes.
+Throttling
+Limits execution frequency to improve performance during high-frequency events.
+Debouncing
+Delays execution until user activity stops, reducing unnecessary function calls.

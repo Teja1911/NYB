@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Smart Order Dashboard</h1>
+    <label for="">Product Name:</label>
+    <input type="text" id="productName" placeholder="Product Name"><br><br>
+    <label for="">Price:</label>
+    <input type="number" id="priceInput" placeholder="Price"><br><br>
+    <button id="addproductBtn">Add Product</button><br><br>
+    <label for="">Search:</label>
+    <input type="text" name="" id="search" placeholder="Product Name">
+    <p id="searchResult"></p>
+    <table border="1" cellspacing="0" cellpadding="15px">
+        <thead>
+            <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="displayProduct"></tbody>
+    </table>
+    <br>
+    <label for="">Order Status:</label>
+    <p id="orderResult"></p>
+    <button id="placeOrder">Place Order</button>
+    <script src="./index.js"></script>
+</body>
+</html>
