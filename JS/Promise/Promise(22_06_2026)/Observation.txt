@@ -1,0 +1,103 @@
+Promise all
+Suppose an E-Commerce Dashboard needs:
+Products
+Categories
+User Profile
+The page should load only when all data is available
+Waits for all Promises
+if One Fails
+Entire Promise Fails
+Real Time Usage
+Dashboard data
+Profile + orders + cart
+Multiple API's
+Promise race
+Need first promise that finishes 
+success or failure
+First Completed Promise Wins 
+Success or Failure 
+Real-Time Usage
+Fastest API
+Timeout Handling 
+CDN servers
+Promise.all
+Sometimes we want all results even if some fail
+No Promise is Ignored
+Success and Failure both Returned 
+Real-Time Usage
+Bulk Upload
+Report Generation
+Multiple APIs
+Promise.any
+Need the first successful Promise 
+First Successful Promise Wins 
+Failures Ignored
+Real-Time Usage
+Backup APIs
+CDN Networks
+Multiple Servers
+
+Comparison Table
+| Method               | Waits For     | Failure Behavior       |
+| -------------------- | ------------- | ---------------------- |
+| Promise.all()        | All Success   | One Fail = Fail        |
+| Promise.race()       | First Settled | Success or Fail        |
+| Promise.allSettled() | All Results   | Never Fails            |
+| Promise.any()        | First Success | Fails Only If All Fail |
+
+Before Promises asynchronous operations were handled using callbacks 
+Every Promise has 3 States
+Pending
+   ↓
+Resolved (Success)
+or
+Pending
+   ↓
+Rejected (Failure)
+Promise Execution Flow:
+Promise Created
+       ↓
+Pending State
+       ↓
+Success ? Failure
+       ↓
+resolve() reject()
+       ↓
+.then() .catch()
+
+Async and await
+Even promises can become difficult 
+Lots if chaining
+Async marks function as asynchronous
+Always returns Promise
+Await pauses execution until Promise Resolve
+Can only be used inside the async functions
+loadUser()
+     ↓
+await getUser()
+     ↓
+Wait
+     ↓
+Promise Resolved
+     ↓
+Continue Execution
+Promise chaining
+a()
+.then(...)
+.then(...)
+.then(...)
+Async/Await
+let a = await task1();
+let b = await task2();
+let c = await task3();
+Looks like synchronous code 
+
+| Method               | Observation                   |
+| -------------------- | ----------------------------- |
+| Promise.all()        | Waits for all success         |
+| Promise.race()       | First completed wins          |
+| Promise.allSettled() | Returns all results           |
+| Promise.any()        | First success wins            |
+| async                | Creates asynchronous function |
+| await                | Waits for Promise resolution  |
+

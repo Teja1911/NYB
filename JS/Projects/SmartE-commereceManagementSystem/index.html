@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <hr color="black" size="2" width="100%" noshade="">
+    <h1 style="text-align: center;">SMART E-COMMERCE MANAGEMENT SYSTEM</h1>
+    <hr color="black" size="2" width="100%" noshade="">
+    <br><br>
+    <form action="">
+        <label >Product Name:</label>&nbsp;&nbsp;
+        <input type="text" id="productName"><br><br>
+        <label >Category:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="category"><br><br>
+        <label >Price:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="price"><br><br>
+        <label >Stock:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="stock"><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" onclick="addProduct()" >Add Product</button>
+    </form>
+    <br><br>
+    <hr color="black" size="2" width="100%" noshade="">
+    <br>
+    <label for="">Search Product:</label>&nbsp;
+    <input type="text" id="searchProduct" oninput="searchProduct()">
+    <p id="searchItem"></p>
+    <br><br>
+    <hr color="black" size="2" width="100%" noshade="">
+    <h2>Available Products</h2>
+    <hr color="black" size="2" width="100%" noshade="">
+    <br>
+    <table border="1" border-color="black" color="black" size="2" cellspacing="0" cellpadding="15px">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="productBody">
+                
+        </tbody>
+        
+    </table>
+    <br>
+    <hr color="black" size="2" width="100%" noshade="">
+    <br>
+    <h3 id="totalProducts"></h3><br>
+    <h3 id="inventorayValues"></h3>
+    <script src="./index.js"></script>
+</body>
+</html>
