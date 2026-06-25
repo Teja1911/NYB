@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Employee Directory Dashboard</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Employee Directory Dashboard</h1>
+        <hr color="black" width="100%" noshade="">
+        <section class="browser-section">
+            <h2>Browser Information:</h2>
+            <p id="browser">Browser:</p>
+            <p id="platform">Platform:</p>
+            <p id="url">Current URL:</p>
+        </section>
+        <hr color="black" width="100%" noshade="">
+        <section class="button-section">
+            <button id="browserBtn">Show Browser Info</button>
+            <button id="urlBtn">Current URL</button>
+            <button id="reloadBtn">Reload Page</button>
+            <button id="backBtn">Go Back</button>
+        </section>
+        <hr color="black" width="100%" noshade="">
+        <section class="api-section">
+            <h2>Employee Management</h2>
+            <button id="loadEmployees">Load Employees</button>
+        </section>
+        <hr color="black" width="100%" noshade="">
+        <section>
+            <h3>Status</h3>
+            <p id="status">Waiting for request...</p>
+        </section>
+        <hr color="black" width="100%" noshade="">
+        <section>
+            <h2>Employee Directory</h2>
+            <div id="employeeContainer"></div>
+        </section>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
