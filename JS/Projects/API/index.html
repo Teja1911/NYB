@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee CRUD Dashboard</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Employee CRUD Dashboard</h1>
+        <hr color="black" width="100%" noshade="">
+        <!-- Employee Form -->
+        <section>
+            <h2>Employee Form:</h2>
+            <label for="">Employee Id:</label>
+            <input type="number" id="employeeId" placeholder="Employee Id">
+            <br><br>
+            <label for="">Employee Name:</label>
+            <input type="text" id="employeeName" placeholder="Employee Name">
+            <br><br>
+            <label for="">Employee Email:</label>
+            <input type="email" id="employeeEmail" placeholder="Employee Email">
+            <br><br>
+            <label for="">Department:</label>
+            <input type="text" id="department" placeholder="Department">
+            <br><br>
+            <label for="">Phone Number:</label>
+            <input type="text" id="phone" placeholder="Phone Number">
+        </section>
+        <hr color="black" width="100%" noshade="">
+        <section>
+            <button id="loadBtn">Load Employees</button>
+            <button id="addBtn">Add Employees</button>
+            <button id="updateBtn">Update Employee</button>
+            <button id="patchBtn">Update Email</button>
+        </section>
+        <hr color="black" width="100%" noshade="">
+        <section>
+            <h3>Status</h3>
+            <p id="status">Waiting for operation...</p>
+        </section>
+        <hr color="black" width="100%" noshade="">
+        <section>
+            <h2>Employee List:</h2>
+            <table border="1" cellspacing="0" cellpadding="10">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Department</th>
+                        <th>Phone</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="employeeBody"></tbody>
+            </table>
+        </section>
+        <hr color="black" width="100%" noshade="">
+        <h3>Employee Count:
+            <span id="employeeCount">0</span>
+        </h3>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

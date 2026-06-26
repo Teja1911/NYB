@@ -1,0 +1,94 @@
+git:
+Git is a Distributed Version Control System.
+It tracks changes made to your project over time, allowing you to save versions, collaborate with others, and restore previous versions if needed.
+
+You accidentally delete everything.
+Without Git:
+Project Lost ❌
+With Git:
+Restore Previous Version ✅
+This is the main problem Git solves.
+
+Without Git,
+everyone edits the same files and overwrites each other's work.
+With Git,
+every developer works independently, and Git combines everyone's changes.
+
+Version Control
+Version control means keeping the history of every change made to a project.
+
+Git Hub:
+Git works on your computer.
+GitHub stores your Git repository on the cloud.
+Git
+↓
+Your Laptop
+GitHub
+↓
+Internet
+
+Difference Between the git and GitHub
+Git	                            GitHub
+Version Control System	        Cloud hosting platform
+Runs on local computer	        Runs online
+Tracks file history	            Stores repositories
+Works offline	                Requires internet for syncing
+
+Repository:
+A repository (repo) is a folder that Git tracks.
+
+Git WorkFlow
+Project Folder
+↓
+git init
+↓
+Git Repository
+↓
+git add
+↓
+git commit
+↓
+git push
+↓
+GitHub Repository
+
+It creates a hidden folder called:
+.git
+This folder stores:
+Commit history
+Branch information
+Configuration
+Version history
+Without .git, Git cannot track your project.
+
+git status
+untracked
+Git knows the files exist but isn't tracking them yet.
+
+To add files
+git add .
+git add filename
+git add index.html
+after the staging area
+we will commit the files  
+git commit -m "initial commit"
+
+git branch -m Main
+git push -u origin main
+git push
+
+connect the local project to github
+git remote add origin
+
+Command	Purpose
+git init	                    Initialize a repository
+git status	                    Show current status
+git add .	                    Stage all files
+git add fileName	            Stage one file
+git commit -m "message"	        Create a commit
+git log	                        View commit history
+git remote add origin URL	    Connect to GitHub
+git push -u origin main	        First push
+git push	                    Push later changes
+git pull	                    Download latest changes
+git clone URL	                Copy a repository locally

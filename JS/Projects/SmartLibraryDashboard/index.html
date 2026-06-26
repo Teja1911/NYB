@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+<title>Smart Library Dashboard</title>
+<link rel="stylesheet"href="style.css">
+</head>
+<body>
+<div class="container">
+<h1>
+📚 Smart Library Management Dashboard
+</h1>
+<hr color="black" width="100%" noshade="">
+<!-- Search -->
+<section>
+<h2>Search Books</h2>
+<input type="text"id="searchBook" placeholder="Search Book Name">
+</section>
+<hr color="black" width="100%" noshade="">
+<!-- Buttons -->
+<section>
+<button id="loadBooks">Load Books</button>
+<button id="viewBorrowed">View Borrowed</button>
+<button id="nextBook">Next Borrowed Book</button>
+</section>
+<hr color="black" width="100%" noshade="">
+<!-- Status -->
+<section>
+<h3>Borrow Status</h3>
+<p id="status">Waiting...</p>
+</section>
+<hr color="black" width="100%" noshade="">
+<!-- Borrow ID -->
+<section>
+<h3>Current Borrow ID</h3>
+<p id="borrowId">Not Generated</p>
+</section>
+<hr color="black" width="100%" noshade="">
+<!-- Books -->
+<section>
+<h2>Available Books</h2>
+<div id="bookContainer">
+</div>
+</section>
+<hr color="black" width="100%" noshade="">
+<!-- Borrow History -->
+<section>
+<h2>Borrow History</h2>
+<div id="borrowHistory">
+    No Books Borrowed
+</div>
+</section>
+<hr color="black" width="100%" noshade="">
+<!-- Current Borrowed Book -->
+<section>
+<h2>Current Borrowed Book</h2>
+<p id="currentBook">None</p>
+</section>
+</div>
+<script type="module" src="index.js"></script>
+</body>
+</html>
