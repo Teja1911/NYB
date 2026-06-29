@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    background:#f4f6f9;
+    padding: 20px;
+}
+h1{
+    color: rgb(206, 64, 64);
+    font-size: 40px;
+}
+h2{
+    margin: 20px 0;
+    color:#333;
+}
+#hero{
+    height: 50vh;
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/036/054/418/small/ai-generated-landing-a-plane-against-a-golden-sky-at-sunset-passenger-aircraft-flying-up-in-sunset-light-travelling-and-business-concept-photo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px black;
+}   
+.external{
+    background: lightgreen;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 15px blueviolet;
+}
+/* Group Selector */
+.solid,
+.dashed,
+.dotted,
+.double,
+.rounded{
+    padding: 20px;
+    margin: 15px 0;
+    background: lightseagreen;
+    box-shadow: 5px 5px 15px black;
+}
+.selectors p{
+    border: 1px solid black;
+    padding: 10px;
+}
+.selectors>p{
+    font-weight: bold;
+}
+h2+p{
+    color: red;
+}
+h2~p{
+    background:#ddd
+}
+.solid{
+    border: 3px solid blue;
+}
+.dashed{
+    border: 3px dashed red;
+}
+.dotted{
+    border: 3px dotted green;
+}
+.double{
+    border: 4px double black;
+}
+.rounded{
+    border: 2px solid purple;
+    border-radius: 20px;
+}
+.fixed{
+    width: 300px;
+    height: 150px;
+    background:#87ceeb;
+    padding: 20px;
+    margin: 10px;
+}
+.responsive{
+    width: 80%;
+    height: 150px;
+    background: orange;
+    padding: 20px;
+    margin: 10px;
+}
+.viewport{
+    width: 50vw;
+    height: 20vh;
+    background: lightgreen;
+    padding: 20px;
+    margin: 10px;
+}
+.card{
+    width: 250px;
+    padding: 20px;
+    margin: 20px;
+    display: inline-block;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.2);
+    box-shadow: 5px 5px 15px black;
+    transition: 0.3s;
+}
+.card:hover{
+    transform: translateY(-5px);
+}
+@media(max-width:768px){
+    .card{
+        display: block;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+}

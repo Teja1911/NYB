@@ -1,0 +1,98 @@
+/* Universal Selector */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Element Selector */
+h4{
+    color: rgb(108, 33, 179);
+}
+/* Class Selector */
+.card{
+    color: rgb(147, 228, 55);
+}
+/* Id Selector */
+#section{
+    color: rgb(24, 97, 161);
+}
+/* Group Selector */
+h3,h4{
+    background-color: rgb(123, 194, 223);
+}
+/* Descendant Selector */
+.card p{
+    background-color: rgb(212, 132, 66);
+}
+/* Child Selector */
+.card > p{
+    font-size: 20px;
+}
+/* Adjacent Sibling */
+h2+p{
+    background-color: rgb(27, 146, 100);
+}
+/* General Sibling */
+h2~p{
+    background-color: rgb(127, 231, 58);
+}
+
+/* Borders */
+.card{
+    border: 3px solid blueviolet;
+    border-radius: 15px;
+}
+h2{
+    border: 3px dotted rgb(199, 39, 39);
+    border-radius: 15px;
+}
+h3{
+    border: 3px dashed red;
+    border-radius: 15px;
+}
+h4{
+    border: 3px double black;
+    border-radius: 15px;
+}
+h6{
+    color: brown !important;
+}
+.hero{
+    height: 400px;
+    background-image: url("travel.jfif");
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    text-align: center;
+    text-decoration: solid;
+    border-radius: 5px;
+    color: rgb(190, 49, 49);
+    box-shadow: 4px 4px 20px blue;
+}
+
+.box{
+    background-color: blue;
+    width: 200px;
+    height: 300px;
+    text-align: center;
+}
+.percentage{
+    background-color: blueviolet;
+    width: 80%;
+}
+.viewport{
+    background-color: brown;
+    height: 100vw;
+    width: 100vh;
+}
+.auto{
+    background-color: green;
+    width: auto;
+    height: auto;
+}
+.responsive{
+    background-color: orangered;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}

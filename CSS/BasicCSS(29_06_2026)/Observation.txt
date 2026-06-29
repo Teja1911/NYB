@@ -1,0 +1,65 @@
+Introduction to CSS:
+CSS is used to style the HTML Elements 
+HTML Provides structure 
+CSS provides appearance 
+Advantages of CSS
+Separation of Content and Presentation
+Benefits:
+Better Readability
+Easier Maintenance
+Reusable Styles 
+Responsive Layouts 
+Faster Web Development 
+Ways to apply CSS
+There are three ways 
+1.Inline CSS
+2.Internal CSS
+3.External CSS
+
+1.Inline CSS
+Advantages:
+Quick Styling 
+Useful for testing 
+Disadvantages:
+Difficult to maintain
+Repetition
+Not Reusable
+
+2.Internal CSS
+Advantages:
+Useful for small projects 
+Single Page
+Disadvantages:
+Not Reusable across pages 
+
+3.External CSS
+Advantages:
+Reusable
+Professional
+Scalable 
+Maintainable
+
+CSS Selectors
+
+
+!important
+    ↓
+Inline CSS
+    ↓
+ID Selector
+    ↓
+Class Selector
+    ↓
+Element Selector
+    ↓
+Universal Selector
+    ↓
+Browser Default Styles
+
+using px 
+fixed 
+problem is small screens overflow
+
+Responsive
+using % 
+Fits all the screens 
