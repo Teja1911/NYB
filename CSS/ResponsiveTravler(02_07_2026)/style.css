@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+body{
+    background:#fff;
+    overflow-x: hidden;
+}
+header{
+    min-height: 70vh;
+    background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),url(hero.jpg);
+    background-size: cover;
+    background-size:cover;
+    background-position:center;
+    color: white;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: auto;
+    padding: 25px 80px;
+}
+nav h1{
+    display: flex;
+    justify-content: flex-start;
+}
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    list-style: none;
+    align-items: center;
+}
+nav button{
+    background:#ff4f7b;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+}
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+}
+.hero p{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.hero h1{
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+.hero button{
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    background:#ff4f7b;
+    color: white;
+    font-size: 16px;
+}
+.events{
+    padding: 80px;
+    text-align: center;
+}
+.events h2{
+    margin-bottom:40px ;
+    font-size: 35px;
+}
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.card{
+    background:white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+.card img{
+    width: 100%;
+    height:auto;
+    display:block;
+    border-radius: 10px;
+}
+.card h3{
+    margin:20px 0;
+}
+.card p{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.card button{
+    padding: 10px 20px;
+    background:#ff4f7b;
+    border: none;
+    color: white;
+    border-radius: 20px;
+}
+.explore{
+    height: 70vh;
+    background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(explore.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.overlay{
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.overlay h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.overlay p{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.overlay button{
+    padding: 10px 20px;
+    background:#ff4f7b;
+    border: none;
+    color: white;
+    border-radius: 20px;
+}
+.tours{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 80px;
+}
+.tours h2{
+    margin-bottom:40px ;
+    font-size: 35px;
+}
+.tours p{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.tours button{
+    padding: 10px 20px;
+    background:#ff4f7b;
+    border: none;
+    color: white;
+    border-radius: 20px;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+.gallery img{
+    width: 100%;
+    height:auto;
+    display:block;
+    border-radius:10px;
+}
+footer{
+    background:#111827;
+    text-align: center;
+    padding: 30px;
+    color: white;
+}
+@media(max-width:1024px){
+    header{
+        min-height:80vh;   
+    }
+    nav{
+        padding:20px 30px;
+    }
+    nav ul{
+        gap:15px;   
+    }
+    .hero{
+        height:auto;
+        padding:100px 20px;
+    }
+    .hero h1{   
+        font-size:45px; 
+    }
+    .cards{
+        grid-template-columns:1fr;
+    }
+    .tours{ 
+        grid-template-columns:1fr;  
+        padding: 40px;
+    }
+    .gallery{
+        grid-template-columns:1fr 1fr;
+    }
+    .events{
+        padding: 40px;
+    }
+    .explore{
+        height:50vh;
+    }
+    img{
+        width:100%;
+        height:auto;
+    }
+}
+@media(max-width:768px){
+    header{
+        min-height: 100vh;
+    }
+    nav{  
+        flex-direction:column; 
+        padding: 20px; 
+        gap:20px;
+    }
+    nav ul{
+        flex-direction:column;
+        gap:15px;
+    }
+    .hero{  
+        height:auto;
+        padding:120px 20px; 
+    }
+    .hero h1{   
+        font-size:32px;
+    }
+    .hero p{
+        font-size:18px; 
+    }
+    .cards{
+        grid-template-columns:1fr;
+    }
+    .gallery{
+        grid-template-columns:1fr;
+    }
+    .tours{
+        grid-template-columns:1fr;
+        padding: 25px;
+    }
+    .events{
+        padding: 25px;
+    }
+    .explore{
+        height:auto;
+        padding:60px 20px;
+    }
+    img{    
+        width:100%;
+        height:auto;
+        display:block;  
+    }
+}

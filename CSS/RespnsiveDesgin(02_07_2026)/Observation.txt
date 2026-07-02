@@ -1,0 +1,4 @@
+Responsive Design
+Webpage should automatically adapt to different screen sizes
+Media Query:
+Media Query allows CSS to change styles depending on the screen size 

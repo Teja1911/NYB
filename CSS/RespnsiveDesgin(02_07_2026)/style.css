@@ -1,0 +1,58 @@
+.menu{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+a{
+    text-decoration: none;
+}
+@media(max-width:767px){
+    body{
+        background: red;
+    }
+    h1{
+        font-size: 24px;
+    }
+    .container{
+        padding: 10px;
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+    .menu{
+        display: none;
+    }
+}
+@media(min-width:768px)and (max-width:1024px){
+    body{
+        background: skyblue;
+    }
+    h1{
+        font-size: 32px;
+    }
+    .container{
+        padding: 20px;
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+@media(min-width:1025px) and (max-width:1440px){
+    body{
+        background: blueviolet;
+    }
+    h1{
+        font-size: 40px;
+    }
+    .container{
+        padding: 40px;
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
