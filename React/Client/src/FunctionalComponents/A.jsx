@@ -14,6 +14,7 @@ function A() {
     //Data coming From Parent Component is called props
     return(
         <StrictMode>
+            <hr style={{ border: "none", borderTop: "1px solid #e70f0fe7", margin: "20px 0" }} />
             <h1>Hello This is Functional Component</h1>
             {/* <B/> */}
             <B hello={"hi"}/>
