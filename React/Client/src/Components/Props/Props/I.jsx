@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 
-function I() {
-    let [value,setValue]=useState(19)
+function I({value}) {
   return (
     <div>
         I
