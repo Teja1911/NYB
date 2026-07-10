@@ -52,7 +52,8 @@ import Child from './pages/Props_08-07-2026/ParentToChild/Child'
 import Prop from './pages/Props_08-07-2026/Props/Prop.jsx'
 import State from './pages/LocalState_09-07-2026/UseState/State.jsx'
 import Context from './pages/GlobalState_09-07-2026/ContextAPI/Context.jsx'
-import ContextDemo from './pages/ContextDemo/ContextDemo.jsx'
+import ContextDemo from './pages/FoodieHub/ContextDemo.jsx'
+import AxiosPage from './pages/API_10-07-2026/AxiosPage.jsx'
 
 function App() {
   return (
@@ -66,7 +67,8 @@ function App() {
           <Route path="/props" element={<Prop/>}/>
           <Route path="/usestate" element={<State/>}/>
           <Route path="/context" element={<Context/>}/>
-          <Route path="/context-demo" element={<ContextDemo/>}/>
+          <Route path="/foodiehub" element={<ContextDemo/>}/>
+          <Route path="/apidemo" element={<AxiosPage/>}/>
         </Routes>
       </BrowserRouter>
   )
