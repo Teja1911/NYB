@@ -54,6 +54,7 @@ import State from './pages/LocalState_09-07-2026/UseState/State.jsx'
 import Context from './pages/GlobalState_09-07-2026/ContextAPI/Context.jsx'
 import ContextDemo from './pages/FoodieHub/ContextDemo.jsx'
 import AxiosPage from './pages/API_10-07-2026/AxiosPage.jsx'
+import ContextPage from './pages/ContextAPIDemo_13-07-2026/ContextPage.jsx'
 
 function App() {
   return (
@@ -69,6 +70,7 @@ function App() {
           <Route path="/context" element={<Context/>}/>
           <Route path="/foodiehub" element={<ContextDemo/>}/>
           <Route path="/apidemo" element={<AxiosPage/>}/>
+          <Route path='/contextapidemo' element={<ContextPage/>}/>
         </Routes>
       </BrowserRouter>
   )
