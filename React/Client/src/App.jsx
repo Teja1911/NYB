@@ -54,7 +54,7 @@ import State from './pages/LocalState_09-07-2026/UseState/State.jsx'
 import Context from './pages/GlobalState_09-07-2026/ContextAPI/Context.jsx'
 import ContextDemo from './pages/FoodieHub/ContextDemo.jsx'
 import AxiosPage from './pages/API_10-07-2026/AxiosPage.jsx'
-import ContextPage from './pages/ContextAPIDemo_13-07-2026/ContextPage.jsx'
+import ContextPage from './pages/EmployeeDashboard_13-07-2026/EmployeeDashboard.jsx'
 
 function App() {
   return (
