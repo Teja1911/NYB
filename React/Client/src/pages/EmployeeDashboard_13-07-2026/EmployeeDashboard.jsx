@@ -1,14 +1,13 @@
-import AppProvider, { AppContext } from "../../Components/EmployeeDashboard/AppContext";
+import AppProvider, { AppContext } from "../../Components/EmployeeDashboard/ContextAPIDemo/AppContext";
 import React, { useContext } from 'react'
-import Navbar from "../../Components/EmployeeDashboard/Navbar";
-import Sidebar from "../../Components/EmployeeDashboard/Sidebar";
-import Dashboard from "../../Components/EmployeeDashboard/Dashboard";
-import ThemeSwitcher from "../../Components/EmployeeDashboard/ThemeSwitcher";
-import LoginFrom from "../../Components/EmployeeDashboard/LoginForm";
-import UserProfile from "../../Components/EmployeeDashboard/UserProfile";
-import HomeContent from "../../Components/EmployeeDashboard/HomeContent";
-import "../../Components/EmployeeDashboard/ContextDemo.css";
-import ConsumerExample from "../../Components/EmployeeDashboard/ConsumerExample";
+import Navbar from "../../Components/EmployeeDashboard/ContextAPIDemo/Navbar";
+import Sidebar from "../../Components/EmployeeDashboard/ContextAPIDemo/Sidebar";
+import Dashboard from "../../Components/EmployeeDashboard/ContextAPIDemo/Dashboard";
+import ThemeSwitcher from "../../Components/EmployeeDashboard/ContextAPIDemo/ThemeSwitcher";
+import LoginFrom from "../../Components/EmployeeDashboard/ContextAPIDemo/LoginForm";
+import UserProfile from "../../Components/EmployeeDashboard/ContextAPIDemo/UserProfile";
+// import "../../Components/EmployeeDashboard/ContextAPIDemo/ContextDemo.css";
+import "../../Components/EmployeeDashboard/ContextAPIDemo/ContextDemo.css"
 
 function ContextContent() {
 
@@ -29,8 +28,7 @@ function ContextContent() {
                     <ThemeSwitcher/>
                     <LoginFrom/>
                     <UserProfile/>
-                    <HomeContent/>
-                    <ConsumerExample/>
+                    
 
                 </div>
 
@@ -41,7 +39,7 @@ function ContextContent() {
     );
 
 }
-function ContextPage() {
+function EmployeeDashboard() {
   return (
     <AppProvider>   
         <ContextContent/>
@@ -49,4 +47,4 @@ function ContextPage() {
   )
 }
 
-export default ContextPage
+export default EmployeeDashboard
