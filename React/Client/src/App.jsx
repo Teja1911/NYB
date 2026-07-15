@@ -57,6 +57,8 @@ import AxiosPage from './pages/API_10-07-2026/AxiosPage.jsx'
 import ContextPage from './pages/EmployeeDashboard_13-07-2026/EmployeeDashboard.jsx'
 import Redux from './pages/GlobalState_09-07-2026/Redux/Redux.jsx'
 import ReduxToolkit from './pages/ReduxToolkit_14-07-2026/ReduxToolkit.jsx'
+import Reducer from './pages/LocalState_09-07-2026/UseReducer/UseReducerPage.jsx'
+import EmployeeDashboard from './pages/EmployeeDashboard_13-07-2026/EmployeeDashboard.jsx'
 
 function App() {
   return (
@@ -72,9 +74,10 @@ function App() {
           <Route path="/context" element={<Context/>}/>
           <Route path="/foodiehub" element={<ContextDemo/>}/>
           <Route path="/apidemo" element={<AxiosPage/>}/>
-          <Route path='/contextapidemo' element={<ContextPage/>}/>
+          <Route path='/employeedashboard' element={<EmployeeDashboard/>}/>
           <Route path='/redux' element={<Redux/>}/>
           <Route path='/reduxtoolkit' element={<ReduxToolkit/>}/>
+          <Route path='/reducer' element={<Reducer/>}/>
         </Routes>
       </BrowserRouter>
   )
