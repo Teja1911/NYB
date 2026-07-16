@@ -1,24 +1,41 @@
 import React, { useContext } from 'react'
 import { AppContext } from './AppContext'
+import {FaMoon,FaSun,FaPalette} from 'react-icons/fa'
 
 function ThemeSwitcher() {
     const{theme,setTheme}=useContext(AppContext)
-    function changeTheme(){
-        console.log("Current Theme :", theme);
-        setTheme(theme === "light"? "dark": "light")
+    function toggleTheme() {
+        setTheme(theme === "light"? "dark": "light");
     }
   return (
-    <div className='card'
-     style={{
-        background: theme === "light" ? "#ffffff" : "#2d3748",
-        color: theme === "light" ? "#000000" : "#ffffff"
-    }}>
-                <h2>Theme Management</h2>
-                <p>Current Theme:
-                    <strong>{theme}</strong>
-                </p>
-                <button onClick={changeTheme}>Switch Theme</button>
-            </div>
+    <div className="card">
+            <h2>
+                <FaPalette />
+                {" "}Appearance
+            </h2>
+            <hr />
+            <br />
+            <h3>Current Theme</h3>
+            <h1>
+                {
+                    theme === "light"
+                    ?
+                    <>
+                        <FaSun />
+                        {" "}Light Mode
+                    </>
+                    :
+                    <>
+                        <FaMoon />
+                        {" "}Dark Mode
+                    </>
+                }
+            </h1>
+            <p>Change the appearance of the Employee Portal.</p>
+            <br />
+            <button onClick={toggleTheme}>Switch Theme</button>
+     </div>
+
   )
 }
 

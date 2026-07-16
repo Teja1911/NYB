@@ -1,38 +1,82 @@
 import React, { useContext } from 'react'
 import { AppContext } from './AppContext'
+import {
+FaLock,
+FaUserCheck,
+FaSignOutAlt,
+FaSignInAlt
+} from 'react-icons/fa'
 
 function LoginFrom() {
-    const{user,setUser,theme}=useContext(AppContext)
-    function login(){
-        setUser({
-            name:"Tejaswar Rao",
-            role:"React Developer",
-            isLoggedIn:true
-        })
-    }
-    function logout(){
-        setUser({
-            name:"Guest",
-            role:"Visitor",
-            isLoggedIn:false
-        })
+    const{user,setUser}=useContext(AppContext)
+   function handleAuth(){
+        if(user.isLoggedIn){
+            setUser({
+                ...user,
+                isLoggedIn:false,
+                name:"Guest",
+                role:"Visitor"
+            });
+        }
+        else{
+            setUser({
+                ...user,
+                isLoggedIn:true,
+                name:"Tejaswar Rao",
+                role:"Frontend Developer"
+            });
+        }
     }
   return (
-    <div className='card' 
-     style={{
-        background: theme === "light" ? "#ffffff" : "#2d3748",
-        color: theme === "light" ? "#000000" : "#ffffff"
-    }}>
-            <h2>User Authentication</h2>
+    
+        <div className="card">
+            <h2>
+                <FaLock />
+                {" "}Authentication
+            </h2>
+            <hr />
+            <br />
             <p>
-                Status:
-                <strong>{user.isLoggedIn ?"Logged In":"Not Logged In"}</strong>
+                <strong>User :</strong>
+                {user.name}
             </p>
-            {
-                user.isLoggedIn?
-                (<button onClick={logout}>Logout</button>):
-                (<button onClick={login}>Login</button>)
-            }
+            <p>
+                <strong>Role :</strong>
+                {user.role}
+            </p>
+            <p>
+                <strong>Status :</strong>
+                {
+                    user.isLoggedIn
+                    ?
+                    <span style={{color:"green"}}>
+                        <FaUserCheck />
+                        {" "}Logged In
+                    </span>
+                    :
+                    <span style={{color:"red"}}>
+                        Logged Out
+                    </span>
+                }
+            </p>
+            <br />
+            <button
+                onClick={handleAuth}
+            >
+                {
+                    user.isLoggedIn
+                    ?
+                    <>
+                        <FaSignOutAlt />
+                        {" "}Logout
+                    </>
+                    :
+                    <>
+                        <FaSignInAlt />
+                        {" "}Login
+                    </>
+                }
+            </button>
     </div>
   )
 }

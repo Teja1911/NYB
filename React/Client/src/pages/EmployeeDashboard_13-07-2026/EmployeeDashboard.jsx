@@ -3,11 +3,13 @@ import React, { useContext } from 'react'
 import Navbar from "../../Components/EmployeeDashboard/ContextAPIDemo/Navbar";
 import Sidebar from "../../Components/EmployeeDashboard/ContextAPIDemo/Sidebar";
 import Dashboard from "../../Components/EmployeeDashboard/ContextAPIDemo/Dashboard";
-import ThemeSwitcher from "../../Components/EmployeeDashboard/ContextAPIDemo/ThemeSwitcher";
-import LoginFrom from "../../Components/EmployeeDashboard/ContextAPIDemo/LoginForm";
-import UserProfile from "../../Components/EmployeeDashboard/ContextAPIDemo/UserProfile";
+// import ThemeSwitcher from "../../Components/EmployeeDashboard/ContextAPIDemo/ThemeSwitcher";
+// import LoginFrom from "../../Components/EmployeeDashboard/ContextAPIDemo/LoginForm";
+// import UserProfile from "../../Components/EmployeeDashboard/ContextAPIDemo/UserProfile";
 // import "../../Components/EmployeeDashboard/ContextAPIDemo/ContextDemo.css";
 import "../../Components/EmployeeDashboard/ContextAPIDemo/ContextDemo.css"
+import EmployeeSection from "../../Components/Features/Employee/EmployeeSection";
+
 
 function ContextContent() {
 
@@ -25,9 +27,10 @@ function ContextContent() {
 
                 <div className="content">
                     <Dashboard/>
-                    <ThemeSwitcher/>
-                    <LoginFrom/>
-                    <UserProfile/>
+                    <EmployeeSection/>
+                    
+                    
+                    
                     
 
                 </div>

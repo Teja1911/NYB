@@ -1,21 +1,38 @@
 import React, { useContext } from 'react'
 import { AppContext } from './AppContext'
+import {
+    FaBell,
+    FaMoon,
+    FaSearch,
+    FaUserCircle,
+    FaEnvelope
+} from "react-icons/fa"
 
 function Navbar() {
     const{theme,user}=useContext(AppContext)
-    console.log("Navbar Theme:", theme);
   return (
-    <nav className='navbar'>
-            <h2>Employee Portal</h2>
-            <div className='navbar-info'>
-                <p>
-                    Welcome &nbsp;
+    <nav className="navbar">
+            <div className="logo">
+                <h2>Employee Portal</h2>
+            </div>
+            <div className="search-box">
+                <FaSearch />
+                <input
+                    type="text"
+                    placeholder="Search Employee..."
+                />
+            </div>
+            <div className="navbar-right">
+                <FaBell className="nav-icon"/>
+                <FaEnvelope className="nav-icon"/>
+                <FaMoon className="nav-icon"/>
+                <FaUserCircle className="nav-avatar"/>
+                <div>
+                    <p>Welcome</p>
                     <strong>{user.name}</strong>
-                </p>
-                <p>
-                    Theme &nbsp;
-                    <strong>{theme}</strong>
-                </p>
+                    <br/>
+                    <small>{user.role}</small>
+                </div>
             </div>
         </nav>
   )

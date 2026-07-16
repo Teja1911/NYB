@@ -1,0 +1,21 @@
+export const initialState={
+    form:{
+        id:"",
+        name:"",
+        email:"",
+        phone:"",
+        department:"",
+        role:"",
+        salary:"",
+        experience:"",
+        address:""
+    },
+    employees:[],
+    editingEmployee:null,
+    errors:{},
+    search:"",
+    filters:{
+        department:"All",
+        role:"All"
+    }
+}
