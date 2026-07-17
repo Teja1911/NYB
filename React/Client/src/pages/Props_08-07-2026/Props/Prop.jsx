@@ -1,5 +1,5 @@
 import React from 'react'
-import S from '../../../Components/Props/Props/A.jsx'
+import S from '../../../Learning Concepts/Props/Props/A.jsx'
 function A() {
   return (
     <div>

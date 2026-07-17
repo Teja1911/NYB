@@ -1,14 +1,15 @@
-import AppProvider, { AppContext } from "../../Components/EmployeeDashboard/ContextAPIDemo/AppContext";
+import AppProvider, { AppContext } from "../../projects/Employee-dashboard/Features/dashboard/context/AppContext";
 import React, { useContext } from 'react'
-import Navbar from "../../Components/EmployeeDashboard/ContextAPIDemo/Navbar";
-import Sidebar from "../../Components/EmployeeDashboard/ContextAPIDemo/Sidebar";
-import Dashboard from "../../Components/EmployeeDashboard/ContextAPIDemo/Dashboard";
+import Navbar from "../../projects/Employee-dashboard/layouts/Navbar";
+// import Sidebar from "../../Components/EmployeeDashboard/ContextAPIDemo/Sidebar";
+import Dashboard from "../../projects/Employee-dashboard/Features/dashboard/DashboardSection";
+import Sidebar from '../../projects/Employee-dashboard/layouts/Sidebar'
 // import ThemeSwitcher from "../../Components/EmployeeDashboard/ContextAPIDemo/ThemeSwitcher";
 // import LoginFrom from "../../Components/EmployeeDashboard/ContextAPIDemo/LoginForm";
 // import UserProfile from "../../Components/EmployeeDashboard/ContextAPIDemo/UserProfile";
 // import "../../Components/EmployeeDashboard/ContextAPIDemo/ContextDemo.css";
-import "../../Components/EmployeeDashboard/ContextAPIDemo/ContextDemo.css"
-import EmployeeSection from "../../Components/Features/Employee/EmployeeSection";
+import "../../projects/Employee-dashboard/Features/dashboard/styles/ContextDemo.css"
+import EmployeeSection from "../../projects/Employee-dashboard/Features/employee/EmployeeSection";
 
 
 function ContextContent() {
@@ -28,11 +29,6 @@ function ContextContent() {
                 <div className="content">
                     <Dashboard/>
                     <EmployeeSection/>
-                    
-                    
-                    
-                    
-
                 </div>
 
             </div>

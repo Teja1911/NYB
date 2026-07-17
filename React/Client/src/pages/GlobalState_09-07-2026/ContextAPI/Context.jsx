@@ -1,5 +1,5 @@
 import React from 'react'
-import A from '../../../Components/State/GlobalState/ContextAPI/A'
+import A from '../../../Learning Concepts/State/GlobalState/ContextAPI/A'
 
 function Context() {
   return (

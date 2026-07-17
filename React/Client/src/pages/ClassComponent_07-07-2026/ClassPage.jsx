@@ -1,5 +1,5 @@
 import React from 'react'
-import A from '../../Components/ClassComponents/A'
+import A from '../../Learning Concepts/ClassComponents/A'
 
 function ClassPage() {
   return (

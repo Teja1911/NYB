@@ -1,5 +1,5 @@
 import React from 'react'
-import A from '../../Components/FunctionalComponents/A'
+import A from '../../Learning Concepts/FunctionalComponents/A'
 
 function Functionalpage() {
   return (

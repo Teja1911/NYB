@@ -1,10 +1,10 @@
 import React from 'react'
-import Counter from '../../../Components/State/LocalState/useReducer/Counter'
-import EmployeeForm from '../../../Components/State/LocalState/useReducer/EmployeeForm'
-import ShoppingCart from '../../../Components/State/LocalState/useReducer/ShoppingCart'
-import Comparison from '../../../Components/State/LocalState/useReducer/Comparison'
-import ReducerInfo from '../../../Components/State/LocalState/useReducer/ReducerInfo'
-import AdvanceReducer from '../../../Components/State/LocalState/useReducer/AdvanceReducer'
+import Counter from '../../../Learning Concepts/State/LocalState/useReducer/Counter'
+import EmployeeForm from '../../../Learning Concepts/State/LocalState/useReducer/EmployeeForm'
+import ShoppingCart from '../../../Learning Concepts/State/LocalState/useReducer/ShoppingCart'
+import Comparison from '../../../Learning Concepts/State/LocalState/useReducer/Comparison'
+import ReducerInfo from '../../../Learning Concepts/State/LocalState/useReducer/ReducerInfo'
+import AdvanceReducer from '../../../Learning Concepts/State/LocalState/useReducer/AdvanceReducer'
 
 function UseReducerPage() {
   return (

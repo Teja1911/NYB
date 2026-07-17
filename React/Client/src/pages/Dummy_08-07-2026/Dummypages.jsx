@@ -1,5 +1,5 @@
 import React from 'react'
-import A from '../../Components/Dummy/A'
+import A from '../../Learning Concepts/Dummy/A'
 
 function Dummypages() {
   return (

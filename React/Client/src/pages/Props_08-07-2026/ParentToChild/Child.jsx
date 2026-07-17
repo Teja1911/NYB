@@ -1,5 +1,5 @@
 import React from 'react'
-import C from '../../../Components/Props/ParentToChild/Child'
+import C from '../../../Learning Concepts/Props/ParentToChild/Child'
 function Child() {
   return (
     <div>
