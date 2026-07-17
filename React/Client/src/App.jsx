@@ -53,12 +53,23 @@ import Prop from './pages/Props_08-07-2026/Props/Prop.jsx'
 import State from './pages/LocalState_09-07-2026/UseState/State.jsx'
 import Context from './pages/GlobalState_09-07-2026/ContextAPI/Context.jsx'
 import ContextDemo from './pages/FoodieHub/ContextDemo.jsx'
-import AxiosPage from './pages/API_10-07-2026/AxiosPage.jsx'
-import ContextPage from './pages/EmployeeDashboard_13-07-2026/EmployeeDashboard.jsx'
+import AxiosPage from './pages/API_10-07-2026/AxiosSection.jsx'
 import Redux from './pages/GlobalState_09-07-2026/Redux/Redux.jsx'
 import ReduxToolkit from './pages/ReduxToolkit_14-07-2026/ReduxToolkit.jsx'
 import Reducer from './pages/LocalState_09-07-2026/UseReducer/UseReducerPage.jsx'
 import EmployeeDashboard from './pages/EmployeeDashboard_13-07-2026/EmployeeDashboard.jsx'
+import ClassComponentPage from './pages/practice_17-07-2026/ClassComponentPage.jsx'
+import FunctionalComponentPage from './pages/practice_17-07-2026/FunctionalComponentPage.jsx'
+import ConditionalRenderingPage from './pages/practice_17-07-2026/ConditionalRenderingPage.jsx'
+import ContextAPIChildPage from './pages/practice_17-07-2026/ContextAPIChildPage.jsx'
+import EventHandlingPage from './pages/practice_17-07-2026/EventHandlingPage.jsx'
+import FetchAPIPage from './pages/practice_17-07-2026/FetchAPIPage.jsx'
+import ListRenderingPage from './pages/practice_17-07-2026/ListRenderingPage.jsx'
+import PropsPage from './pages/practice_17-07-2026/PropsPage.jsx'
+import StatePage from './pages/practice_17-07-2026/StatePage.jsx'
+import UseEffectPage from './pages/practice_17-07-2026/UseEffectPage.jsx'
+import UseReducerPage from './pages/practice_17-07-2026/UseReducerPage.jsx'
+import StudentManagementPage from './pages/Student-Management_17-07-2026/StudentManagementPage.jsx'
 
 function App() {
   return (
@@ -78,6 +89,18 @@ function App() {
           <Route path='/redux' element={<Redux/>}/>
           <Route path='/reduxtoolkit' element={<ReduxToolkit/>}/>
           <Route path='/reducer' element={<Reducer/>}/>
+          <Route path='/classcomponent' element={<ClassComponentPage/>}/>
+          <Route path='/functionalcomponent' element={<FunctionalComponentPage/>}/>
+          <Route path='/conditionalrendering' element={<ConditionalRenderingPage/>}/>
+          <Route path='/contextapi' element={<ContextAPIChildPage/>}/>
+          <Route path='/eventhandling' element={<EventHandlingPage/>}/>
+          <Route path='/fetchapi' element={<FetchAPIPage/>}/>
+          <Route path='/listrendering' element={<ListRenderingPage/>}/>
+          <Route path='/props' element={<PropsPage/>}/>
+          <Route path='/state' element={<StatePage/>}/>
+          <Route path='/useeffect' element={<UseEffectPage/>}/>
+          <Route path='/useReducer' element={<UseReducerPage/>}/>
+          <Route path='/studentmanagement' element={<StudentManagementPage/>}/>
         </Routes>
       </BrowserRouter>
   )
