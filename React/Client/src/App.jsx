@@ -70,6 +70,8 @@ import StatePage from './pages/practice_17-07-2026/StatePage.jsx'
 import UseEffectPage from './pages/practice_17-07-2026/UseEffectPage.jsx'
 import UseReducerPage from './pages/practice_17-07-2026/UseReducerPage.jsx'
 import StudentManagementPage from './pages/Student-Management_17-07-2026/StudentManagementPage.jsx'
+import LoginLogout from './projects/Login/LoginLogout.jsx'
+import ConditionalRenderingExamplePage from './pages/ConditionalRendering_20-07-2026/ConditionalRenderingExamplePage.jsx'
 
 function App() {
   return (
@@ -101,6 +103,8 @@ function App() {
           <Route path='/useeffect' element={<UseEffectPage/>}/>
           <Route path='/useReducer' element={<UseReducerPage/>}/>
           <Route path='/studentmanagement' element={<StudentManagementPage/>}/>
+          <Route path='/conditionalrenderingexamples' element={<ConditionalRenderingExamplePage/>}/>
+          <Route path='/loginlogout' element={<LoginLogout/>}/>
         </Routes>
       </BrowserRouter>
   )
