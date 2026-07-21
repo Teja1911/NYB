@@ -72,6 +72,9 @@ import UseReducerPage from './pages/practice_17-07-2026/UseReducerPage.jsx'
 import StudentManagementPage from './pages/Student-Management_17-07-2026/StudentManagementPage.jsx'
 import LoginLogout from './projects/Login/LoginLogout.jsx'
 import ConditionalRenderingExamplePage from './pages/ConditionalRendering_20-07-2026/ConditionalRenderingExamplePage.jsx'
+import APIDemoPage from './pages/APIDemo_21-07-2026/APIDemoPage.jsx'
+import APIDemoFetchPage from './pages/APIDemo_21-07-2026/APIDemoFetchPage.jsx'
+import APIDemoAxiosPage from './pages/APIDemo_21-07-2026/APIDemoAxiosPage.jsx'
 
 function App() {
   return (
@@ -105,6 +108,9 @@ function App() {
           <Route path='/studentmanagement' element={<StudentManagementPage/>}/>
           <Route path='/conditionalrenderingexamples' element={<ConditionalRenderingExamplePage/>}/>
           <Route path='/loginlogout' element={<LoginLogout/>}/>
+          <Route path='/apidemopage' element={<APIDemoPage/>}/>
+          <Route path='/apidemofetchpage' element={<APIDemoFetchPage/>}/>
+          <Route path='/apidemoaxiospage' element={<APIDemoAxiosPage/>}/>
         </Routes>
       </BrowserRouter>
   )
