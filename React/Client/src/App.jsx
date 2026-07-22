@@ -75,6 +75,7 @@ import ConditionalRenderingExamplePage from './pages/ConditionalRendering_20-07-
 import APIDemoPage from './pages/APIDemo_21-07-2026/APIDemoPage.jsx'
 import APIDemoFetchPage from './pages/APIDemo_21-07-2026/APIDemoFetchPage.jsx'
 import APIDemoAxiosPage from './pages/APIDemo_21-07-2026/APIDemoAxiosPage.jsx'
+import RegistrationPage from './pages/DynamicForm_22-07-2026/RegistrationPage.jsx'
 
 function App() {
   return (
@@ -111,6 +112,7 @@ function App() {
           <Route path='/apidemopage' element={<APIDemoPage/>}/>
           <Route path='/apidemofetchpage' element={<APIDemoFetchPage/>}/>
           <Route path='/apidemoaxiospage' element={<APIDemoAxiosPage/>}/>
+          <Route path='/registrationform' element={<RegistrationPage/>}/>
         </Routes>
       </BrowserRouter>
   )
