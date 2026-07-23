@@ -76,6 +76,7 @@ import APIDemoPage from './pages/APIDemo_21-07-2026/APIDemoPage.jsx'
 import APIDemoFetchPage from './pages/APIDemo_21-07-2026/APIDemoFetchPage.jsx'
 import APIDemoAxiosPage from './pages/APIDemo_21-07-2026/APIDemoAxiosPage.jsx'
 import RegistrationPage from './pages/DynamicForm_22-07-2026/RegistrationPage.jsx'
+import HigherOrderComponent from './pages/HigherOrderComponent_23-07-2026/HigherOrderComponent.jsx'
 
 function App() {
   return (
@@ -113,6 +114,7 @@ function App() {
           <Route path='/apidemofetchpage' element={<APIDemoFetchPage/>}/>
           <Route path='/apidemoaxiospage' element={<APIDemoAxiosPage/>}/>
           <Route path='/registrationform' element={<RegistrationPage/>}/>
+          <Route path='/hoc' element={<HigherOrderComponent/>}/>
         </Routes>
       </BrowserRouter>
   )
