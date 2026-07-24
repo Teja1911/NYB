@@ -32,6 +32,8 @@ import APIDemoFetchPage from './pages/APIDemo_21-07-2026/APIDemoFetchPage.jsx'
 import APIDemoAxiosPage from './pages/APIDemo_21-07-2026/APIDemoAxiosPage.jsx'
 import RegistrationPage from './pages/DynamicForm_22-07-2026/RegistrationPage.jsx'
 import HigherOrderComponent from './pages/HigherOrderComponent_23-07-2026/HigherOrderComponent.jsx'
+import RevisionConceptsPage from './pages/RevisionConcepts_24-07-2026/RevisionConceptsPage.jsx'
+import RevisionConceptsMiniProjectPage from './pages/RevisionConceptsMiniProject_24-07-2026/RevisionConceptsMiniProjectPage.jsx'
 
 function App() {
   return (
@@ -70,6 +72,8 @@ function App() {
           <Route path='/apidemoaxiospage' element={<APIDemoAxiosPage/>}/>
           <Route path='/registrationform' element={<RegistrationPage/>}/>
           <Route path='/hoc' element={<HigherOrderComponent/>}/>
+          <Route path='/revisionconcepts' element={<RevisionConceptsPage/>}/>
+          <Route path='/revisionconceptsminiproject' element={<RevisionConceptsMiniProjectPage/>}/>
         </Routes>
       </BrowserRouter>
   )
