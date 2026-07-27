@@ -1,0 +1,12 @@
+.user-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.empty-users {
+  text-align: center;
+  padding: 30px;
+  font-size: 18px;
+  color: #666666;
+}

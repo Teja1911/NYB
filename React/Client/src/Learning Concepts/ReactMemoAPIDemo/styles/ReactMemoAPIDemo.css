@@ -1,0 +1,21 @@
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+}
+
+button {
+  padding: 10px 16px;
+  cursor: pointer;
+}

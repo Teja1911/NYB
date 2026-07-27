@@ -34,6 +34,8 @@ import RegistrationPage from './pages/DynamicForm_22-07-2026/RegistrationPage.js
 import HigherOrderComponent from './pages/HigherOrderComponent_23-07-2026/HigherOrderComponent.jsx'
 import RevisionConceptsPage from './pages/RevisionConcepts_24-07-2026/RevisionConceptsPage.jsx'
 import RevisionConceptsMiniProjectPage from './pages/RevisionConceptsMiniProject_24-07-2026/RevisionConceptsMiniProjectPage.jsx'
+import ReactMemoAPIDemoPage from './pages/ReactMemoAPIDemo_27-07-2026/ReactMemoAPIDemoPage.jsx'
+
 
 function App() {
   return (
@@ -74,6 +76,8 @@ function App() {
           <Route path='/hoc' element={<HigherOrderComponent/>}/>
           <Route path='/revisionconcepts' element={<RevisionConceptsPage/>}/>
           <Route path='/revisionconceptsminiproject' element={<RevisionConceptsMiniProjectPage/>}/>
+          <Route path='/reactmemoapidemo' element={<ReactMemoAPIDemoPage/>}/>
+          
         </Routes>
       </BrowserRouter>
   )

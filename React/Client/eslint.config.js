@@ -17,5 +17,9 @@ export default defineConfig([
       globals: globals.browser,
       parserOptions: { ecmaFeatures: { jsx: true } },
     },
+    rules: {
+      // Disable React 19 warning for state updates inside useEffect
+      "react-hooks/set-state-in-effect": "off",
+    },
   },
 ])
