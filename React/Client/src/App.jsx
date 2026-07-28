@@ -35,6 +35,8 @@ import HigherOrderComponent from './pages/HigherOrderComponent_23-07-2026/Higher
 import RevisionConceptsPage from './pages/RevisionConcepts_24-07-2026/RevisionConceptsPage.jsx'
 import RevisionConceptsMiniProjectPage from './pages/RevisionConceptsMiniProject_24-07-2026/RevisionConceptsMiniProjectPage.jsx'
 import ReactMemoAPIDemoPage from './pages/ReactMemoAPIDemo_27-07-2026/ReactMemoAPIDemoPage.jsx'
+import AdvancedReactPage from './pages/AdvancedReact_28-07-2026/AdvancedReactPage.jsx'
+import AdvanceReactMiniProjectPage from './pages/AdvanceReactMiniProject_28-07-2026/AdvanceReactMiniProjectPage.jsx'
 
 
 function App() {
@@ -77,7 +79,8 @@ function App() {
           <Route path='/revisionconcepts' element={<RevisionConceptsPage/>}/>
           <Route path='/revisionconceptsminiproject' element={<RevisionConceptsMiniProjectPage/>}/>
           <Route path='/reactmemoapidemo' element={<ReactMemoAPIDemoPage/>}/>
-          
+          <Route path="/advancereact" element={<AdvancedReactPage/>}/>
+          <Route path='/advancereactminiproject' element={<AdvanceReactMiniProjectPage/>}/>
         </Routes>
       </BrowserRouter>
   )
