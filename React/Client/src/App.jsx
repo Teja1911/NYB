@@ -37,6 +37,8 @@ import RevisionConceptsMiniProjectPage from './pages/RevisionConceptsMiniProject
 import ReactMemoAPIDemoPage from './pages/ReactMemoAPIDemo_27-07-2026/ReactMemoAPIDemoPage.jsx'
 import AdvancedReactPage from './pages/AdvancedReact_28-07-2026/AdvancedReactPage.jsx'
 import AdvanceReactMiniProjectPage from './pages/AdvanceReactMiniProject_28-07-2026/AdvanceReactMiniProjectPage.jsx'
+import PerformanceOptimizationPage from './pages/PerformanceOptimization_29-07-2026/PerformanceOptimizationPage.jsx'
+import PerformanceOptimizationMiniProjectPage from './pages/PerformanceOptimizationMiniProject_29-07-2026/PerformanceOptimizationMiniProjectPage.jsx'
 
 
 function App() {
@@ -81,6 +83,8 @@ function App() {
           <Route path='/reactmemoapidemo' element={<ReactMemoAPIDemoPage/>}/>
           <Route path="/advancereact" element={<AdvancedReactPage/>}/>
           <Route path='/advancereactminiproject' element={<AdvanceReactMiniProjectPage/>}/>
+          <Route path='/performanceoptimization' element={<PerformanceOptimizationPage/>}/>
+          <Route path='/performanceoptimizationminiproject' element={<PerformanceOptimizationMiniProjectPage/>}/>
         </Routes>
       </BrowserRouter>
   )
