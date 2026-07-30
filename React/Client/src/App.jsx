@@ -39,6 +39,8 @@ import AdvancedReactPage from './pages/AdvancedReact_28-07-2026/AdvancedReactPag
 import AdvanceReactMiniProjectPage from './pages/AdvanceReactMiniProject_28-07-2026/AdvanceReactMiniProjectPage.jsx'
 import PerformanceOptimizationPage from './pages/PerformanceOptimization_29-07-2026/PerformanceOptimizationPage.jsx'
 import PerformanceOptimizationMiniProjectPage from './pages/PerformanceOptimizationMiniProject_29-07-2026/PerformanceOptimizationMiniProjectPage.jsx'
+import ReactPortalsEventBindingPage from './pages/ReactPortals_EventBinding_30-07-2026/ReactPortalsEventBindingPage.jsx'
+import ReactPortalsEventBindingMiniProjectPage from './pages/ReactPortals_EventBinding_30-07-2026/ReactPortalsEventBindingMiniProjectPage.jsx'
 
 
 function App() {
@@ -85,6 +87,8 @@ function App() {
           <Route path='/advancereactminiproject' element={<AdvanceReactMiniProjectPage/>}/>
           <Route path='/performanceoptimization' element={<PerformanceOptimizationPage/>}/>
           <Route path='/performanceoptimizationminiproject' element={<PerformanceOptimizationMiniProjectPage/>}/>
+          <Route path='/reactportals' element={<ReactPortalsEventBindingPage/>}/>
+          <Route path='/reactportalsminiproject' element={<ReactPortalsEventBindingMiniProjectPage/>}/>
         </Routes>
       </BrowserRouter>
   )
