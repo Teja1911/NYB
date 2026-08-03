@@ -1,0 +1,168 @@
+/* ==========================================
+   Global Styles
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+/* ==========================================
+   Main Container
+========================================== */
+
+.destructuring-container{
+    max-width:1200px;
+    margin:40px auto;
+    padding:20px;
+}
+
+/* ==========================================
+   Main Heading
+========================================== */
+
+.main-title{
+    text-align:center;
+    color:#2c3e50;
+    margin-bottom:30px;
+    font-size:36px;
+}
+
+/* ==========================================
+   Card
+========================================== */
+
+.card{
+    background:#ffffff;
+    padding:25px;
+    margin-bottom:25px;
+    border-radius:10px;
+    box-shadow:0 6px 15px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+/* ==========================================
+   Card Heading
+========================================== */
+
+.card h2{
+    color:#34495e;
+    margin-bottom:20px;
+    border-bottom:2px solid #3498db;
+    padding-bottom:10px;
+}
+
+/* ==========================================
+   Paragraph
+========================================== */
+
+.card p{
+    margin:10px 0;
+    color:#555;
+    font-size:16px;
+}
+
+/* ==========================================
+   Labels
+========================================== */
+
+label{
+    display:block;
+    margin-top:12px;
+    margin-bottom:6px;
+    font-weight:bold;
+    color:#2c3e50;
+}
+
+/* ==========================================
+   Inputs
+========================================== */
+
+input{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    outline:none;
+    transition:.3s;
+}
+
+input:focus{
+    border-color:#3498db;
+    box-shadow:0 0 5px rgba(52,152,219,.4);
+}
+
+/* ==========================================
+   Buttons
+========================================== */
+
+button{
+    margin-top:15px;
+    padding:10px 20px;
+    border:none;
+    border-radius:6px;
+    background:#3498db;
+    color:#fff;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#2980b9;
+    transform:translateY(-2px);
+}
+
+/* ==========================================
+   Highlight Text
+========================================== */
+
+.highlight{
+    color:#27ae60;
+    font-weight:bold;
+}
+
+/* ==========================================
+   Code Block (Optional)
+========================================== */
+
+.code-box{
+    background:#2d3436;
+    color:#ffffff;
+    padding:15px;
+    border-radius:8px;
+    margin-top:15px;
+    overflow:auto;
+    font-family:monospace;
+}
+
+/* ==========================================
+   Responsive Design
+========================================== */
+
+@media(max-width:768px){
+
+    .destructuring-container{
+        padding:15px;
+    }
+    .main-title{
+        font-size:28px;
+    }
+    .card{
+        padding:18px;
+    }
+    button{
+        width:100%;
+    }
+
+}

@@ -41,6 +41,8 @@ import PerformanceOptimizationPage from './pages/PerformanceOptimization_29-07-2
 import PerformanceOptimizationMiniProjectPage from './pages/PerformanceOptimizationMiniProject_29-07-2026/PerformanceOptimizationMiniProjectPage.jsx'
 import ReactPortalsEventBindingPage from './pages/ReactPortals_EventBinding_30-07-2026/ReactPortalsEventBindingPage.jsx'
 import ReactPortalsEventBindingMiniProjectPage from './pages/ReactPortals_EventBinding_30-07-2026/ReactPortalsEventBindingMiniProjectPage.jsx'
+import ListRendering_Destructuring_LazyLoadingPage from './pages/ListRendering_Destructuring_LazyLoading_02-08-2026/ListRendering_Destructuring_LazyLoadingPage.jsx'
+import ListRendering_Destructuring_LazyLoadingMiniProject from './pages/ListRendering_Destructuring_LazyLoading_02-08-2026/ListRendering_Destructuring_LazyLoadingMiniProject.jsx'
 
 
 function App() {
@@ -89,6 +91,8 @@ function App() {
           <Route path='/performanceoptimizationminiproject' element={<PerformanceOptimizationMiniProjectPage/>}/>
           <Route path='/reactportals' element={<ReactPortalsEventBindingPage/>}/>
           <Route path='/reactportalsminiproject' element={<ReactPortalsEventBindingMiniProjectPage/>}/>
+          <Route path='/ListRendering_Destructuring_LazyLoading' element={<ListRendering_Destructuring_LazyLoadingPage/>}/>
+          <Route path='/ListRendering_Destructuring_LazyLoading_MiniProject' element={<ListRendering_Destructuring_LazyLoadingMiniProject/>}/>
         </Routes>
       </BrowserRouter>
   )
