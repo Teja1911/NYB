@@ -44,6 +44,7 @@ import ReactPortalsEventBindingMiniProjectPage from './pages/ReactPortals_EventB
 import ListRendering_Destructuring_LazyLoadingPage from './pages/ListRendering_Destructuring_LazyLoading_02-08-2026/ListRendering_Destructuring_LazyLoadingPage.jsx'
 import ListRendering_Destructuring_LazyLoadingMiniProject from './pages/ListRendering_Destructuring_LazyLoading_02-08-2026/ListRendering_Destructuring_LazyLoadingMiniProject.jsx'
 import BrowserRouting from './Learning Concepts/BrowserRouting/BrowserRouting.jsx'
+import AdvancedBrowserRoutingPage from './Learning Concepts/AdvancedBrowserRouting/AdvancedBrowserRoutingPage.jsx'
 
 
 function App() {
@@ -95,6 +96,7 @@ function App() {
           <Route path='/ListRendering_Destructuring_LazyLoading' element={<ListRendering_Destructuring_LazyLoadingPage/>}/>
           <Route path='/ListRendering_Destructuring_LazyLoading_MiniProject' element={<ListRendering_Destructuring_LazyLoadingMiniProject/>}/>
           <Route path='/BrowserRouting/*' element={<BrowserRouting/>}/>
+          <Route path='/advancedbrowserrouting/*' element={<AdvancedBrowserRoutingPage/>}/>
         </Routes>
       </BrowserRouter>
   )
