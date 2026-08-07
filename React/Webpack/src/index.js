@@ -1,9 +1,10 @@
+import person from "./person.js";
 import message from "./message.js";
 
 import "./style.css";
 
 import logo from "./logo.png";
-
+const employee=new person("Surya",23)
 const app = document.getElementById("app");
 
 app.innerHTML = `
@@ -12,7 +13,7 @@ app.innerHTML = `
 
         <h1>
 
-            Webpack Mini Project
+            Babel Mini Project
 
         </h1>
 
@@ -31,10 +32,11 @@ app.innerHTML = `
             class="logo"
 
         />
+        <h2>${employee.getDetails()}</h2>
 
         <p>
 
-            This project demonstrates Webpack Module Bundling, Loaders, Plugins and Asset Management.
+            This project demonstrates Babel Transpilation using Webpack.
 
         </p>
 
