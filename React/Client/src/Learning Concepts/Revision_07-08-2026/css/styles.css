@@ -1,0 +1,259 @@
+/* Global Styles */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#f4f4f4;
+
+}
+
+/* Navbar */
+
+.navbar{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:18px;
+
+    background:#222;
+
+}
+
+.navbar a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    transition:0.3s;
+
+}
+
+.navbar a:hover{
+
+    color:#4CAF50;
+
+}
+
+/* Active NavLink */
+
+.active-link{
+
+    color:#FFD700 !important;
+
+    border-bottom:3px solid #FFD700;
+
+    padding-bottom:4px;
+
+}
+
+/* Page Container */
+
+.page{
+
+    width:80%;
+
+    max-width:900px;
+
+    margin:40px auto;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:10px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,0.2);
+
+}
+
+/* Headings */
+
+h1{
+
+    color:#1976D2;
+
+    margin-bottom:20px;
+
+}
+
+h2{
+
+    color:#E91E63;
+
+    margin-top:20px;
+
+    margin-bottom:10px;
+
+}
+
+h3{
+
+    margin-top:12px;
+
+    color:#444;
+
+}
+
+/* Paragraph */
+
+p{
+
+    font-size:17px;
+
+    line-height:1.7;
+
+    margin-bottom:15px;
+
+    color:#555;
+
+}
+
+/* List */
+
+ul{
+
+    margin-left:25px;
+
+    margin-top:15px;
+
+}
+
+li{
+
+    margin-bottom:10px;
+
+    font-size:17px;
+
+}
+
+/* Links Inside Page */
+
+.page a{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    color:#1976D2;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+.page a:hover{
+
+    color:#4CAF50;
+
+}
+
+/* Button */
+
+button{
+
+    margin-top:20px;
+
+    padding:12px 25px;
+
+    background:#1976D2;
+
+    color:white;
+
+    border:none;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:0.3s;
+
+}
+
+button:hover{
+
+    background:#0D47A1;
+
+}
+
+/* Code Block */
+
+pre{
+
+    margin-top:20px;
+
+    background:#272822;
+
+    color:white;
+
+    padding:20px;
+
+    border-radius:8px;
+
+    overflow:auto;
+
+}
+
+/* Responsive Design */
+
+@media(max-width:768px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:12px;
+
+    }
+
+    .page{
+
+        width:95%;
+
+        padding:20px;
+
+    }
+
+    h1{
+
+        font-size:28px;
+
+    }
+
+    h2{
+
+        font-size:22px;
+
+    }
+
+    p{
+
+        font-size:16px;
+
+    }
+
+}

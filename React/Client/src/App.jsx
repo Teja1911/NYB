@@ -45,6 +45,7 @@ import ListRendering_Destructuring_LazyLoadingPage from './pages/ListRendering_D
 import ListRendering_Destructuring_LazyLoadingMiniProject from './pages/ListRendering_Destructuring_LazyLoading_02-08-2026/ListRendering_Destructuring_LazyLoadingMiniProject.jsx'
 import BrowserRouting from './Learning Concepts/BrowserRouting/BrowserRouting.jsx'
 import AdvancedBrowserRoutingPage from './Learning Concepts/AdvancedBrowserRouting/AdvancedBrowserRoutingPage.jsx'
+import ReactRevisionPage from './Learning Concepts/Revision_07-08-2026/ReactRevisionPage.jsx'
 
 
 function App() {
@@ -97,6 +98,7 @@ function App() {
           <Route path='/ListRendering_Destructuring_LazyLoading_MiniProject' element={<ListRendering_Destructuring_LazyLoadingMiniProject/>}/>
           <Route path='/BrowserRouting/*' element={<BrowserRouting/>}/>
           <Route path='/advancedbrowserrouting/*' element={<AdvancedBrowserRoutingPage/>}/>
+          <Route path='/revision/*' element={<ReactRevisionPage/>}/>
         </Routes>
       </BrowserRouter>
   )
