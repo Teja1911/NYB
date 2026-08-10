@@ -46,6 +46,7 @@ import ListRendering_Destructuring_LazyLoadingMiniProject from './pages/ListRend
 import BrowserRouting from './Learning Concepts/BrowserRouting/BrowserRouting.jsx'
 import AdvancedBrowserRoutingPage from './Learning Concepts/AdvancedBrowserRouting/AdvancedBrowserRoutingPage.jsx'
 import ReactRevisionPage from './Learning Concepts/Revision_07-08-2026/ReactRevisionPage.jsx'
+import ReactFundamentalsRevisionPage from './Learning Concepts/Revision-Concepts/ReactFundamentalsRevision/ReactFundamentalsRevisionPage.jsx'
 
 
 function App() {
@@ -99,6 +100,7 @@ function App() {
           <Route path='/BrowserRouting/*' element={<BrowserRouting/>}/>
           <Route path='/advancedbrowserrouting/*' element={<AdvancedBrowserRoutingPage/>}/>
           <Route path='/revision/*' element={<ReactRevisionPage/>}/>
+          <Route path='/revision-fundamentals' element={<ReactFundamentalsRevisionPage/>}/>
         </Routes>
       </BrowserRouter>
   )
