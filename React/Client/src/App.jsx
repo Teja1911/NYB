@@ -47,6 +47,7 @@ import BrowserRouting from './Learning Concepts/BrowserRouting/BrowserRouting.js
 import AdvancedBrowserRoutingPage from './Learning Concepts/AdvancedBrowserRouting/AdvancedBrowserRoutingPage.jsx'
 import ReactRevisionPage from './Learning Concepts/Revision_07-08-2026/ReactRevisionPage.jsx'
 import ReactFundamentalsRevisionPage from './Learning Concepts/Revision-Concepts/ReactFundamentalsRevision/ReactFundamentalsRevisionPage.jsx'
+import ReactHooksApiRevisionPage from './Learning Concepts/ReactHooksApiRevision/ReactHooksApiRevisionPage.jsx'
 
 
 function App() {
@@ -101,6 +102,7 @@ function App() {
           <Route path='/advancedbrowserrouting/*' element={<AdvancedBrowserRoutingPage/>}/>
           <Route path='/revision/*' element={<ReactRevisionPage/>}/>
           <Route path='/revision-fundamentals' element={<ReactFundamentalsRevisionPage/>}/>
+          <Route path='/revision-api-hooks' element={<ReactHooksApiRevisionPage/>}/>
         </Routes>
       </BrowserRouter>
   )

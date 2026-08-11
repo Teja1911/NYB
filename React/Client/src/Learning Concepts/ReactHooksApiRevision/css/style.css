@@ -1,0 +1,246 @@
+/* =========================================
+   React Hooks & API Revision
+   ========================================= */
+
+.hooks-revision-container {
+    width: 900px;
+    max-width: 90%;
+
+    margin: 40px auto;
+    padding: 30px;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #ffffff;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================
+   Page Heading
+   ========================================= */
+
+.hooks-revision-container h1 {
+    margin-bottom: 8px;
+
+    text-align: center;
+
+    color: #222;
+}
+
+.revision-description {
+    margin-bottom: 30px;
+
+    text-align: center;
+
+    color: #666;
+}
+
+
+/* =========================================
+   User Dashboard
+   ========================================= */
+
+.user-dashboard {
+    width: 100%;
+}
+
+
+/* =========================================
+   Search Section
+   ========================================= */
+
+.search-section {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+.search-section input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.search-section input:focus {
+    outline: none;
+
+    border-color: #2563eb;
+}
+
+.search-section button {
+    flex: 0 0 180px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+.search-section button:hover {
+    background-color: #1d4ed8;
+}
+
+
+/* =========================================
+   Users List
+   ========================================= */
+
+.users-list {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =========================================
+   User Card
+   ========================================= */
+
+.user-card {
+    padding: 20px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    background-color: #f8f9fa;
+}
+
+.user-card h3 {
+    margin-top: 0;
+
+    margin-bottom: 15px;
+
+    color: #222;
+}
+
+.user-card p {
+    margin: 8px 0;
+
+    color: #555;
+}
+
+
+/* =========================================
+   Loading
+   ========================================= */
+
+.loading-container {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 200px;
+
+    text-align: center;
+}
+
+.loading-spinner {
+    width: 35px;
+
+    height: 35px;
+
+    margin-bottom: 15px;
+
+    border: 4px solid #ddd;
+
+    border-top: 4px solid #2563eb;
+
+    border-radius: 50%;
+
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================
+   Error Message
+   ========================================= */
+
+.error-container {
+    padding: 25px;
+
+    text-align: center;
+
+    border: 1px solid #f0b4b4;
+
+    border-radius: 8px;
+
+    background-color: #fff5f5;
+}
+
+.error-container h3 {
+    margin-bottom: 10px;
+
+    color: #c62828;
+}
+
+.error-container p {
+    color: #666;
+}
+
+
+/* =========================================
+   Empty Users
+   ========================================= */
+
+.users-list > p {
+    grid-column: 1 / -1;
+
+    padding: 30px;
+
+    text-align: center;
+
+    color: #666;
+}
+
+
+/* =========================================
+   Responsive Design
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .hooks-revision-container {
+        width: 95%;
+
+        padding: 20px;
+    }
+
+    .users-list {
+        grid-template-columns: 1fr;
+    }
+
+    .search-section {
+        flex-direction: column;
+    }
+
+    .search-section button {
+        width: 100%;
+    }
+}
