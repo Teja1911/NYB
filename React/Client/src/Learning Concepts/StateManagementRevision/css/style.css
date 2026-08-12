@@ -1,0 +1,235 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+button {
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+/* Main Page */
+
+.state-management-page {
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.state-management-page > h1 {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.page-description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Common Section */
+
+.theme-demo,
+.reducer-demo,
+.product-list,
+.cart {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.theme-demo h2,
+.reducer-demo h2,
+.product-list h2,
+.cart h2 {
+    margin-bottom: 15px;
+}
+
+/* Context Demo */
+
+.theme-demo {
+    text-align: center;
+    transition: 0.3s;
+}
+
+.theme-demo.light {
+    background: #ffffff;
+    color: #222;
+}
+
+.theme-demo.dark {
+    background: #222;
+    color:  white;
+}
+
+.theme-demo.dark p{
+    color: white;
+}
+
+.theme-demo button {
+    margin-top: 15px;
+}
+
+/* Reducer Demo */
+
+.reducer-demo {
+    text-align: center;
+}
+
+.reducer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.reducer-buttons button {
+    background: #333;
+    color: white;
+}
+
+/* Products */
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.product-card h3 {
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.product-card button {
+    margin-top: 10px;
+    background: #2563eb;
+    color: white;
+}
+
+/* Cart */
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item h3 {
+    margin-bottom: 5px;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-controls button {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    background: #e5e7eb;
+}
+
+.quantity-controls span {
+    min-width: 20px;
+    text-align: center;
+}
+
+.cart-item > button {
+    background: #dc2626;
+    color: white;
+}
+
+.cart-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.cart-footer button {
+    background: #dc2626;
+    color: white;
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cart-item {
+        grid-template-columns: 1fr auto;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .state-management-page {
+        padding: 15px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reducer-buttons {
+        flex-direction: column;
+    }
+
+    .cart-header,
+    .cart-footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cart-item {
+        grid-template-columns: 1fr;
+    }
+}
