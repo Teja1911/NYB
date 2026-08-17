@@ -50,6 +50,8 @@ import ReactFundamentalsRevisionPage from './Learning Concepts/Revision-Concepts
 import ReactHooksApiRevisionPage from './Learning Concepts/ReactHooksApiRevision/ReactHooksApiRevisionPage.jsx'
 import StateManagementRevisionPage from './Learning Concepts/StateManagementRevision/StateManagementRevisionPage.jsx'
 import ReactPerformanceRevisionPage from './Learning Concepts/ReactPerformanceRevision/ReactPerformanceRevisionPage.jsx'
+import ReactRouterRevisionPage from './Learning Concepts/ReactRouterRevision/ReactRouterRevisionPage.jsx'
+import ReactFormsRevisionPage from './Learning Concepts/ReactFormsRevision/ReactFormsRevisionPage.jsx'
 
 
 function App() {
@@ -107,6 +109,8 @@ function App() {
           <Route path='/revision-api-hooks' element={<ReactHooksApiRevisionPage/>}/>
           <Route path='/revision-state-management' element={<StateManagementRevisionPage/>}/>
           <Route path='/revision-performance' element={<ReactPerformanceRevisionPage/>}/>
+          <Route path='/revision-router/*' element={<ReactRouterRevisionPage/>}/>
+          <Route path='/revision-react-forms' element={<ReactFormsRevisionPage/>}/>
         </Routes>
       </BrowserRouter>
   )
