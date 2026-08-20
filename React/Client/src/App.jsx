@@ -54,6 +54,7 @@ import ReactRouterRevisionPage from './Learning Concepts/ReactRouterRevision/Rea
 import ReactFormsRevisionPage from './Learning Concepts/ReactFormsRevision/ReactFormsRevisionPage.jsx'
 import APIIntegrationRevisionPage from './Learning Concepts/APIIntegrationRevision/APIIntegrationRevisionPage.jsx'
 import ReactStateManagementRevisionPage from './Learning Concepts/ReactStateManagementRevision/ReactStateManagementRevisionPage.jsx'
+import ReactRevisionPerformancePage from './Learning Concepts/ReactRevisionPerformance/ReactRevisionPerformancePage.jsx'
 
 
 function App() {
@@ -115,6 +116,7 @@ function App() {
           <Route path='/revision-react-forms' element={<ReactFormsRevisionPage/>}/>
           <Route path='/revision-react-api' element={<APIIntegrationRevisionPage/>}/>
           <Route path='/revision-react-state-management' element={<ReactStateManagementRevisionPage/>}/>
+          <Route path='/react-revision-performance' element={<ReactRevisionPerformancePage/>}/>
         </Routes>
       </BrowserRouter>
   )
