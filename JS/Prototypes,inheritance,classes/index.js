@@ -83,3 +83,41 @@ const vehicle=new Car("Toyota")
 vehicle.start()
 vehicle.stop()
 
+// Inheritance
+// It will take the methods from the parent class and used in the child class
+class Employee{
+    constructor(name,department){
+        this.name=name
+        this.department=department
+    }
+    login(){
+        return `${this.name} Logged in`
+    }
+}
+class Developer extends Employee{
+    constructor(name,language){
+        super(name,"Engineering")
+        this.language=language
+    }
+    code(){
+        return `${this.name} writes ${this.language}`
+    }
+}
+const developer=new Developer("Teja","JavaScript")
+console.log(developer.login())
+console.log(developer.code())
+
+// Encapsulation
+// Encapsulation means building data and behaviour together while controlling the access to internal state
+class BankAccount{
+    #balance=0
+    deposit(amount){
+        this.#balance+=amount
+    }
+    getBalance(){
+        return this.#balance
+    }
+} 
+const account=new BankAccount()
+account.deposit(10000)
+console.log(account.getBalance())
