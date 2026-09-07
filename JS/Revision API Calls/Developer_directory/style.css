@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 30px;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#developerContainer {
+    display: grid;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#developerContainer div {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+#loadingMessage {
+    font-weight: bold;
+}
+
+#errorMessage {
+    font-weight: bold;
+}
