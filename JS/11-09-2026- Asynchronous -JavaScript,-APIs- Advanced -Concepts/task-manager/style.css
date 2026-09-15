@@ -1,0 +1,15 @@
+body {
+    font-family: Arial;
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+li {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.done {
+    text-decoration: line-through;
+}

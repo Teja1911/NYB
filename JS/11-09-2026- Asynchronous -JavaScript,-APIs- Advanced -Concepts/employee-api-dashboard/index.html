@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Employee API Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Employee API Dashboard</h1>
+
+        <!-- Add Employee -->
+
+        <form id="employeeForm">
+
+            <input
+                type="text"
+                id="nameInput"
+                placeholder="Employee name"
+            >
+
+            <input
+                type="email"
+                id="emailInput"
+                placeholder="Employee email"
+            >
+
+            <button type="submit">
+                Add Employee
+            </button>
+
+        </form>
+
+
+        <!-- Status -->
+
+        <p id="loadingMessage"></p>
+
+        <p id="errorMessage"></p>
+
+        <p id="successMessage"></p>
+
+
+        <!-- Employee List -->
+
+        <div id="employeeList"></div>
+
+    </div>
+
+
+    <script type="module" src="./js/app.js"></script>
+
+</body>
+
+</html>
