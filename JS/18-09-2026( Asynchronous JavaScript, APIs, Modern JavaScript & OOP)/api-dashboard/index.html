@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product API Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div>
+                <h1>Product API Dashboard</h1>
+                <p>JavaScript API Management Application</p>
+            </div>
+            <button id="refreshButton">
+                Refresh
+            </button>
+        </header>
+        <!-- Add Product -->
+        <section class="add-section">
+            <h2>Add Product</h2>
+            <form id="productForm">
+                <input
+                    type="text"
+                    id="productTitle"
+                    placeholder="Product title"
+                    required
+                >
+                <input
+                    type="number"
+                    id="productPrice"
+                    placeholder="Price"
+                    min="1"
+                    required
+                >
+                <button type="submit">
+                    Add Product
+                </button>
+            </form>
+        </section>
+        <!-- Search and Filter -->
+        <section class="controls">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search products..."
+            >
+            <select id="filterSelect">
+                <option value="all">
+                    All Products
+                </option>
+                <option value="low">
+                    Price Below $50
+                </option>
+                <option value="high">
+                    Price $50+
+                </option>
+            </select>
+        </section>
+        <!-- Status -->
+        <div id="statusMessage" class="status"></div>
+        <!-- Product Count -->
+        <div class="product-info">
+            <h2>Products</h2>
+            <span id="productCount">
+                0 Products
+            </span>
+        </div>
+        <!-- Products -->
+        <section id="productContainer" class="product-grid"></section>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
