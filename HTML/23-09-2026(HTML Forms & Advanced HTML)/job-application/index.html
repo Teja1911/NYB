@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYB Infotech Job Application</title>
+    <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <h1>NYB Infotech</h1>
+        <p>Job Application Portal</p>
+    </header>
+    <hr>
+    <nav>
+        <a href="#personal">Personal Details</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#application">Application</a>
+    </nav>
+    <hr>
+    <main>
+        <section>
+            <figure>
+                <img src="logo.png" alt="NYBInfotech logo" width="180" height="100">
+                <figcaption>NYB Infotech</figcaption>
+            </figure>
+            <h2>Frontend Developer Position</h2>
+            <p> We are looking for talented developers who are interested in building modern web applications.</p>
+        </section>
+        <hr>
+        <form id="application" action="/submit-application" method="post" enctype="multipart/form-data">
+            <fieldset id="personal">
+                <legend>Personal information</legend>
+                <p>
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" minlength="3" maxlength="50" required>
+                </p>
+                <p>
+                    <label for="dateBirth">Date of Birth:</label>
+                    <input type="date" name="dateBirth" id="dateBirth" required>
+                </p>
+                <p>Gender:</p>
+                
+                <label>
+                    <input type="radio" name="gender" value="male">
+                    Male
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="female">
+                    Female
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="other">
+                    Other
+                </label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Contact Details</legend>
+                <p>
+                    <label for="emailAddress">Email:</label>
+                    <input type="email" name="email" id="emailAddress" placeholder="your@example.com" required>
+                </p>
+                <p>
+                    <label for="phoneNumber">Phone Number:</label>
+                    <input type="tel" id="phoneNumber" name="phone" pattern="[0-9]{10}" placeholder="9876543210" required>
+                </p>
+                <p>
+                    <label for="address">Address:</label>
+                    <textarea name="address" id="address" rows="5" cols="40" placeholder="Enter your complete address" maxlength="300" required></textarea>
+                </p>
+            </fieldset>
+            <br>
+            <fieldset id="education"> 
+                <legend>Education</legend>
+                <p>
+                    <label for="degree">Highest Degree:</label>
+                    <select name="degree" id="degree">
+                        <option value="">Select Degree</option>
+                        <option value="btech">B.Tech</option>
+                        <option value="be">BE</option>
+                        <option value="mca">MCA</option>
+                        <option value="mtech">M.Tech</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="university">University:</label>
+                    <input type="text" name="university" id="university" placeholder="Enter university name" required>
+                </p>
+                <p>
+                    <label for="graduationYear">Graduation Year:</label>
+                    <input type="number" id="graduationYear" name="graduationYear" min="2000" max="2035" required>
+                </p>
+            </fieldset>
+            <br>
+            <fieldset id="skills">
+                <legend>Technical Skills</legend>
+                <p>Select Your Skills</p>
+                <label>
+                    <input type="checkbox" name="skills" value="html">
+                    HTML
+                </label>
+                <label>
+                    <input type="checkbox" name="skills" value="css">
+                    CSS
+                </label>
+                <label>
+                    <input type="checkbox" name="skills" value="js">
+                    JavaScript
+                </label>
+                <label>
+                    <input type="checkbox" name="skills" value="react">
+                    React
+                </label>
+                <label>
+                    <input type="checkbox" name="skills" value="node">
+                    Node.js
+                </label>
+            </fieldset>
+            <br>
+            <fieldset id="experience">
+                <legend>Professional Experience</legend>
+                <p>
+                    <label for="experienceYears">Years of Experience</label>
+                    <input type="number" name="years" id="experienceYears" min="0" max="40" value="0" required>
+                </p>
+                <p>Employement Type:</p>
+                <label>
+                    <input type="radio" name="employeeType" value="full-time" required>
+                    Full Time
+                </label>
+                <label>
+                    <input type="radio" name="employeeType" value="part-time" required>
+                    Part Time
+                </label>
+                <label>
+                    <input type="radio" name="employeeType" value="internship" required>
+                    Internship
+                </label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Preferred Location</legend>
+                <label for="location">City:</label>
+                <select name="location" id="location">
+                    <option value="">Select City</option>
+                    <option value="hyderabad">Hyderabad</option>
+                    <option value="banglore">Banglore</option>
+                    <option value="chennai">Chennai</option>
+                    <option value="coimbatore">Coimbatore</option>
+                </select>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Resume Upload</legend>
+                <label for="resume">Upload Resume:</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Cover Letter</legend>
+                <label for="coverLetter">Why should we hire you?</label>
+                <br>
+                <textarea name="coverLetter" id="coverLetter" maxlength="1000" rows="8" cols="60" placeholder="Write your cover letter..." required></textarea>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Application Information</legend>
+                <p>
+                    <label for="applicationId">Application ID:</label>
+                    <input type="text" name="applicationId" id="applicationId" value="TECH-2026-001" readonly>
+                </p>
+                <p>
+                    <label for="unavailableField">Referral Code:</label>
+                    <input type="text" name="referralcode" id="unavailableField" value="Currently unaviable" disabled>
+                </p>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Terms and Condition</legend>
+                <label>
+                    <input type="checkbox" name="terms" value="accepted" required>
+                    I agree to the
+                    Terms and Conditions.
+                </label>
+            </fieldset>
+            <br>
+            <button type="submit">Submit Application</button>
+            <button type="reset">Reset Form</button>
+            <button type="button">Save for Later</button>
+        </form>
+        <hr>
+        <section>
+            <h2>Frequently Asked Questions:</h2>
+            <details>
+                <summary>Can freshers apply?</summary>
+                <p>
+                    Yes. Eligible freshers can apply
+                    for entry-level positions.
+                </p>
+            </details>
+            <details>
+                <summary>What resume formats are accepted?</summary>
+                <p>
+                    PDF, DOC and DOCX formats
+                    are accepted.
+                </p>
+            </details>
+            <details>
+                <summary>
+                    Is this form secure?
+                </summary>
+                <p>
+                    A production application should
+                    use HTTPS and server-side
+                    validation.
+                </p>
+            </details>
+        </section>
+        <hr>
+        <section>
+            <h2>Office Location</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.314466305348!2d78.38325139999999!3d17.4446566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa9403e6d6750337f%3A0x3be8f5af6f41a897!2sNYB%20Infotech!5e0!3m2!1sen!2sin!4v1790154484446!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </section>
+    </main>
+    <hr>
+    <footer>
+        <p>NYB Infotech &copy; 2026</p>
+        <p>All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
