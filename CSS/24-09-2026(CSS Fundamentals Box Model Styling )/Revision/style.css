@@ -1,0 +1,97 @@
+/* selector {
+    property: value;
+} */
+
+/* Universal */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+/* Main Heading */
+h1 {
+    color: blue;
+    font-size: 40px;
+}
+
+/* Element Selector */
+p {
+    color: gray;
+    font-size: 18px;
+}
+
+/* Class Selector */
+.highlight {
+    color: red;
+}
+
+/* Attribute Selector */
+input[type="email"] {
+    border: 2px solid blue;
+}
+
+input[type="text"] {
+    border: 2px solid rgb(240, 189, 21);
+}
+
+input[type="password"] {
+    border: 2px solid rgb(0, 217, 255);
+}
+
+/* Group Selector */
+/*  h1,
+    h2,
+    p {
+        color: blue;
+} */
+
+/* Descendant Selector */
+.company p {
+    color: blue;
+}
+
+.companies p {
+    color: rgb(6, 241, 65);
+}
+
+/* Child Selector */
+.company1 > p {
+    color: red;
+}
+
+/* Adjacent Sibling Selector */
+h2 + p {
+    color: red;
+}
+
+/* General Sibling Selector */
+h2 ~ p {
+    color: blue;
+}
+
+/* CSS Specificty */
+/* Inline
+   ↓
+ID
+   ↓
+Class / Attribute / Pseudo-class
+   ↓
+Element
+   ↓
+Universal */
+
+/* !important */
+/* !important gives a declaration very high priority in the cascade. */
+button {
+    color: antiquewhite;
+    background: green !important;
+    border-radius: 5px;
+}
+
+.colorHeading{
+    color: blue;
+}

@@ -1,0 +1,145 @@
+/* =========================
+   GLOBAL SETTINGS
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header {
+    background-color: #e3f2fd;
+    padding: 30px;
+    border-bottom: 3px solid #1565c0;
+}
+
+
+/* ID selector */
+
+#company-title {
+    color: #0d47a1;
+    margin-bottom: 10px;
+}
+
+
+/* Descendant selector */
+
+.site-header p {
+    text-align: center;
+    color: #555;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navigation {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.navigation a {
+    color: #1565c0;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+
+/* =========================
+   MAIN SECTIONS
+========================= */
+
+.section {
+    width: 80%;
+    min-height: 150px;
+
+    margin: 30px auto;
+    padding: 25px;
+
+    background-color: white;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+
+/* Grouping selector */
+
+.section h2,
+.section p {
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+form {
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px;
+
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+
+/* Attribute selector */
+
+input[required] {
+    border-left: 4px solid #1565c0;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+    padding: 10px 20px;
+
+    background-color: #1565c0;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+    margin-top: 40px;
+    padding: 20px;
+
+    background-color: #263238;
+    color: white;
+
+    text-align: center;
+}

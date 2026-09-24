@@ -1,0 +1,768 @@
+/* =========================================================
+   TECHNOVA / NYB INFOTECH
+   CSS DAY - EXTERNAL STYLESHEET
+========================================================= */
+
+
+/* =========================================================
+   1. UNIVERSAL SELECTOR
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   2. BODY / GLOBAL STYLING
+   ========================================================= */
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f4f7fb;
+
+    color: #222;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   3. TYPOGRAPHY
+   ========================================================= */
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 21px;
+}
+
+p {
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   4. HEADER
+   ========================================================= */
+
+header {
+    background-color: #0d47a1;
+
+    color: white;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border-bottom: 4px solid #1976d2;
+}
+
+
+/* ID SELECTOR
+   Used by the Employee page */
+
+#home {
+    background-color: #0d47a1;
+}
+
+
+/* =========================================================
+   5. HEADER PARAGRAPH
+   ========================================================= */
+
+header p {
+    margin: 5px 0;
+
+    color: #e3f2fd;
+}
+
+
+/* =========================================================
+   6. NAVIGATION
+   ========================================================= */
+
+nav {
+    background-color: #1565c0;
+
+    padding: 15px;
+
+    text-align: center;
+
+    border-bottom: 2px solid #0d47a1;
+}
+
+
+/* DESCENDANT SELECTOR */
+
+nav a {
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    margin: 0 12px;
+
+    padding: 8px 12px;
+
+    border-radius: 5px;
+}
+
+
+/* ATTRIBUTE SELECTOR */
+
+nav a[href^="#"] {
+    transition: background-color 0.3s;
+}
+
+
+/* =========================================================
+   7. NAVIGATION HOVER
+   ========================================================= */
+
+nav a:hover {
+    background-color: #0d47a1;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   8. MAIN CONTENT
+   ========================================================= */
+
+main {
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 30px auto;
+}
+
+
+/* =========================================================
+   9. SECTIONS
+   ========================================================= */
+
+section {
+    background-color: white;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    border: 1px solid #d7dce2;
+
+    border-radius: 10px;
+}
+
+
+/* GROUPING SELECTOR */
+
+section h2,
+section h3 {
+    color: #0d47a1;
+}
+
+
+/* =========================================================
+   10. DESCENDANT SELECTOR
+   ========================================================= */
+
+section p {
+    color: #444;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   11. CHILD SELECTOR
+   ========================================================= */
+
+section > h2 {
+    border-bottom: 2px solid #1976d2;
+
+    padding-bottom: 8px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   12. GENERAL SIBLING SELECTOR
+   ========================================================= */
+
+h2 ~ p {
+    color: #444;
+}
+
+
+/* =========================================================
+   13. LINKS
+   ========================================================= */
+
+a {
+    color: #1565c0;
+
+    font-weight: 500;
+}
+
+
+a:hover {
+    color: #0d47a1;
+}
+
+
+/* =========================================================
+   14. PROFILE IMAGE
+   ========================================================= */
+
+img {
+    max-width: 100%;
+
+    height: auto;
+}
+
+
+/* Employee profile image */
+
+#profile img {
+    width: 200px;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    border: 4px solid #1565c0;
+
+    border-radius: 10px;
+
+    display: block;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   15. FIGURE
+   ========================================================= */
+
+figure {
+    margin: 0 0 25px 0;
+
+    text-align: center;
+
+    padding: 20px;
+
+    background-color: #f1f8ff;
+
+    border: 1px solid #c7def5;
+
+    border-radius: 10px;
+}
+
+
+figcaption {
+    margin-top: 10px;
+
+    font-weight: bold;
+
+    color: #0d47a1;
+}
+
+
+/* =========================================================
+   16. LISTS
+   ========================================================= */
+
+ul,
+ol {
+    padding-left: 30px;
+}
+
+
+li {
+    margin-bottom: 6px;
+}
+
+
+/* =========================================================
+   17. DEFINITION LIST
+   ========================================================= */
+
+dt {
+    font-weight: bold;
+
+    color: #0d47a1;
+
+    margin-top: 10px;
+}
+
+
+dd {
+    margin-left: 20px;
+
+    color: #555;
+}
+
+
+/* =========================================================
+   18. TABLE
+   ========================================================= */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 20px;
+
+    background-color: white;
+}
+
+
+/* GROUPING SELECTOR */
+
+th,
+td {
+    border: 1px solid #b8c1cc;
+
+    padding: 12px;
+
+    text-align: left;
+}
+
+
+/* TABLE HEADER */
+
+th {
+    background-color: #1565c0;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+
+/* TABLE ROW */
+
+tr:nth-child(even) {
+    background-color: #f1f5f9;
+}
+
+
+/* =========================================================
+   19. TABLE CAPTION
+   ========================================================= */
+
+caption {
+    caption-side: top;
+
+    padding: 10px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: #0d47a1;
+}
+
+
+/* =========================================================
+   20. AUDIO AND VIDEO
+   ========================================================= */
+
+audio,
+video {
+    max-width: 100%;
+
+    display: block;
+
+    margin: 15px 0;
+}
+
+
+/* =========================================================
+   21. ASIDE
+   ========================================================= */
+
+aside {
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 30px auto;
+
+    padding: 25px;
+
+    background-color: #e3f2fd;
+
+    border: 1px solid #90caf9;
+
+    border-left: 5px solid #1565c0;
+
+    border-radius: 8px;
+}
+
+
+aside h2,
+aside h3 {
+    color: #0d47a1;
+}
+
+
+/* =========================================================
+   22. FORM
+   ========================================================= */
+
+form {
+    width: 100%;
+}
+
+
+/* =========================================================
+   23. FIELDSET
+   ========================================================= */
+
+fieldset {
+    margin-bottom: 25px;
+
+    padding: 20px;
+
+    border: 2px solid #90caf9;
+
+    border-radius: 8px;
+
+    background-color: #fafdff;
+}
+
+
+/* =========================================================
+   24. LEGEND
+   ========================================================= */
+
+legend {
+    padding: 5px 12px;
+
+    font-weight: bold;
+
+    color: #0d47a1;
+
+    background-color: white;
+
+    border: 1px solid #90caf9;
+
+    border-radius: 5px;
+}
+
+
+/* =========================================================
+   25. FORM LABEL
+   ========================================================= */
+
+label {
+    display: inline-block;
+
+    margin-bottom: 6px;
+
+    font-weight: 600;
+
+    color: #333;
+}
+
+
+/* =========================================================
+   26. TEXT INPUTS
+   ========================================================= */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+input[type="file"],
+textarea,
+select {
+    width: 100%;
+
+    padding: 10px;
+
+    margin-top: 5px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #aab4bf;
+
+    border-radius: 5px;
+
+    background-color: white;
+
+    font-family: inherit;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   27. FOCUS
+   ========================================================= */
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+
+    border-color: #1565c0;
+
+    box-shadow: 0 0 0 2px rgba(21, 101, 192, 0.15);
+}
+
+
+/* =========================================================
+   28. REQUIRED ATTRIBUTE SELECTOR
+   ========================================================= */
+
+input[required],
+textarea[required],
+select[required] {
+    border-left: 4px solid #1565c0;
+}
+
+
+/* =========================================================
+   29. RADIO AND CHECKBOX
+   ========================================================= */
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+
+    margin-right: 6px;
+}
+
+
+/* =========================================================
+   30. READONLY
+   ========================================================= */
+
+input[readonly] {
+    background-color: #eeeeee;
+
+    color: #555;
+}
+
+
+/* =========================================================
+   31. DISABLED
+   ========================================================= */
+
+input:disabled {
+    background-color: #dddddd;
+
+    color: #888;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   32. VALIDATION
+   ========================================================= */
+
+input:valid,
+textarea:valid,
+select:valid {
+    border-color: #66bb6a;
+}
+
+
+input:invalid,
+textarea:invalid,
+select:invalid {
+    border-color: #ef5350;
+}
+
+
+/* =========================================================
+   33. BUTTONS
+   ========================================================= */
+
+button {
+    padding: 11px 20px;
+
+    margin: 5px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #1565c0;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* BUTTON HOVER */
+
+button:hover {
+    background-color: #0d47a1;
+}
+
+
+/* BUTTON ACTIVE */
+
+button:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================================================
+   34. DETAILS / SUMMARY
+   ========================================================= */
+
+details {
+    margin-bottom: 15px;
+
+    padding: 15px;
+
+    border: 1px solid #c5d5e5;
+
+    border-radius: 6px;
+
+    background-color: #f8fbff;
+}
+
+
+summary {
+    cursor: pointer;
+
+    font-weight: bold;
+
+    color: #0d47a1;
+}
+
+
+/* =========================================================
+   35. IFRAME
+   ========================================================= */
+
+iframe {
+    max-width: 100%;
+
+    border: 2px solid #1565c0 !important;
+
+    border-radius: 8px;
+}
+
+
+/* =========================================================
+   36. HR
+   ========================================================= */
+
+hr {
+    border: none;
+
+    border-top: 1px solid #d0d7de;
+
+    margin: 25px 0;
+}
+
+
+/* =========================================================
+   37. FOOTER
+   ========================================================= */
+
+footer {
+    background-color: #263238;
+
+    color: white;
+
+    padding: 25px;
+
+    text-align: center;
+
+    margin-top: 30px;
+
+    border-top: 4px solid #1565c0;
+}
+
+
+footer p {
+    margin: 5px 0;
+
+    color: #e0e0e0;
+}
+
+
+/* =========================================================
+   38. OPACITY EXAMPLE
+   ========================================================= */
+
+#media video:last-child {
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   39. SPECIFICITY EXAMPLE
+   ========================================================= */
+
+/*
+    Element selector:
+    p
+    Specificity is lower.
+
+    Class selector:
+    .example
+    Specificity is higher.
+
+    ID selector:
+    #example
+    Specificity is higher than class.
+
+    We don't need !important here because
+    normal CSS specificity is enough.
+*/
+
+
+/* =========================================================
+   40. !IMPORTANT EXAMPLE
+   ========================================================= */
+
+/*
+    Avoid using !important unnecessarily.
+
+    Example:
+
+    p {
+        color: red !important;
+    }
+
+    Use !important only when there is
+    a genuine CSS priority requirement.
+*/
