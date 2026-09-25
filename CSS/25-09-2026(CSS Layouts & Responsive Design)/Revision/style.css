@@ -1,0 +1,204 @@
+.box {
+    position: static;
+    background-color: brown;
+    top: 50px;
+}
+.box1 {
+    background-color: blueviolet;
+    position: relative;
+    left: 30px;
+}
+
+/* Absolute positioning needs a positioning reference. */
+.card {
+    position: relative;
+    background-color: aqua;
+}
+.badge1 {
+    background-color: gray;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    bottom: 2px;
+}
+
+.service-card {
+    position: relative;
+    width: 300px;
+    padding: 30px;
+    border: 1px solid #ddd;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+}
+
+/* Z index */
+/* z-index: 3
+   ↑
+z-index: 2
+   ↑
+z-index: 1
+   ↑
+page
+
+Higher stacking level generally appears above a lower one when the elements participate in the same stacking context. */
+.hero {
+    position: relative;
+}
+
+.background-box {
+    position: absolute;
+    inset: 0;
+    background-color: #1565c0;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.profile-image {
+    float: left;
+    width: 200px;
+    margin-right: 20px;
+}
+
+.chat-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+}
+/* Because it creates the positioning context for .badge. */
+/* Parent
+position: relative
+       ↓
+Child
+position: absolute
+       ↓
+Child positions relative to parent */
+.card1 {
+    position: relative;
+}
+
+.badge2 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.photo {
+    float: left;
+}
+
+footer {
+    clear: both;
+}
+
+.services {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+    align-content: center;
+    gap: 20px;
+    /* flex-wrap: wrap; */
+    /* they can move to another row. */
+}
+
+.container {
+    display: flex;
+}
+.item {
+    flex-grow: 1;
+}
+
+/* .card {
+    flex-basis: 250px;
+} */
+
+
+.itemThird {
+    order: -1;
+}
+
+.service-container1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-card1 {
+    flex: 1 1 250px;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: white;
+}
+
+/* fr means fraction of available space. */
+.service-grid {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.layout {
+    display: grid;
+
+    grid-template-columns: 1fr 300px;
+
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "main sidebar"
+        "footer footer";
+}
+
+.header {
+    grid-area: header;
+}
+
+.nav {
+    grid-area: nav;
+}
+
+.main {
+    grid-area: main;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+
+    /* CSS for smaller screens */
+    .service-container {
+        flex-direction: row;
+    }
+
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>NYB Infotech</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-content">
+            <div class="logo">
+                <h1>NYB Infotech</h1>
+                <p>WHERE IT MEET INGENUITY</p>
+
+            </div>
+            <!-- RESPONSIVE NAVIGATION -->
+            <nav class="navigation">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#company">Company</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <!-- HERO SECTION-->
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <span class="hero-badge">Digital Innovation</span>
+                    <h2>Building Digital Solutions for Modern Businesses</h2>
+                    <p> We create reliable, scalable and user-friendly digital experiences for businesses.</p>
+                    <a href="#contact" class="primary-button"> Get Started</a>
+                </div>
+            </div>
+        </section>
+        <!-- ABOUT SECTION -->
+        <section id="about" class="section">
+            <div class="container about-layout">
+                <div class="about-image">
+                    <img src="images/logo.png" alt="NYB Infotech company team">
+                </div>
+                <div class="about-content">
+                    <span class="section-label">About Us</span>
+                    <h2> Technology That Solves Real Problems</h2>
+                    <p>NYB Infotech provides modern technology services for businesses.</p>
+                    <p> Our focus is building responsive, scalable and user-friendly applications.</p>
+                    <ul>
+                        <li>Modern Web Development</li>
+                        <li>Responsive Applications</li>
+                        <li>Cloud Solutions</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--SERVICES SECTION-->
+        <section id="services" class="section services-section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-label">What We Do</span>
+                    <h2>Our Services</h2>
+                    <p>Technology solutions designed for modern businesses.</p>
+                </div>
+                <div class="service-grid">
+                    <article class="service-card">
+                        <span class="service-number">01</span>
+                        <h3>Web Development</h3>
+                        <p>Responsive and scalable web applications.</p>
+                    </article>
+                    <article class="service-card">
+                        <span class="service-number">02</span>
+                        <h3>Mobile Applications</h3>
+                        <p>Modern applications for mobile platforms.</p>
+                    </article>
+                    <article class="service-card">
+                        <span class="service-number">03</span>
+                        <h3>Cloud Solutions</h3>
+                        <p>Reliable and scalable cloud infrastructure.</p>
+                    </article>
+                    <article class="service-card">
+                        <span class="service-number">04</span>
+                        <h3>API Integration</h3>
+                        <p>Secure and efficient API integrations.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- COMPANY INFORMATION-->
+        <section id="company" class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-label">Company</span>
+                    <h2>Company Information</h2>
+                </div>
+                <div class="table-wrapper">
+                    <table>
+                        <caption>NYB Infotech Company Details</caption>
+                        <thead>
+                            <tr>
+                                <th>Department</th>
+                                <th>Employees</th>
+                                <th>Location</th>
+                                <th>Experience</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Development</td>
+                                <td>45</td>
+                                <td>Hyderabad</td>
+                                <td>5+ Years</td>
+                            </tr>
+                            <tr>
+                                <td>Design</td>
+                                <td>15</td>
+                                <td>Hyderabad</td>
+                                <td>4+ Years</td>
+                            </tr>
+                            <tr>
+                                <td>Management</td>
+                                <td>10</td>
+                                <td>Hyderabad</td>
+                                <td>7+ Years</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section contact-section">
+            <div class="container contact-layout">
+                <div class="contact-information">
+                    <span class="section-label">Contact Us</span>
+                    <h2>Let's Build Something Together</h2>
+                    <p>Have a project or business requirement? Send us a message.</p>
+                    <div class="contact-item">
+                        <strong>Email</strong>
+                        <a href="mailto:info@technova.com">nyb@infotech.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Phone</strong>
+                        <a href="tel:+919876543210">+91 98765 43210</a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required >
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service</option>
+                            <option value="web">Web Development</option>
+                            <option value="mobile">Mobile Application</option>
+                            <option value="cloud">Cloud Solutions</option>
+                            <option value="api">API Integration</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your requirement" required></textarea>
+                    </div>
+                    <button type="submit" class="primary-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div>
+                <h3>NYB Infotech </h3>
+                <p>Building digital solutions for modern businesses.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>NYB Infotech © 2026</p>
+        </div>
+    </footer>
+    <!-- FIXED BUTTON -->
+    <a href="#home" class="back-to-top">↑</a>
+</body>
+</html>

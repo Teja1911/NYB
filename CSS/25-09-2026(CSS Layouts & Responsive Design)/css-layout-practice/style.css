@@ -1,0 +1,314 @@
+/* =========================================
+   BASIC
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    padding: 20px;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f5f5f5;
+}
+
+h1 {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+section {
+    background-color: white;
+
+    padding: 20px;
+
+    margin-bottom: 30px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+
+/* =========================================
+   1. FLEXBOX
+========================================= */
+
+.flex-container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.box {
+    padding: 30px;
+
+    background-color: lightblue;
+
+    border: 1px solid blue;
+
+    text-align: center;
+
+    flex: 1;
+}
+
+
+/* =========================================
+   2. GRID
+========================================= */
+
+.grid-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+}
+
+.grid-container .box {
+    background-color: lightgreen;
+
+    border-color: green;
+}
+
+
+/* =========================================
+   3. POSITION
+========================================= */
+
+.position-container {
+
+    position: relative;
+
+    height: 250px;
+
+    border: 2px solid #999;
+}
+
+
+/* Static */
+
+.static-box {
+
+    padding: 15px;
+
+    background-color: lightgray;
+
+    width: 120px;
+}
+
+
+/* Relative */
+
+.relative-box {
+
+    position: relative;
+
+    left: 50px;
+
+    top: 20px;
+
+    padding: 15px;
+
+    background-color: orange;
+
+    width: 120px;
+}
+
+
+/* Absolute */
+
+.absolute-box {
+
+    position: absolute;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    padding: 15px;
+
+    background-color: pink;
+
+    width: 120px;
+}
+
+
+/* =========================================
+   4. Z-INDEX
+========================================= */
+
+.zindex-container {
+
+    position: relative;
+
+    height: 200px;
+}
+
+.z-box {
+
+    position: absolute;
+
+    width: 150px;
+
+    height: 100px;
+
+    padding: 30px;
+
+    text-align: center;
+}
+
+.box-one {
+
+    background-color: orange;
+
+    left: 50px;
+
+    top: 40px;
+
+    z-index: 1;
+}
+
+.box-two {
+
+    background-color: lightblue;
+
+    left: 100px;
+
+    top: 80px;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   5. FLOAT
+========================================= */
+
+.float-box {
+
+    float: left;
+
+    width: 150px;
+
+    height: 100px;
+
+    margin-right: 20px;
+
+    background-color: lightcoral;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.clear {
+
+    clear: both;
+}
+
+
+/* =========================================
+   6. FLEX ALIGNMENT
+========================================= */
+
+.alignment-container {
+
+    height: 200px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border: 2px solid #999;
+}
+
+.small-box {
+
+    padding: 30px;
+
+    background-color: violet;
+}
+
+
+/* =========================================
+   7. RESPONSIVE
+========================================= */
+
+.responsive-container {
+
+    display: flex;
+
+    gap: 10px;
+}
+
+.responsive-box {
+
+    flex: 1;
+
+    padding: 30px;
+
+    background-color: lightseagreen;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* Flexbox */
+
+    .flex-container {
+
+        flex-direction: column;
+    }
+
+
+    /* Grid */
+
+    .grid-container {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Responsive boxes */
+
+    .responsive-container {
+
+        flex-direction: column;
+    }
+
+
+    /* Position */
+
+    .position-container {
+
+        height: 300px;
+    }
+
+}
