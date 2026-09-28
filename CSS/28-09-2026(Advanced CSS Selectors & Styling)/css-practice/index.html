@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Advanced Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1>CSS Advanced Practice</h1>
+        <p>Simple examples of selectors and styling concepts</p>
+    </header>
+    <main class="page-content">
+        <!-- Selectors Revision -->
+        <section class="topic-section">
+            <h2>1. CSS Selectors - Revision</h2>
+            <div class="revision-area">
+                <h3>Element Selector</h3>
+                <p class="revision-text">This paragraphs demonstrates a class selectors.</p>
+                <div id="revision-unique">
+                    This demonstrates an ID selector
+                </div>
+            </div>
+        </section>
+        <!-- Attribute Selector -->
+        <section class="topic-section">
+            <h2>2. Attribute Selector</h2>
+            <div class="attribute-area">
+                <input type="text" placeholder="Text input">
+                <br><br>
+                <input type="email" placeholder="Email input">
+                <br><br>
+                <input type="password" placeholder="Password input">
+            </div>
+        </section>
+        <!-- Descendant Selector -->
+        <section class="topic-section">
+            <h2>3. Descendant Selector</h2>
+            <div class="descendant-area">
+                <p>Paragraph inside the container</p>
+                <div>
+                    <p>Paragraph nested deeper</p>
+                </div>
+            </div>
+            <p>Paragraph outside the container</p>
+        </section>
+        <!-- Child Selector -->
+        <section class="topic-section">
+            <h2>4. Child Selector</h2>
+            <div class="child-area">
+                <p>Direct child paragraph</p>
+                <div>
+                    <p>Nested paragraph</p>
+                </div>
+            </div>
+        </section>
+        <!-- Sibling Selectors -->
+        <section class="topic-section">
+            <h2>5. Sibling Selectors</h2>
+            <h3 class="sibling-heading">Heading</h3>
+            <p>First paragraph</p>
+            <p>Second paragraph</p>
+            <p>Third paragraph</p>
+        </section>
+        <!-- Hover -->
+        <section class="topic-section">
+            <h2>6. :hover</h2>
+            <button class="hover-control">Move Mouse Over Me</button>
+        </section>
+        <!-- Focus -->
+        <section class="topic-section">
+            <h2>7. :focus</h2>
+            <input type="text" class="focus-control" placeholder="Click inside this input">
+        </section>
+        <!-- Active -->
+        <section class="topic-section">
+            <h2>8. :active</h2>
+            <button class="active-control">Press and Hold Me </button>
+        </section>
+        <!-- Visited -->
+        <section class="topic-section">
+            <h2>9. :visited</h2>
+            <a class="visited-control"  href="https://example.com" target="_blank">Visit Example Website</a>
+        </section>
+        <!-- First Child -->
+         <section class="topic-section">
+            <h2>10. :first-child</h2>
+            <ul class="first-child-list">
+                <li>First Item</li>
+                <li>Second Item</li>
+                <li>Third Item</li>
+            </ul>
+        </section>
+        <!-- Last Child -->
+        <section class="topic-section">
+            <h2>11. :last-child</h2>
+            <ul class="last-child-list">
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Orange</li>
+            </ul>
+        </section>
+        <!-- Nth Child -->
+        <section class="topic-section">
+            <h2>12. :nth-child()</h2>
+            <div class="nth-child-area">
+                <div>Item 1</div>
+                <div>Item 2</div>
+                <div>Item 3</div>
+                <div>Item 4</div>
+                <div>Item 5</div>
+            </div>
+        </section>
+        <!-- Before -->
+        <section class="topic-section">
+            <h2>13. ::before</h2>
+            <p class="before-example">Important Message</p>
+        </section>
+        <!-- After -->
+         <section class="topic-section">
+            <h2>14. ::after</h2>
+            <p class="after-example">Task Completed</p>
+        </section>
+        <!-- First Letter -->
+        <section class="topic-section">
+            <h2>15. ::first-letter</h2>
+            <p class="letter-example">Learning CSS becomes easier when you practice every concept.</p>
+        </section>
+        <!-- First Line -->
+        <section class="topic-section">
+            <h2>16. ::first-line</h2>
+            <p class="line-example">CSS is used to style webpages. It controls colors, spacing, layouts and many other things.</p>
+        </section>
+        <!-- Specificity -->
+         <section class="topic-section">
+            <h2>17. CSS Specificity</h2>
+            <p id="specific-id" class="specific-class" >Which color will I get?</p>
+        </section>
+        <!-- Inheritance -->
+         <section class="topic-section">
+            <h2>18. CSS Inheritance</h2>
+            <div class="inherit-parent">
+                <h3>Parent Heading</h3>
+                <p>Child paragraph inherits the parent's text color.</p>
+                <span>Child span also inherits.</span>
+            </div>
+        </section>
+        <!-- CSS Variables -->
+        <section class="topic-section">
+            <h2>19. CSS Variables</h2>
+            <div class="variable-example">
+                <h3>Reusable Color</h3>
+                <button>Reusable Button</button>
+            </div>
+        </section>
+        <!-- Colors and Background -->
+        <section class="topic-section">
+            <h2>20. Colors and Backgrounds</h2>
+            <div class="color-example">
+                <h3>Colors Example</h3>
+                <p>This section demonstrates text and background colors.</p>
+            </div>
+        </section>
+        <!-- Borders -->
+        <section class="topic-section">
+            <h2>21. Borders</h2>
+            <div class="border-example">
+                Border Example
+            </div>
+        </section>
+        <!-- Box Model -->
+          <section class="topic-section">
+            <h2>22. Box Model</h2>
+            <div class="box-model-example">
+                Content
+            </div>
+            <p>The box above contains content, padding and border, with margin outside.</p>
+        </section>
+    </main>
+    <footer class="page-footer">
+        CSS Practice - End
+    </footer>
+</body>
+</html>
