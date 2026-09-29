@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-shell">
+        <!-- HEADER -->
+        <header class="dashboard-header">
+            <h1>Dashboard</h1>
+            <nav class="dashboard-nav">
+                <a href="#">Home</a>
+                <a href="#">Reports</a>
+                <a href="#">Settings</a>
+            </nav>
+        </header>
+        <!-- SIDEBAR -->
+        <aside class="dashboard-sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li>Dashboard</li>
+                <li>Users</li>
+                <li>Products</li>
+                <li>Reports</li>
+            </ul>
+        </aside>
+        <!-- MAIN -->
+        <main class="dashboard-main">
+            <h2>Overview</h2>
+            <!-- CARDS -->
+            <div class="dashboard-cards">
+                <article class="dashboard-card">
+                    <h3>Users</h3>
+                    <p>120</p>
+                </article>
+                <article class="dashboard-card">
+                    <h3>Orders</h3>
+                    <p>80</p>
+                </article>
+                <article class="dashboard-card">
+                    <h3>Sales</h3>
+                    <p>₹50K</p>
+                </article>
+                <article class="dashboard-card">
+                    <h3>Products</h3>
+                    <p>45</p>
+                </article>
+            </div>
+            <!-- CONTENT AREA -->
+            <section class="dashboard-content">
+                <div class="dashboard-table-box">
+                    <h3>Recent Users</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Role</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ravi</td>
+                                <td>Developer</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td>Priya</td>
+                                <td>Designer</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td>Kiran</td>
+                                <td>Tester</td>
+                                <td>Pending</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- LIST -->
+                <div class="dashboard-list-box">
+                    <h3>Tasks</h3>
+                    <ul>
+                        <li>Complete UI</li>
+                        <li>Review code</li>
+                        <li>Test application</li>
+                        <li>Deploy project</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <!-- FOOTER -->
+        <footer class="dashboard-footer">
+            Dashboard Practice © 2026
+        </footer>
+    </div>
+</body>
+</html>

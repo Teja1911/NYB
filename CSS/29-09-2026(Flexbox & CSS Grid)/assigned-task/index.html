@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox and Grid Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- FLEXBOX NAVIGATION -->
+    <header class="practice-topbar">
+        <h1>My Page</h1>
+        <nav class="practice-navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <!-- FLEXBOX CARDS -->
+        <section class="practice-flex-section">
+            <h2>Flexbox Cards</h2>
+            <div class="practice-card-row">
+                <article class="practice-flex-card">
+                    <h3>HTML</h3>
+                    <p>Structure</p>
+                </article>
+                <article class="practice-flex-card">
+                    <h3>CSS</h3>
+                    <p>Styling</p>
+                </article>
+                <article class="practice-flex-card">
+                    <h3>JavaScript</h3>
+                    <p>Logic</p>
+                </article>
+            </div>
+        </section>
+        <!-- GRID WITH repeat() AND fr -->
+        <section class="practice-grid-section">
+            <h2>Grid Cards</h2>
+            <div class="practice-grid-cards">
+                <article>Card 1</article>
+                <article>Card 2</article>
+                <article>Card 3</article>
+                <article>Card 4</article>
+                <article>Card 5</article>
+                <article>Card 6</article>
+            </div>
+        </section>
+        <!-- minmax -->
+        <section class="practice-minmax-section">
+            <h2>Responsive Grid</h2>
+            <div class="practice-minmax-layout">
+                <div>Box A</div>
+                <div>Box B</div>
+                <div>Box C</div>
+                <div>Box D</div>
+            </div>
+        </section>
+        <!-- GRID AREAS -->
+        <section class="practice-area-section">
+            <h2>Grid Areas</h2>
+            <div class="practice-area-layout">
+                <div class="practice-area-one">Header</div>
+                <div class="practice-area-two">Sidebar</div>
+                <div class="practice-area-three">Main</div>
+                <div class="practice-area-four">Footer</div>
+            </div>
+        </section>
+        <!-- NESTED GRID -->
+        <section class="practice-nested-section">
+            <h2>Nested Grid</h2>
+            <div class="practice-outer-grid">
+                <div class="practice-nested-box">
+                    <h3>Outer Grid Item</h3>
+                    <div class="practice-inner-grid">
+                        <span>Inner 1</span>
+                        <span>Inner 2</span>
+                        <span>Inner 3</span>
+                        <span>Inner 4</span>
+                    </div>
+                </div>
+                <div class="practice-nested-box">Another Item</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

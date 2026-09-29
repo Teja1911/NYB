@@ -1,0 +1,587 @@
+/* Common Page Style */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+.concept-page-header {
+    padding: 30px;
+    text-align: center;
+    background-color: #1565c0;
+    color: white;
+}
+
+.concept-page {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.topic-flex-container,
+.topic-flex-direction,
+.topic-justify-content,
+.topic-align-items,
+.topic-align-content,
+.topic-flex-wrap,
+.topic-flex-gap,
+.topic-flex-grow,
+.topic-flex-shrink,
+.topic-flex-basis,
+.topic-flex-order,
+.topic-grid-container,
+.topic-grid-rows-columns,
+.topic-grid-columns,
+.topic-grid-rows,
+.topic-grid-gap,
+.topic-grid-repeat,
+.topic-grid-fr,
+.topic-grid-minmax,
+.topic-grid-areas,
+.topic-grid-placement,
+.topic-nested-grid,
+.topic-flex-vs-grid {
+    padding: 25px;
+    margin-bottom: 25px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+
+.topic-flex-container h2,
+.topic-flex-direction h2,
+.topic-justify-content h2,
+.topic-align-items h2,
+.topic-align-content h2,
+.topic-flex-wrap h2,
+.topic-flex-gap h2,
+.topic-flex-grow h2,
+.topic-flex-shrink h2,
+.topic-flex-basis h2,
+.topic-flex-order h2,
+.topic-grid-container h2,
+.topic-grid-rows-columns h2,
+.topic-grid-columns h2,
+.topic-grid-rows h2,
+.topic-grid-gap h2,
+.topic-grid-repeat h2,
+.topic-grid-fr h2,
+.topic-grid-minmax h2,
+.topic-grid-areas h2,
+.topic-grid-placement h2,
+.topic-nested-grid h2,
+.topic-flex-vs-grid h2 {
+    color: #0d47a1;
+    margin-top: 0;
+}
+
+.flex-container-example {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    border: 2px solid #90caf9;
+}
+
+/* Flex Container */
+.flex-container-item-a,
+.flex-container-item-b,
+.flex-container-item-c {
+    flex: 1;
+    padding: 25px;
+    background-color: #e3f2fd;
+    text-align: center;
+}
+
+/* Flex Direction */
+.flex-direction-example {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 200px;
+    padding: 10px;
+    border: 2px solid #81c784;
+}
+
+.flex-direction-item-a,
+.flex-direction-item-b,
+.flex-direction-item-c {
+    padding: 15px;
+    background-color: #e8f5e9;
+    text-align: center;
+}
+
+/* Justify Content */
+.justify-content-example {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border: 2px solid #ffcc80;
+}
+
+.justify-content-item-a,
+.justify-content-item-b,
+.justify-content-item-c {
+    padding: 20px;
+    background-color: #fff3e0;
+}
+
+/* ALIGN-ITEMS */
+.align-items-example {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 150px;
+    padding: 10px;
+    border: 2px solid #ce93d8;
+}
+
+.align-items-item-a,
+.align-items-item-b,
+.align-items-item-c {
+    padding: 20px;
+    background-color: #f3e5f5;
+}
+
+.align-items-item-b {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* ALIGN-CONTENT */
+.align-content-example {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    height: 250px;
+    gap: 10px;
+    padding: 10px;
+    border: 2px solid #80cbc4;
+}
+
+.align-content-item-a,
+.align-content-item-b,
+.align-content-item-c,
+.align-content-item-d,
+.align-content-item-e,
+.align-content-item-f {
+    width: 30%;
+    padding: 15px;
+    background-color: #e0f2f1;
+    text-align: center;
+}
+
+/* FLEX-WRAP */
+
+.flex-wrap-example {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 500px;
+    max-width: 100%;
+    padding: 10px;
+    border: 2px solid #ef9a9a;
+}
+
+.flex-wrap-item-a,
+.flex-wrap-item-b,
+.flex-wrap-item-c,
+.flex-wrap-item-d,
+.flex-wrap-item-e {
+    width: 140px;
+    padding: 20px;
+    background-color: #ffebee;
+    text-align: center;
+}
+
+/* GAP */
+.flex-gap-example {
+    display: flex;
+    gap: 30px;
+    padding: 15px;
+    border: 2px solid #90caf9;
+}
+
+.flex-gap-item-a,
+.flex-gap-item-b,
+.flex-gap-item-c {
+    padding: 25px;
+    background-color: #e3f2fd;
+}
+
+/* FLEX-GROW */
+.flex-grow-example {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border: 2px solid #a5d6a7;
+}
+
+.flex-grow-item-a {
+    flex-grow: 1;
+    padding: 25px;
+    background-color: #c8e6c9;
+}
+
+.flex-grow-item-b {
+    flex-grow: 2;
+    padding: 25px;
+    background-color: #81c784;
+}
+
+/* FLEX-SHRINK */
+.flex-shrink-example {
+    display: flex;
+    width: 400px;
+    max-width: 100%;
+    border: 2px solid #ffab91;
+    overflow: hidden;
+}
+
+.flex-shrink-item-a {
+    flex-shrink: 1;
+    flex-basis: 300px;
+    padding: 25px;
+    background-color: #ffccbc;
+}
+
+.flex-shrink-item-b {
+    flex-shrink: 0;
+    flex-basis: 200px;
+    padding: 25px;
+    background-color: #ffab91;
+}
+
+/* FLEX-BASIS */
+.flex-basis-example {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.flex-basis-item-a {
+    flex-basis: 200px;
+    padding: 25px;
+    background-color: #d1c4e9;
+}
+
+.flex-basis-item-b {
+    flex-basis: 100px;
+    padding: 25px;
+    background-color: #b39ddb;
+}
+
+/* ORDER */
+
+.flex-order-example {
+    display: flex;
+    gap: 10px;
+}
+
+.flex-order-item-a {
+    order: 3;
+    padding: 25px;
+    background-color: #ffcdd2;
+}
+
+.flex-order-item-b {
+    order: 1;
+    padding: 25px;
+    background-color: #c5cae9;
+}
+
+.flex-order-item-c {
+    order: 2;
+    padding: 25px;
+    background-color: #b2dfdb;
+}
+
+/* GRID CONTAINER */
+
+.grid-container-example {
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+    border: 2px solid #90caf9;
+}
+
+.grid-container-item-a,
+.grid-container-item-b,
+.grid-container-item-c {
+    padding: 25px;
+    background-color: #e3f2fd;
+    text-align: center;
+}
+
+/* GRID ROWS AND COLUMNS */
+.grid-rows-columns-example {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:100px 100px;
+    gap: 10px;
+}
+
+.grid-rows-columns-example div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e8f5e9;
+    border: 1px solid #81c784;
+}
+
+/* GRID-TEMPLATE-COLUMNS */
+.grid-columns-example {
+    display: grid;
+    grid-template-columns:100px 200px 1fr;
+    gap: 10px;
+    overflow-x: auto;
+}
+
+.grid-columns-example div {
+    padding: 25px;
+    background-color: #fff3e0;
+    text-align: center;
+}
+
+/* GRID-TEMPLATE-ROWS */
+.grid-rows-example {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:60px 100px 140px;
+    gap: 10px;
+}
+
+.grid-rows-example div {
+    padding: 20px;
+    background-color: #f3e5f5;
+    border: 1px solid #ce93d8;
+}
+
+/* GRID GAP */
+.grid-gap-example {
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap: 30px;
+    padding: 10px;
+    border: 2px solid #80cbc4;
+}
+
+.grid-gap-example div {
+    padding: 25px;
+    background-color: #e0f2f1;
+    text-align: center;
+}
+
+/* REPEAT() */
+.grid-repeat-example {
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap: 10px;
+}
+
+.grid-repeat-example div {
+    padding: 25px;
+    background-color: #dcedc8;
+    text-align: center;
+}
+
+/* FR */
+.grid-fr-example {
+    display: grid;
+    grid-template-columns:1fr 2fr;
+    gap: 10px;
+}
+
+.grid-fr-example div {
+    padding: 30px;
+    background-color: #ffecb3;
+    text-align: center;
+}
+
+/* MINMAX() */
+.grid-minmax-example {
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.grid-minmax-example div {
+    padding: 30px;
+    background-color: #d7ccc8;
+    text-align: center;
+}
+
+/* GRID AREAS */
+
+.grid-area-example {
+    display: grid;
+    grid-template-columns:150px 1fr;
+    grid-template-rows:70px 150px 70px;
+    grid-template-areas:
+        "head head"
+        "side main"
+        "foot foot";
+    gap: 10px;
+}
+
+.grid-area-header {
+    grid-area: head;
+    padding: 20px;
+    background-color: #bbdefb;
+}
+
+.grid-area-side {
+    grid-area: side;
+    padding: 20px;
+    background-color: #c8e6c9;
+}
+
+.grid-area-main {
+    grid-area: main;
+    padding: 20px;
+    background-color: #ffe0b2;
+}
+
+.grid-area-footer {
+    grid-area: foot;
+    padding: 20px;
+    background-color: #d1c4e9;
+}
+
+/* GRID ITEM PLACEMENT */
+.grid-placement-example {
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap: 10px;
+}
+
+.grid-placement-wide {
+    grid-column: 1 / 3;
+    padding: 30px;
+    background-color: #b3e5fc;
+    text-align: center;
+}
+
+.grid-placement-small-a {
+    padding: 30px;
+    background-color: #c8e6c9;
+    text-align: center;
+}
+
+.grid-placement-small-b {
+    padding: 30px;
+    background-color: #ffccbc;
+    text-align: center;
+}
+
+/* NESTED GRID */
+
+.nested-grid-outer {
+    display: grid;
+    grid-template-columns:2fr 1fr;
+    gap: 15px;
+}
+
+.nested-grid-parent {
+    padding: 20px;
+    background-color: #e3f2fd;
+}
+
+.nested-grid-inner {
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.nested-grid-inner div {
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #90caf9;
+    text-align: center;
+}
+
+.nested-grid-side {
+    padding: 20px;
+    background-color: #fff3e0;
+}
+
+
+/* FLEXBOX VS GRID */
+
+.flex-vs-grid-wrapper {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: 20px;
+}
+
+.flex-vs-grid-flex,
+.flex-vs-grid-grid {
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.flex-vs-grid-flex-items {
+    display: flex;
+    gap: 10px;
+}
+
+.flex-vs-grid-flex-items span {
+    flex: 1;
+    padding: 20px;
+    background-color: #e3f2fd;
+    text-align: center;
+}
+
+.flex-vs-grid-grid-items {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: 10px;
+}
+
+.flex-vs-grid-grid-items span {
+    padding: 20px;
+    background-color: #e8f5e9;
+    text-align: center;
+}
+
+.concept-page-footer {
+    padding: 25px;
+    text-align: center;
+    background-color: #222;
+    color: white;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 650px) {
+
+    .grid-area-example {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+            "head"
+            "side"
+            "main"
+            "foot";
+    }
+
+    .flex-vs-grid-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .flex-direction-example {
+        width: 100%;
+    }
+
+    .grid-columns-example {
+        grid-template-columns:100px 150px 200px;
+    }
+}
