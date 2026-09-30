@@ -1,0 +1,275 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #1f2937;
+}
+
+/* Navigation */
+.assignment-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 6%;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.assignment-logo h1 {
+    margin: 0;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+}
+.assignment-navigation {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.assignment-navigation a {
+    color: #1f2937;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease,transform 0.3s ease;
+}
+.assignment-navigation a:hover {
+    color: #2563eb;
+    transform: translateY(-2px);
+}
+
+/* Hero */
+.assignment-hero {
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 70px 6%;
+    overflow: hidden;
+    background-color: #dbeafe;
+}
+.assignment-hero-content {
+    flex: 1;
+}
+.assignment-label {
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #2563eb;
+}
+.assignment-hero h2 {
+    max-width: 700px;
+    margin: 10px 0;
+    font-size: clamp(2rem, 6vw, 4.5rem);
+    line-height: 1.1;
+}
+.assignment-hero p {
+    max-width: 600px;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+.assignment-hero-button {
+    margin-top: 20px;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.assignment-hero-button:hover {
+    transform: scale(1.08);
+    background-color: #1d4ed8;
+}
+
+/* Hero Shape */
+.assignment-hero-shape {
+    width: 220px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #2563eb;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    animation: assignmentFloat 3s infinite alternate;
+}
+@keyframes assignmentFloat {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-20px);
+    }
+}
+
+/* cards */
+.assignment-cards-section {
+    padding: 70px 6%;
+}
+.assignment-cards-section > h2 {
+    text-align: center;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+}
+.assignment-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 30px auto 0;
+}
+.assignment-feature-card {
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.assignment-feature-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+.assignment-card-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    background-color: #dbeafe;
+    color: #2563eb;
+    font-weight: bold;
+}
+
+/* Image Section */
+.assignment-image-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 70px 6%;
+    background-color: white;
+}
+.assignment-image-wrapper {
+    flex: 1;
+    min-width: 0;
+}
+.assignment-image-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+.assignment-image-content {
+    flex: 1;
+}
+.assignment-image-content h2 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+/* Contact */
+.assignment-contact-section {
+    position: relative;
+    padding: 80px 6%;
+    text-align: center;
+    background-color: #1e293b;
+    color: white;
+    overflow: hidden;
+}
+.assignment-contact-section::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: -50px;
+    right: 10%;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+.assignment-contact-section h2 {
+    position: relative;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+.assignment-contact-section p {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+}
+.assignment-contact-button {
+    position: relative;
+    margin-top: 25px;
+    padding: 14px 28px;
+    border: 2px solid white;
+    border-radius: 8px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+.assignment-contact-button:hover {
+    background-color: white;
+    color: #1e293b;
+    transform: scale(1.05);
+}
+
+/* Footer */
+.assignment-footer {
+    padding: 25px;
+    text-align: center;
+    background-color: #111827;
+    color: white;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .assignment-hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .assignment-hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .assignment-image-section {
+        flex-direction: column;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .assignment-header {
+        position: static;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    .assignment-navigation {
+        justify-content: center;
+        gap: 12px;
+    }
+    .assignment-hero {
+        min-height: auto;
+        padding: 50px 5%;
+    }
+    .assignment-hero-shape {
+        width: 160px;
+        height: 160px;
+    }
+    .assignment-cards-section,
+    .assignment-image-section {
+        padding: 50px 5%;
+    }
+}
