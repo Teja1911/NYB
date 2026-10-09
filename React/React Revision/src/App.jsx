@@ -8,6 +8,12 @@ import PracticalAssessmentProps from './React Revision/06-10-2026(props state co
 import ListsFormsEventsConcepts from './React Revision/07-10-2026(Lists, Forms, Events & useEffect)/Concepts Example/ListsFormsEventsConcepts'
 import ListsFormsEventsAssignment from './React Revision/07-10-2026(Lists, Forms, Events & useEffect)/Assigned Task/ListsFormsEventsAssignment'
 import UserRegistrationAssessment from './React Revision/07-10-2026(Lists, Forms, Events & useEffect)/Pratical Task/UserRegistrationAssessment'
+import ApiIntegrationConcepts from './React Revision/08-10-2026(api integration data handling)/ApiIntegrationConcepts'
+import ApiIntegrationAssignment from './React Revision/08-10-2026(api integration data handling)/ApiIntegrationAssignment'
+import UserManagementAssessment from './React Revision/08-10-2026(api integration data handling)/UserManagementAssessment/UserManagementAssessment'
+import ContextCustomHooksConcepts from './React Revision/09-10-2026(context api custom hooks)/ContextCustomHooksConcepts'
+import ContextCustomHooksAssignment from './React Revision/09-10-2026(context api custom hooks)/ContextCustomHooksAssignment'
+import TeamTaskTracker from './React Revision/09-10-2026(context api custom hooks)/TeamTaskTracker/TeamTaskTracker'
 function App() {
   return (
     <BrowserRouter>
@@ -21,6 +27,12 @@ function App() {
         <Route path='/ListsFormsEventsConcepts' element={<ListsFormsEventsConcepts />} />
         <Route path='/ListsFormsEventsAssignment' element={<ListsFormsEventsAssignment />} />
         <Route path='/UserRegistrationAssessment' element={<UserRegistrationAssessment />} />
+        <Route path='/ApiIntegrationConcepts' element={<ApiIntegrationConcepts />} />
+        <Route path='/ApiIntegrationAssignment' element={<ApiIntegrationAssignment />} />
+        <Route path='/UserManagementAssessment' element={<UserManagementAssessment />} /> 
+        <Route path='/ContextCustomHooksConcepts' element={<ContextCustomHooksConcepts />} />
+        <Route path='/ContextCustomHooksAssignment' element={<ContextCustomHooksAssignment />} />
+        <Route path='/TeamTaskTracker' element={<TeamTaskTracker />} />
       </Routes>   
     </BrowserRouter>
   )
