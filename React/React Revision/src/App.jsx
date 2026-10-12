@@ -14,6 +14,9 @@ import UserManagementAssessment from './React Revision/08-10-2026(api integratio
 import ContextCustomHooksConcepts from './React Revision/09-10-2026(context api custom hooks)/ContextCustomHooksConcepts'
 import ContextCustomHooksAssignment from './React Revision/09-10-2026(context api custom hooks)/ContextCustomHooksAssignment'
 import TeamTaskTracker from './React Revision/09-10-2026(context api custom hooks)/TeamTaskTracker/TeamTaskTracker'
+import ReactRouterConcepts from './React Revision/12-10-2026-react-router/ReactRouterConcepts'
+import ReactRouterAssignment from './React Revision/12-10-2026-react-router/ReactRouterAssignment'
+import EmployeeManagementAssessment from './React Revision/12-10-2026-react-router/EmployeeManagementAssessment/EmployeeManagementAssessment'
 function App() {
   return (
     <BrowserRouter>
@@ -33,6 +36,9 @@ function App() {
         <Route path='/ContextCustomHooksConcepts' element={<ContextCustomHooksConcepts />} />
         <Route path='/ContextCustomHooksAssignment' element={<ContextCustomHooksAssignment />} />
         <Route path='/TeamTaskTracker' element={<TeamTaskTracker />} />
+        <Route path='/ReactRouterConcepts/*' element={<ReactRouterConcepts/>}/>
+        <Route path='/ReactRouterAssignment/*' element={<ReactRouterAssignment/>}/>
+        <Route path='/EmployeeManagementAssessment/*' element={<EmployeeManagementAssessment/>}/>
       </Routes>   
     </BrowserRouter>
   )
