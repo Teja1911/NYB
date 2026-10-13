@@ -17,6 +17,9 @@ import TeamTaskTracker from './React Revision/09-10-2026(context api custom hook
 import ReactRouterConcepts from './React Revision/12-10-2026-react-router/ReactRouterConcepts'
 import ReactRouterAssignment from './React Revision/12-10-2026-react-router/ReactRouterAssignment'
 import EmployeeManagementAssessment from './React Revision/12-10-2026-react-router/EmployeeManagementAssessment/EmployeeManagementAssessment'
+import ReducerContextConcepts from './React Revision/13-10-2026(useReducer context)/ReducerContextConcepts'
+import ReducerContextAssignement from './React Revision/13-10-2026(useReducer context)/ReducerContextAssignment'
+import EmployeeStateAssessment from './React Revision/13-10-2026(useReducer context)/EmployeeStateAssessment/EmployeeStateAssessment'
 function App() {
   return (
     <BrowserRouter>
@@ -39,6 +42,9 @@ function App() {
         <Route path='/ReactRouterConcepts/*' element={<ReactRouterConcepts/>}/>
         <Route path='/ReactRouterAssignment/*' element={<ReactRouterAssignment/>}/>
         <Route path='/EmployeeManagementAssessment/*' element={<EmployeeManagementAssessment/>}/>
+        <Route path='/ReducerContextConcepts/*' element={<ReducerContextConcepts />} />
+        <Route path='/ReducerContextAssignment/*' element={<ReducerContextAssignement />} />
+        <Route path='/EmployeeStateAssessment/*' element={<EmployeeStateAssessment />} />
       </Routes>   
     </BrowserRouter>
   )
