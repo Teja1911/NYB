@@ -20,6 +20,9 @@ import EmployeeManagementAssessment from './React Revision/12-10-2026-react-rout
 import ReducerContextConcepts from './React Revision/13-10-2026(useReducer context)/ReducerContextConcepts'
 import ReducerContextAssignement from './React Revision/13-10-2026(useReducer context)/ReducerContextAssignment'
 import EmployeeStateAssessment from './React Revision/13-10-2026(useReducer context)/EmployeeStateAssessment/EmployeeStateAssessment'
+import ReactPerformanceConcepts from './React Revision/14-10-2026(react performance)/ReactPerformanceConcepts'
+import ReactPerformanceAssignment from './React Revision/14-10-2026(react performance)/ReactPerformanceAssignment'
+import EmployeeAnalyticsAssessment from './React Revision/14-10-2026(react performance)/EmployeeAnalyticsAssessment/EmployeeAnalyticsAssessment'
 function App() {
   return (
     <BrowserRouter>
@@ -45,6 +48,9 @@ function App() {
         <Route path='/ReducerContextConcepts/*' element={<ReducerContextConcepts />} />
         <Route path='/ReducerContextAssignment/*' element={<ReducerContextAssignement />} />
         <Route path='/EmployeeStateAssessment/*' element={<EmployeeStateAssessment />} />
+        <Route path='/ReactPerformanceConcepts/*' element={<ReactPerformanceConcepts/>}/>
+        <Route path='/ReactPerformanceAssignment/*' element={<ReactPerformanceAssignment />} />
+        <Route path='/EmployeeAnalyticsAssessment/*' element={<EmployeeAnalyticsAssessment/>}/>
       </Routes>   
     </BrowserRouter>
   )
