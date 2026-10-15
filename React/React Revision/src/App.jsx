@@ -23,6 +23,9 @@ import EmployeeStateAssessment from './React Revision/13-10-2026(useReducer cont
 import ReactPerformanceConcepts from './React Revision/14-10-2026(react performance)/ReactPerformanceConcepts'
 import ReactPerformanceAssignment from './React Revision/14-10-2026(react performance)/ReactPerformanceAssignment'
 import EmployeeAnalyticsAssessment from './React Revision/14-10-2026(react performance)/EmployeeAnalyticsAssessment/EmployeeAnalyticsAssessment'
+import ReusableArchitectureConcepts from './React Revision/15-10-2026(reusable components architecture)/ReusableArchitectureConcepts'
+import ReusableArchitectureAssignment from './React Revision/15-10-2026(reusable components architecture)/ReusableArchitectureAssignment'
+import EmployeePortal from './React Revision/15-10-2026(reusable components architecture)/EmployeePortal/EmployeePortal'
 function App() {
   return (
     <BrowserRouter>
@@ -51,6 +54,9 @@ function App() {
         <Route path='/ReactPerformanceConcepts/*' element={<ReactPerformanceConcepts/>}/>
         <Route path='/ReactPerformanceAssignment/*' element={<ReactPerformanceAssignment />} />
         <Route path='/EmployeeAnalyticsAssessment/*' element={<EmployeeAnalyticsAssessment/>}/>
+        <Route path='/ReusableArchitectureConcepts/*' element={<ReusableArchitectureConcepts/>}/>
+        <Route path='/ReusableArchitectureAssignment/*' element={<ReusableArchitectureAssignment />} />
+        <Route path='/EmployeePortal/*' element={<EmployeePortal />} />
       </Routes>   
     </BrowserRouter>
   )

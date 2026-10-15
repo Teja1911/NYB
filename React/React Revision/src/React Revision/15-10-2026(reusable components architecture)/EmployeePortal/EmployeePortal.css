@@ -1,0 +1,189 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f3f6fb;
+  color: #25344b;
+  font-family: Arial, sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.portal {
+  width: min(1100px, 94%);
+  margin: 32px auto;
+}
+
+.portal-header,
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.portal-header {
+  margin-bottom: 24px;
+}
+
+.portal-header h1 {
+  margin: 5px 0;
+  font-size: 29px;
+}
+
+.portal-header p {
+  color: #68788e;
+}
+
+.eyebrow {
+  color: #a7652c !important;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.employee-count {
+  padding: 10px 14px;
+  border-radius: 20px;
+  background: #e3ecff;
+  color: #2459a6;
+  font-weight: bold;
+}
+
+.panel {
+  margin-bottom: 22px;
+  padding: 22px;
+  border: 1px solid #e0e7f0;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 16px #25344b08;
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+.employee-form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: end;
+  gap: 14px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin: 12px 0;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.form-field input {
+  width: 100%;
+  min-width: 0;
+  padding: 11px;
+  border: 1px solid #ccd6e4;
+  border-radius: 8px;
+  background: white;
+  font-weight: normal;
+}
+
+.form-field input:focus {
+  outline: 2px solid #bdd2f5;
+  border-color: #2459a6;
+}
+
+.button {
+  padding: 10px 14px;
+  border: 1px solid #2459a6;
+  border-radius: 8px;
+  background: #2459a6;
+  color: white;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #194681;
+}
+
+.button.danger {
+  border-color: #b23b45;
+  background: #b23b45;
+}
+
+.button.danger:hover {
+  background: #922d36;
+}
+
+.section-heading {
+  margin-bottom: 10px;
+}
+
+.section-heading h2 {
+  margin-bottom: 0;
+}
+
+.section-heading span {
+  color: #68788e;
+  font-size: 13px;
+}
+
+.table-wrap {
+  width: 100%;
+  margin-top: 12px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 13px 10px;
+  border-bottom: 1px solid #e6ebf2;
+  vertical-align: middle;
+}
+
+th {
+  color: #68788e;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.notice {
+  margin-bottom: 20px;
+  padding: 14px;
+  border-radius: 8px;
+  background: #e3ecff;
+  color: #2459a6;
+}
+
+.notice.error {
+  background: #fce8e8;
+  color: #9c3030;
+}
+
+@media (max-width: 750px) {
+  .employee-form {
+    grid-template-columns: 1fr;
+  }
+
+  .portal-header h1 {
+    font-size: 24px;
+  }
+
+  .panel {
+    padding: 16px;
+  }
+}
