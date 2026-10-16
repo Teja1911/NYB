@@ -26,6 +26,9 @@ import EmployeeAnalyticsAssessment from './React Revision/14-10-2026(react perfo
 import ReusableArchitectureConcepts from './React Revision/15-10-2026(reusable components architecture)/ReusableArchitectureConcepts'
 import ReusableArchitectureAssignment from './React Revision/15-10-2026(reusable components architecture)/ReusableArchitectureAssignment'
 import EmployeePortal from './React Revision/15-10-2026(reusable components architecture)/EmployeePortal/EmployeePortal'
+import ReactTestingConcepts from './React Revision/16-10-2026(testing build submission)/ReactTestingConcepts'
+import ReactTestingAssignment from './React Revision/16-10-2026(testing build submission)/ReactTestingAssignment'
+import EmployeeManagementSystem from './React Revision/16-10-2026(testing build submission)/EmployeeManagementSystem/EmployeeManagementSystem'
 function App() {
   return (
     <BrowserRouter>
@@ -57,6 +60,9 @@ function App() {
         <Route path='/ReusableArchitectureConcepts/*' element={<ReusableArchitectureConcepts/>}/>
         <Route path='/ReusableArchitectureAssignment/*' element={<ReusableArchitectureAssignment />} />
         <Route path='/EmployeePortal/*' element={<EmployeePortal />} />
+        <Route path='/ReactTestingConcepts/*' element={<ReactTestingConcepts />} />
+        <Route path='ReactTestingAssignment/*' element={<ReactTestingAssignment />} />
+        <Route path='/EmployeeManagementSystem/*' element={<EmployeeManagementSystem />} />
       </Routes>   
     </BrowserRouter>
   )
