@@ -1,0 +1,65 @@
+.student-workspace {
+  max-width: 850px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.student-form,
+.student-card {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding: 18px;
+  background: white;
+  border: 1px solid #dbe1eb;
+  border-radius: 10px;
+}
+
+.student-form label {
+  display: grid;
+  gap: 6px;
+}
+
+.student-form input,
+.student-search {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+.student-results {
+  margin-top: 30px;
+}
+
+.student-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.student-card h3,
+.student-card p {
+  margin: 0;
+}
+
+.student-form button,
+.student-card button {
+  width: fit-content;
+  padding: 9px 14px;
+  border: 0;
+  border-radius: 5px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.student-form button[type="button"] {
+  background: #64748b;
+}
+
+.form-error {
+  color: #b91c1c;
+  margin: 0;
+}

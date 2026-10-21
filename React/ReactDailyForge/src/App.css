@@ -1,0 +1,33 @@
+/* * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f5f7fb;
+  color: #222;
+  font-family: Arial, sans-serif;
+}
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 16px 24px;
+  background: #172554;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+.page {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+} */
