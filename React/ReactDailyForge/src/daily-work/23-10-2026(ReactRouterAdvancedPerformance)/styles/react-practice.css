@@ -1,0 +1,98 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #222;
+  font-family: Arial, sans-serif;
+  background: #f7f8fc;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px 24px;
+  background: #e8edf7;
+  border-bottom: 1px solid #d5dbea;
+}
+
+.app-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  flex: 1;
+}
+
+a {
+  color: #175cd3;
+}
+
+.app-header a {
+  text-decoration: none;
+}
+
+.app-header a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.page-content {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 20px;
+}
+
+.practice-card,
+.employee-card,
+.form-panel {
+  display: grid;
+  gap: 12px;
+  margin: 16px 0;
+  padding: 18px;
+  border: 1px solid #dfe3eb;
+  border-radius: 8px;
+  background: white;
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+input,
+select,
+button {
+  max-width: 100%;
+  padding: 10px 12px;
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.form-panel label {
+  display: grid;
+  gap: 6px;
+}
+
+@media (max-width: 600px) {
+  .app-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .app-header nav {
+    flex-direction: column;
+  }
+
+  .page-content {
+    padding: 12px;
+  }
+}

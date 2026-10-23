@@ -5,6 +5,18 @@ import StudentManagementWorkspace from "./daily-work/21-10-2026(ReactFundamental
 import EffectsApiStatePatternsHome from "./daily-work/22-10-2026(ReactEffectsApiContextReducerCustomHooks)/EffectsApiStatePatternsHome";
 import AssignedTaskPractice from "./daily-work/22-10-2026(ReactEffectsApiContextReducerCustomHooks)/AssignedTaskPractice";
 import UserManagementWorkspace from "./daily-work/22-10-2026(ReactEffectsApiContextReducerCustomHooks)/UserManagementWorkspace";
+import ReactRouterAdvancedHome from "./daily-work/23-10-2026(ReactRouterAdvancedPerformance)/ReactRouterAdvancedHome";
+import "./daily-work/23-10-2026(ReactRouterAdvancedPerformance)/styles/react-practice.css";
+import {RouterPracticeHome,ProductDetailsPractice,QueryPractice,} from "./daily-work/23-10-2026(ReactRouterAdvancedPerformance)/RouterPractice";
+import LoginPage from "./daily-work/23-10-2026(ReactRouterAdvancedPerformance)/pages/LoginPage";
+import EmployeePortalLayout from "./daily-work/23-10-2026(ReactRouterAdvancedPerformance)/components/EmployeePortalLayout";
+import ProtectedRoute from "./daily-work/23-10-2026(ReactRouterAdvancedPerformance)/components/ProtectedRoute";
+import AppLayout from "./daily-work/23-10-2026(ReactRouterAdvancedPerformance)/components/AppLayout";
+import DashboardPage from "./daily-work/23-10-2026(ReactRouterAdvancedPerformance)/pages/DashboardPage";
+import EmployeeListPage from "./daily-work/23-10-2026(ReactRouterAdvancedPerformance)/pages/EmployeeListPage";
+import EmployeeFormPage from "./daily-work/23-10-2026(ReactRouterAdvancedPerformance)/pages/EmployeeFormPage";
+import EmployeeDetailsPage from "./daily-work/23-10-2026(ReactRouterAdvancedPerformance)/pages/EmployeeDetailsPage";
+import PerformancePage from "./daily-work/23-10-2026(ReactRouterAdvancedPerformance)/pages/PerformancePage";
 
 export default function App() {
   return (
@@ -18,6 +30,23 @@ export default function App() {
         <Route path="/effects-api-context-reducer-hooks" element={<EffectsApiStatePatternsHome />} />
         <Route path="/effects-api-context-reducer-hooks/practice" element={<AssignedTaskPractice />} /> 
         <Route path="/effects-api-context-reducer-hooks/user-management" element={<UserManagementWorkspace />} />
+        <Route path="/router-advanced" element={<ReactRouterAdvancedHome />} />
+        <Route path="/router-practice" element={<RouterPracticeHome />} />
+        <Route path="/router-practice/products/:productId" element={<ProductDetailsPractice />} />
+        <Route path="/router-practice/search" element={<QueryPractice />} />
+        <Route element={<EmployeePortalLayout />}>
+          <Route path="/login" element={<LoginPage />} />
+          <Route element={<ProtectedRoute />}>
+            <Route element={<AppLayout />}>
+              <Route path="/dashboard" element={<DashboardPage />} />
+              <Route path="/employees" element={<EmployeeListPage />} />
+              <Route path="/employees/new" element={<EmployeeFormPage />} />
+              <Route path="/employees/:employeeId" element={<EmployeeDetailsPage />} />
+              <Route path="/employees/:employeeId/edit" element={<EmployeeFormPage />} />
+              <Route path="/performance" element={<PerformancePage />} />
+            </Route>
+          </Route>
+        </Route>
       </Routes>
     </BrowserRouter>
   );
