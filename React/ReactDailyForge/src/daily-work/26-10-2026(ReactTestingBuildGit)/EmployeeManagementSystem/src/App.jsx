@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 
 import { AuthProvider } from "./context/AuthContext";
+import { EmployeeProvider } from "./context/EmployeeContext";
 
 import ProtectedRoute from "./components/ProtectedRoute";
 
@@ -10,29 +11,31 @@ import DashboardPage from "./pages/DashboardPage";
 function App() {
   return (
     <AuthProvider>
-      <Routes>
-        <Route
-          path="/"
-          element={<Navigate to="/dashboard" replace />}
-        />
-
-        <Route
-          path="/login"
-          element={<LoginPage />}
-        />
-
-        <Route element={<ProtectedRoute />}>
+      <EmployeeProvider>
+        <Routes>
           <Route
-            path="/dashboard"
-            element={<DashboardPage />}
+            path="/"
+            element={<Navigate to="/dashboard" replace />}
           />
-        </Route>
 
-        <Route
-          path="*"
-          element={<Navigate to="/dashboard" replace />}
-        />
-      </Routes>
+          <Route
+            path="/login"
+            element={<LoginPage />}
+          />
+
+          <Route element={<ProtectedRoute />}>
+            <Route
+              path="/dashboard"
+              element={<DashboardPage />}
+            />
+          </Route>
+
+          <Route
+            path="*"
+            element={<Navigate to="/dashboard" replace />}
+          />
+        </Routes>
+      </EmployeeProvider>
     </AuthProvider>
   );
 }

@@ -1,0 +1,76 @@
+{
+  "employees": [
+    {
+      "id": "EMP1001",
+      "firstName": "Arjun",
+      "lastName": "Reddy",
+      "email": "arjun.reddy@company.com",
+      "phone": "9876543210",
+      "department": "Engineering",
+      "designation": "Frontend Developer",
+      "status": "Active",
+      "joiningDate": "2025-02-10",
+      "salary": 650000
+    },
+    {
+      "id": "EMP1002",
+      "firstName": "Priya",
+      "lastName": "Sharma",
+      "email": "priya.sharma@company.com",
+      "phone": "9876543211",
+      "department": "Human Resources",
+      "designation": "HR Executive",
+      "status": "Active",
+      "joiningDate": "2024-08-15",
+      "salary": 520000
+    },
+    {
+      "id": "EMP1003",
+      "firstName": "Rahul",
+      "lastName": "Kumar",
+      "email": "rahul.kumar@company.com",
+      "phone": "9876543212",
+      "department": "Engineering",
+      "designation": "Backend Developer",
+      "status": "Active",
+      "joiningDate": "2025-06-20",
+      "salary": 720000
+    },
+    {
+      "id": "EMP1004",
+      "firstName": "Sneha",
+      "lastName": "Patel",
+      "email": "sneha.patel@company.com",
+      "phone": "9876543213",
+      "department": "Finance",
+      "designation": "Accountant",
+      "status": "On Leave",
+      "joiningDate": "2023-11-05",
+      "salary": 580000
+    },
+    {
+      "id": "EMP1005",
+      "firstName": "Vikram",
+      "lastName": "Rao",
+      "email": "vikram.rao@company.com",
+      "phone": "9876543214",
+      "department": "Design",
+      "designation": "UI/UX Designer",
+      "status": "Inactive",
+      "joiningDate": "2022-07-18",
+      "salary": 600000
+    },
+    {
+      "id": "EMP1006",
+      "firstName": "Ananya",
+      "lastName": "Reddy",
+      "email": "ananya.reddy@company.com",
+      "phone": "9876543215",
+      "department": "Marketing",
+      "designation": "Marketing Executive",
+      "status": "Active",
+      "joiningDate": "2025-01-12",
+      "salary": 480000
+    }
+  ]
+}

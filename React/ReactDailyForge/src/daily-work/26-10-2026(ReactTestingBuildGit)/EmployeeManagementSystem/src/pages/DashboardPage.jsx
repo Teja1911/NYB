@@ -1,14 +1,48 @@
+import { useEffect, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 
 import Button from "../components/Button";
 import PageHeader from "../components/PageHeader";
 import StatCard from "../components/StatCard";
+import LoadingState from "../components/LoadingState";
+
+import { ErrorMessage } from "../components/FeedbackStates";
 
 import { useAuth } from "../context/AuthContext";
+import { useEmployees } from "../hooks/useEmployees";
 
 function DashboardPage() {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
+
+  const {
+    employees,
+    loading,
+    error,
+    fetchEmployees
+  } = useEmployees();
+
+  useEffect(() => {
+    fetchEmployees().catch(() => {
+      // The context stores the error for display below.
+    });
+  }, [fetchEmployees]);
+
+  const statistics = useMemo(() => {
+    const activeEmployees = employees.filter(
+      (employee) => employee.status === "Active"
+    ).length;
+
+    const departments = new Set(
+      employees.map((employee) => employee.department)
+    ).size;
+
+    return {
+      total: employees.length,
+      active: activeEmployees,
+      departments
+    };
+  }, [employees]);
 
   function handleLogout() {
     logout();
@@ -20,7 +54,6 @@ function DashboardPage() {
       <header className="dashboard-topbar">
         <div className="dashboard-brand">
           <span className="dashboard-logo">EMS</span>
-
           <span>Employee Management</span>
         </div>
 
@@ -38,54 +71,52 @@ function DashboardPage() {
 
       <PageHeader
         title="Dashboard"
-        description="Here's an overview of your employee management workspace."
+        description="An overview of your employee management workspace."
       />
 
-      <section className="dashboard-welcome">
-        <div>
-          <p className="dashboard-eyebrow">WORKFORCE OVERVIEW</p>
+      {loading && <LoadingState message="Loading employee statistics..." />}
 
-          <h2>Welcome, {user?.name || "Administrator"}!</h2>
-
-          <p>
-            Manage employee records and monitor your organization's workforce
-            from one place.
-          </p>
-        </div>
-      </section>
-
-      <section
-        className="stats-grid"
-        aria-label="Employee statistics"
-      >
-        <StatCard
-          title="Total Employees"
-          value="—"
-          description="Awaiting employee API integration"
-          icon="👥"
+      {!loading && error && (
+        <ErrorMessage
+          message={error}
+          onRetry={() => fetchEmployees().catch(() => {})}
         />
+      )}
 
-        <StatCard
-          title="Active Employees"
-          value="—"
-          description="Will be calculated from employee records"
-          icon="✓"
-        />
+      {!loading && !error && (
+        <section className="stats-grid" aria-label="Employee statistics">
+          <StatCard
+            title="Total Employees"
+            value={statistics.total}
+            description="Records in the employee directory"
+            icon="👥"
+          />
 
-        <StatCard
-          title="Departments"
-          value="—"
-          description="Will be calculated from employee records"
-          icon="▦"
-        />
-      </section>
+          <StatCard
+            title="Active Employees"
+            value={statistics.active}
+            description="Employees with Active status"
+            icon="✓"
+          />
+
+          <StatCard
+            title="Departments"
+            value={statistics.departments}
+            description="Distinct departments in the directory"
+            icon="▦"
+          />
+        </section>
+      )}
 
       <section className="dashboard-next-step">
         <h2>Employee workspace</h2>
 
         <p>
-          The employee directory will be available after we implement
-          employee management and connect the API.
+          {loading
+            ? "Retrieving employee records..."
+            : error
+              ? "The employee API could not be reached. Start JSON Server and retry."
+              : `Successfully loaded ${employees.length} employee records.`}
         </p>
       </section>
 
