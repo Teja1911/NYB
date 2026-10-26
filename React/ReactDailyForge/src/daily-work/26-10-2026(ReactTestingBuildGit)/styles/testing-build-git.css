@@ -1,0 +1,105 @@
+.testing-page {
+  width: min(1100px, 92%);
+  margin: 30px auto;
+  color: #202938;
+  font-family: Arial, sans-serif;
+}
+
+.testing-header {
+  margin-bottom: 28px;
+  padding: 24px;
+  border-radius: 12px;
+  background: #eef4ff;
+}
+
+.testing-header h1 {
+  margin-top: 0;
+}
+
+.testing-date {
+  font-weight: bold;
+}
+
+.testing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.testing-card {
+  margin-bottom: 20px;
+  padding: 22px;
+  border: 1px solid #dce2ea;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 3px 12px rgb(0 0 0 / 5%);
+}
+
+.testing-card h2 {
+  margin-top: 0;
+}
+
+.testing-card p {
+  line-height: 1.6;
+}
+
+.testing-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #174ea6;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.testing-card a:hover {
+  text-decoration: underline;
+}
+
+.testing-card button {
+  margin: 6px 8px 6px 0;
+  padding: 9px 14px;
+  border: 0;
+  border-radius: 6px;
+  background: #2457c5;
+  color: white;
+  cursor: pointer;
+}
+
+.testing-card button:hover {
+  background: #163f98;
+}
+
+.testing-card input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 6px 0 14px;
+  padding: 10px;
+  border: 1px solid #b9c3d0;
+  border-radius: 6px;
+}
+
+.testing-card label {
+  display: block;
+  font-weight: bold;
+}
+
+.testing-card pre {
+  overflow-x: auto;
+  padding: 14px;
+  border-radius: 8px;
+  background: #f1f3f5;
+}
+
+.testing-footer {
+  margin-top: 24px;
+  padding: 18px;
+  text-align: center;
+  color: #5d6675;
+}
+
+@media (max-width: 800px) {
+  .testing-grid {
+    grid-template-columns: 1fr;
+  }
+}

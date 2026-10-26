@@ -17,6 +17,10 @@ import EmployeeListPage from "./daily-work/23-10-2026(ReactRouterAdvancedPerform
 import EmployeeFormPage from "./daily-work/23-10-2026(ReactRouterAdvancedPerformance)/pages/EmployeeFormPage";
 import EmployeeDetailsPage from "./daily-work/23-10-2026(ReactRouterAdvancedPerformance)/pages/EmployeeDetailsPage";
 import PerformancePage from "./daily-work/23-10-2026(ReactRouterAdvancedPerformance)/pages/PerformancePage";
+import ReactTestingBuildGitHome from "./daily-work/26-10-2026(ReactTestingBuildGit)/ReactTestingBuildGitHome";
+import TestingPractice from "./daily-work/26-10-2026(ReactTestingBuildGit)/testing/TestingPractice";
+import ProductionBuildGuide from "./daily-work/26-10-2026(ReactTestingBuildGit)/production-build/ProductionBuildGuide";
+import GitWorkflowGuide from "./daily-work/26-10-2026(ReactTestingBuildGit)/git-practice/GitWorkflowGuide";
 
 export default function App() {
   return (
@@ -47,6 +51,10 @@ export default function App() {
             </Route>
           </Route>
         </Route>
+        <Route path="/testing-build-git" element={<ReactTestingBuildGitHome />} />
+        <Route path="/testing-build-git/testing" element={<TestingPractice />} />
+        <Route path="/testing-build-git/production-build" element={<ProductionBuildGuide />} />
+        <Route path="/testing-build-git/git-practice" element={<GitWorkflowGuide />} />
       </Routes>
     </BrowserRouter>
   );
