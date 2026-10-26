@@ -1,20 +1,20 @@
 import { useEffect, useMemo } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-import Button from "../components/Button";
+import AppNavigation from "../components/AppNavigation";
 import PageHeader from "../components/PageHeader";
-import StatCard from "../components/StatCard";
 import LoadingState from "../components/LoadingState";
+import StatusBadge from "../components/StatusBadge";
 
-import { ErrorMessage } from "../components/FeedbackStates";
-
-import { useAuth } from "../context/AuthContext";
 import { useEmployees } from "../hooks/useEmployees";
 
-function DashboardPage() {
-  const { user, logout } = useAuth();
-  const navigate = useNavigate();
+import {
+  calculateDashboardStatistics,
+  calculateDepartmentStatistics,
+  calculatePercentage
+} from "../utils/dashboardStatistics";
 
+function DashboardPage() {
   const {
     employees,
     loading,
@@ -22,107 +22,284 @@ function DashboardPage() {
     fetchEmployees
   } = useEmployees();
 
+  // Load employee records from the API.
   useEffect(() => {
-    fetchEmployees().catch(() => {
-      // The context stores the error for display below.
-    });
+    fetchEmployees();
   }, [fetchEmployees]);
 
+  // Calculate summary statistics.
   const statistics = useMemo(() => {
-    const activeEmployees = employees.filter(
-      (employee) => employee.status === "Active"
-    ).length;
-
-    const departments = new Set(
-      employees.map((employee) => employee.department)
-    ).size;
-
-    return {
-      total: employees.length,
-      active: activeEmployees,
-      departments
-    };
+    return calculateDashboardStatistics(employees);
   }, [employees]);
 
-  function handleLogout() {
-    logout();
-    navigate("/login", { replace: true });
-  }
+  // Calculate department-wise employee counts.
+  const departmentStatistics = useMemo(() => {
+    return calculateDepartmentStatistics(employees);
+  }, [employees]);
+
+  const statusStatistics = [
+    {
+      label: "Active",
+      count: statistics.activeEmployees,
+      className: "dashboard-status-active"
+    },
+    {
+      label: "Inactive",
+      count: statistics.inactiveEmployees,
+      className: "dashboard-status-inactive"
+    },
+    {
+      label: "On Leave",
+      count: statistics.employeesOnLeave,
+      className: "dashboard-status-leave"
+    }
+  ];
 
   return (
-    <main className="app-container">
-      <header className="dashboard-topbar">
-        <div className="dashboard-brand">
-          <span className="dashboard-logo">EMS</span>
-          <span>Employee Management</span>
-        </div>
-
-        <div className="dashboard-user">
-          <div className="user-information">
-            <strong>{user?.name || "Administrator"}</strong>
-            <span>{user?.role || "Administrator"}</span>
-          </div>
-
-          <Button variant="secondary" onClick={handleLogout}>
-            Logout
-          </Button>
-        </div>
-      </header>
+    <main className="page-content dashboard-analytics-page">
+      <AppNavigation />
 
       <PageHeader
-        title="Dashboard"
-        description="An overview of your employee management workspace."
+        title="Employee Dashboard"
+        subtitle="Overview of your employee records and workforce statistics."
       />
 
-      {loading && <LoadingState message="Loading employee statistics..." />}
+      <section className="dashboard-welcome">
+        <div>
+          <h2>Workforce Overview</h2>
 
-      {!loading && error && (
-        <ErrorMessage
-          message={error}
-          onRetry={() => fetchEmployees().catch(() => {})}
-        />
-      )}
+          <p>
+            Review employee totals, employment statuses, and
+            department distribution.
+          </p>
+        </div>
 
-      {!loading && !error && (
-        <section className="stats-grid" aria-label="Employee statistics">
-          <StatCard
-            title="Total Employees"
-            value={statistics.total}
-            description="Records in the employee directory"
-            icon="👥"
-          />
+        <Link
+          to="/employees"
+          className="dashboard-view-employees"
+        >
+          View Employee Directory
+        </Link>
+      </section>
 
-          <StatCard
-            title="Active Employees"
-            value={statistics.active}
-            description="Employees with Active status"
-            icon="✓"
-          />
+      {error && (
+        <section className="dashboard-error" role="alert">
+          <p>{error}</p>
 
-          <StatCard
-            title="Departments"
-            value={statistics.departments}
-            description="Distinct departments in the directory"
-            icon="▦"
-          />
+          <button
+            type="button"
+            onClick={() => fetchEmployees()}
+          >
+            Retry
+          </button>
         </section>
       )}
 
-      <section className="dashboard-next-step">
-        <h2>Employee workspace</h2>
+      {loading ? (
+        <LoadingState />
+      ) : (
+        <>
+          {/* Summary cards */}
+          <section className="dashboard-statistics-grid">
+            <article className="dashboard-stat-card">
+              <span className="dashboard-stat-label">
+                Total Employees
+              </span>
 
-        <p>
-          {loading
-            ? "Retrieving employee records..."
-            : error
-              ? "The employee API could not be reached. Start JSON Server and retry."
-              : `Successfully loaded ${employees.length} employee records.`}
-        </p>
-      </section>
+              <strong className="dashboard-stat-number">
+                {statistics.totalEmployees}
+              </strong>
 
-      <footer className="app-footer">
-        Employee Management System · Dashboard
-      </footer>
+              <span className="dashboard-stat-description">
+                All employee records
+              </span>
+            </article>
+
+            <article className="dashboard-stat-card dashboard-stat-active">
+              <span className="dashboard-stat-label">
+                Active Employees
+              </span>
+
+              <strong className="dashboard-stat-number">
+                {statistics.activeEmployees}
+              </strong>
+
+              <span className="dashboard-stat-description">
+                {calculatePercentage(
+                  statistics.activeEmployees,
+                  statistics.totalEmployees
+                )}
+                % of employees
+              </span>
+            </article>
+
+            <article className="dashboard-stat-card dashboard-stat-inactive">
+              <span className="dashboard-stat-label">
+                Inactive Employees
+              </span>
+
+              <strong className="dashboard-stat-number">
+                {statistics.inactiveEmployees}
+              </strong>
+
+              <span className="dashboard-stat-description">
+                {calculatePercentage(
+                  statistics.inactiveEmployees,
+                  statistics.totalEmployees
+                )}
+                % of employees
+              </span>
+            </article>
+
+            <article className="dashboard-stat-card dashboard-stat-leave">
+              <span className="dashboard-stat-label">
+                Employees on Leave
+              </span>
+
+              <strong className="dashboard-stat-number">
+                {statistics.employeesOnLeave}
+              </strong>
+
+              <span className="dashboard-stat-description">
+                {calculatePercentage(
+                  statistics.employeesOnLeave,
+                  statistics.totalEmployees
+                )}
+                % of employees
+              </span>
+            </article>
+          </section>
+
+          {/* Department statistics */}
+          <section className="dashboard-panel">
+            <div className="dashboard-panel-heading">
+              <div>
+                <h2>Department Overview</h2>
+
+                <p>
+                  Number of employees in each department.
+                </p>
+              </div>
+            </div>
+
+            {departmentStatistics.length === 0 ? (
+              <p className="dashboard-empty-message">
+                No department information is available yet.
+              </p>
+            ) : (
+              <div className="dashboard-department-list">
+                {departmentStatistics.map((item) => {
+                  const percentage = calculatePercentage(
+                    item.count,
+                    statistics.totalEmployees
+                  );
+
+                  return (
+                    <article
+                      className="dashboard-department-item"
+                      key={item.department}
+                    >
+                      <div className="dashboard-department-details">
+                        <strong>{item.department}</strong>
+
+                        <span>
+                          {item.count}{" "}
+                          {item.count === 1
+                            ? "employee"
+                            : "employees"}
+                        </span>
+                      </div>
+
+                      <div
+                        className="dashboard-progress-track"
+                        role="progressbar"
+                        aria-label={`${item.department} department employee share`}
+                        aria-valuemin={0}
+                        aria-valuemax={100}
+                        aria-valuenow={percentage}
+                      >
+                        <div
+                          className="dashboard-progress-fill"
+                          style={{
+                            width: `${percentage}%`
+                          }}
+                        />
+                      </div>
+
+                      <span className="dashboard-department-percentage">
+                        {percentage}%
+                      </span>
+                    </article>
+                  );
+                })}
+              </div>
+            )}
+          </section>
+
+          {/* Employment status summary */}
+          <section className="dashboard-panel">
+            <div className="dashboard-panel-heading">
+              <div>
+                <h2>Employment Status Summary</h2>
+
+                <p>
+                  Breakdown of current employee statuses.
+                </p>
+              </div>
+            </div>
+
+            <div className="dashboard-status-list">
+              {statusStatistics.map((item) => {
+                const percentage = calculatePercentage(
+                  item.count,
+                  statistics.totalEmployees
+                );
+
+                return (
+                  <article
+                    className="dashboard-status-item"
+                    key={item.label}
+                  >
+                    <div className="dashboard-status-item-heading">
+                      <StatusBadge status={item.label} />
+
+                      <strong>{item.count}</strong>
+                    </div>
+
+                    <div className="dashboard-status-progress-track">
+                      <div
+                        className={`dashboard-status-progress-fill ${item.className}`}
+                        style={{
+                          width: `${percentage}%`
+                        }}
+                      />
+                    </div>
+
+                    <span className="dashboard-status-percentage">
+                      {percentage}% of all employees
+                    </span>
+                  </article>
+                );
+              })}
+            </div>
+          </section>
+
+          {/* Quick actions */}
+          <section className="dashboard-panel dashboard-quick-actions">
+            <h2>Quick Actions</h2>
+
+            <div className="dashboard-action-links">
+              <Link to="/employees">
+                View Employees
+              </Link>
+
+              <Link to="/employees/new">
+                Add New Employee
+              </Link>
+            </div>
+          </section>
+        </>
+      )}
     </main>
   );
 }

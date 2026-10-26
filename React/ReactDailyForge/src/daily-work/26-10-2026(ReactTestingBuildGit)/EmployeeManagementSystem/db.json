@@ -69,8 +69,20 @@
       "department": "Marketing",
       "designation": "Marketing Executive",
       "status": "Active",
-      "joiningDate": "2025-01-12",
+      "joiningDate": "2025-01-25",
       "salary": 480000
+    },
+    {
+      "firstName": "Teja",
+      "lastName": "A",
+      "email": "teja@gmail.com",
+      "phone": "8888888888",
+      "department": "Developing",
+      "designation": "Software Engineer",
+      "status": "Active",
+      "joiningDate": "2026-02-17",
+      "salary": 320000,
+      "id": "EMP1793011485027"
     }
   ]
 }
