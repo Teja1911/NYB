@@ -1,50 +1,120 @@
-import { useState } from "react";
+import Button from "./components/Button";
+import PageHeader from "./components/PageHeader";
+import StatCard from "./components/StatCard";
+import StatusBadge from "./components/StatusBadge";
+import LoadingState from "./components/LoadingState";
+
+import {
+  EmptyState,
+  ErrorMessage,
+  SuccessMessage
+} from "./components/FeedbackStates";
 
 function App() {
-  const [applicationName] = useState("Employee Management System");
-
   return (
     <main className="app-container">
-      <header className="app-header">
-        <div>
-          <p className="app-label">EMPLOYEE OPERATIONS</p>
-
-          <h1>{applicationName}</h1>
-
-          <p className="app-description">
-            Manage employees, departments, records, and workforce information
-            in one place.
-          </p>
-        </div>
-
-        <span className="status-indicator">
-          Development Mode
-        </span>
-      </header>
+      <PageHeader
+        title="Employee Management System"
+        description="Phase 2: Reusable React components."
+        action={
+          <Button
+            onClick={() => alert("Employee creation will be implemented next.")}
+          >
+            Add Employee
+          </Button>
+        }
+      />
 
       <section className="welcome-card">
-        <h2>Welcome to your Employee Management System</h2>
+        <h2>Dashboard component preview</h2>
 
-        <p>
-          Your new React application is ready. We will build the login,
-          dashboard, employee directory, and employee management features
-          step by step.
-        </p>
+        <div className="stats-grid">
+          <StatCard
+            title="Total Employees"
+            value={120}
+            description="Employees registered in the system"
+            icon="👥"
+          />
 
-        <div className="setup-status">
-          <span className="success-icon" aria-hidden="true">
-            ✓
-          </span>
+          <StatCard
+            title="Active Employees"
+            value={108}
+            description="Currently active employees"
+            icon="✓"
+          />
 
-          <div>
-            <strong>Project initialized</strong>
-            <p>React is rendering the application successfully.</p>
+          <StatCard
+            title="Departments"
+            value={8}
+            description="Departments in the organization"
+            icon="▦"
+          />
+        </div>
+
+        <div className="component-demo">
+          <h3>Employee Status</h3>
+
+          <div className="demo-row">
+            <StatusBadge status="Active" />
+            <StatusBadge status="Inactive" />
+            <StatusBadge status="On Leave" />
           </div>
+        </div>
+
+        <div className="component-demo">
+          <h3>Button Variants</h3>
+
+          <div className="demo-row">
+            <Button onClick={() => alert("Primary button clicked")}>
+              Primary
+            </Button>
+
+            <Button
+              variant="secondary"
+              onClick={() => alert("Secondary button clicked")}
+            >
+              Secondary
+            </Button>
+
+            <Button
+              variant="danger"
+              onClick={() => alert("Danger button clicked")}
+            >
+              Delete
+            </Button>
+          </div>
+        </div>
+
+        <div className="component-demo">
+          <h3>Loading State</h3>
+
+          <LoadingState message="Example loading indicator" />
+        </div>
+
+        <div className="component-demo">
+          <h3>Empty State</h3>
+
+          <EmptyState
+            title="No employees found"
+            message="Employee records will appear here when available."
+          />
+        </div>
+
+        <div className="component-demo">
+          <h3>Error State</h3>
+
+          <ErrorMessage message="This is an example error message." />
+        </div>
+
+        <div className="component-demo">
+          <h3>Success State</h3>
+
+          <SuccessMessage message="Example: Employee saved successfully." />
         </div>
       </section>
 
       <footer className="app-footer">
-        <p>Employee Management System · React Practice Project</p>
+        Employee Management System · Phase 2
       </footer>
     </main>
   );
