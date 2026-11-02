@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Employee Dashboard</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div>
+            <h1>Employee Dashboard</h1>
+            <p>Manage your team in one place</p>
+        </div>
+        <span id="employeeCount">0 Employees</span>
+    </header>
+
+    <main class="container">
+        <section class="stats">
+            <article class="card">
+                <p>Total Employees</p>
+                <h2 id="totalEmployees">0</h2>
+            </article>
+            <article class="card">
+                <p>Departments</p>
+                <h2 id="totalDepartments">0</h2>
+            </article>
+            <article class="card">
+                <p>Monthly Payroll</p>
+                <h2 id="totalPayroll">₹0</h2>
+            </article>
+        </section>
+
+        <section class="panel">
+            <h2 id="formTitle">Add Employee</h2>
+            <form id="employeeForm">
+                <input type="hidden" id="employeeId">
+                <div class="form-grid">
+                    <label>Full Name
+                        <input id="name" type="text" placeholder="Employee name" required>
+                    </label>
+                    <label>Email
+                        <input id="email" type="email" placeholder="employee@example.com" required>
+                    </label>
+                    <label>Department
+                        <select id="department" required>
+                            <option value="">Select department</option>
+                            <option>Frontend</option>
+                            <option>Backend</option>
+                            <option>Testing</option>
+                            <option>Design</option>
+                            <option>HR</option>
+                        </select>
+                    </label>
+                    <label>Role
+                        <input id="role" type="text" placeholder="Job role" required>
+                    </label>
+                    <label>Monthly Salary (₹)
+                        <input id="salary" type="number" min="0" step="0.01" placeholder="45000" required>
+                    </label>
+                    <label>Experience (years)
+                        <input id="experience" type="number" min="0" max="60" step="1" placeholder="2" required>
+                    </label>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" id="saveButton">Add Employee</button>
+                    <button type="button" id="cancelButton" class="secondary hidden">Cancel Edit</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="panel">
+            <div class="toolbar">
+                <input id="search" type="search" placeholder="Search name, email or role...">
+                <select id="departmentFilter">
+                    <option value="">All Departments</option>
+                    <option>Frontend</option>
+                    <option>Backend</option>
+                    <option>Testing</option>
+                    <option>Design</option>
+                    <option>HR</option>
+                </select>
+                <select id="sort">
+                    <option value="name">Sort by Name</option>
+                    <option value="salaryAsc">Salary: Low to High</option>
+                    <option value="salaryDesc">Salary: High to Low</option>
+                    <option value="experience">Experience</option>
+                </select>
+            </div>
+
+            <div id="message" role="status"></div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Employee</th>
+                            <th>Department</th>
+                            <th>Role</th>
+                            <th>Monthly Salary</th>
+                            <th>Experience</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="employeeTable"></tbody>
+                </table>
+            </div>
+            <p id="emptyMessage" class="empty hidden">No employees found.</p>
+        </section>
+    </main>
+
+    <footer>Smart Employee Dashboard · JavaScript Final Project</footer>
+    <script type="module" src="./js/app.js"></script>
+</body>
+</html>

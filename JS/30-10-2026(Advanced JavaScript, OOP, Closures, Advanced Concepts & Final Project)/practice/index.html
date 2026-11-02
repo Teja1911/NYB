@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Practice Exercises</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        select {
+            padding: 10px;
+            width: 100%;
+            max-width: 400px;
+            margin-top: 10px;
+        }
+
+        .message {
+            padding: 15px;
+            background-color: #eff6ff;
+            border-left: 4px solid #2563eb;
+        }
+
+        a {
+            color: #1d4ed8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>JavaScript Practice Exercises</h1>
+
+    <p class="message">
+        Select a topic and open the browser console to see the output.
+    </p>
+
+    <label for="topicSelector">
+        Select a JavaScript topic:
+    </label>
+
+    <br>
+
+    <select id="topicSelector">
+        <option value="advanced-functions.js">
+            Advanced Functions
+        </option>
+
+        <option value="object-oriented-javascript.js">
+            Object-Oriented JavaScript
+        </option>
+
+        <option value="modern-javascript.js">
+            Modern JavaScript
+        </option>
+
+        <option value="copying-and-immutability.js">
+            Copying and Immutability
+        </option>
+
+        <option value="debounce-throttle.js">
+            Debouncing and Throttling
+        </option>
+
+        <option value="defensive-programming.js">
+            Defensive Programming
+        </option>
+    </select>
+
+    <p id="selectionMessage">
+        Loading Advanced Functions...
+    </p>
+
+    <p>
+        <a href="../index.html">Back to Home</a>
+    </p>
+
+    <script>
+        const topicSelector =
+            document.getElementById("topicSelector");
+
+        const selectionMessage =
+            document.getElementById("selectionMessage");
+
+        function loadPracticeTopic(fileName) {
+            const previousScript =
+                document.getElementById("practiceScript");
+
+            if (previousScript) {
+                previousScript.remove();
+            }
+
+            const practiceScript =
+                document.createElement("script");
+
+            practiceScript.id = "practiceScript";
+            practiceScript.src = `./${fileName}`;
+
+            practiceScript.onload = function () {
+                selectionMessage.textContent =
+                    `Loaded: ${fileName}`;
+
+                console.log(`Practice file loaded: ${fileName}`);
+            };
+
+            practiceScript.onerror = function () {
+                selectionMessage.textContent =
+                    `Error loading ${fileName}`;
+
+                console.error(
+                    `Check whether ${fileName} exists in the practice folder.`
+                );
+            };
+
+            document.body.appendChild(practiceScript);
+        }
+
+        topicSelector.addEventListener("change", function () {
+            loadPracticeTopic(topicSelector.value);
+        });
+
+        loadPracticeTopic(topicSelector.value);
+    </script>
+
+</body>
+</html>
