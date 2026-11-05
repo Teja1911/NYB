@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Analytics</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Student Data Analytics</h1>
+    <input id="search" placeholder="Search Student">
+    <select id="filter">
+        <option value="all">All Students</option>
+        <option value="passed">Passed</option>
+        <option value="failed">Failed</option>
+    </select>
+    <button id="topBtn">Top Performer</button>
+    <div id="summary"></div>
+    <div id="topStudent"></div>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Marks</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody id="studentList"></tbody>
+    </table>
+    <script type="module" src="./js/app.js"></script>
+</body>
+</html>

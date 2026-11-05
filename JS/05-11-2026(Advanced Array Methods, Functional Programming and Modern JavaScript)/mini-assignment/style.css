@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 25px;
+    background: #f4f6f9;
+}
+
+h1 {
+    color: #263c5a;
+}
+
+input, select, button {
+    padding: 8px;
+    margin: 5px;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #263c5a;
+    color: white;
+}
+
+#summary, #topStudent {
+    margin-top: 20px;
+    padding: 12px;
+    background: white;
+}
