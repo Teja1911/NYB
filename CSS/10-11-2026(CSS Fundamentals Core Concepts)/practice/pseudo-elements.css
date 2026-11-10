@@ -1,0 +1,20 @@
+.intro::before {
+    content: "★ ";
+    color: orange;
+}
+
+.intro::after {
+    content: " ✓";
+    color: green;
+}
+
+.quote::first-letter {
+    font-size: 35px;
+    color: blue;
+    font-weight: bold;
+}
+
+.selection::selection {
+    background: #2563eb;
+    color: white;
+}

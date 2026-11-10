@@ -1,0 +1,36 @@
+button {
+    padding: 12px 20px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1e40af;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+input:focus {
+    outline: 2px solid #2563eb;
+    background: #eff6ff;
+}
+
+a:hover {
+    color: red;
+}
+
+li:first-child {
+    color: blue;
+}
+
+li:last-child {
+    color: green;
+}
+
+li:nth-child(2) {
+    font-weight: bold;
+}

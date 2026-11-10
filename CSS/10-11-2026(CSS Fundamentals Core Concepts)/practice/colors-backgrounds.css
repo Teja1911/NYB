@@ -1,0 +1,32 @@
+div {
+    padding: 25px;
+    margin: 12px;
+    color: white;
+}
+
+.color-box {
+    background-color: tomato;
+}
+
+.hex-box {
+    background-color: #263c5a;
+}
+
+.rgb-box {
+    background-color: rgb(30, 120, 180);
+}
+
+.gradient-box {
+    background: linear-gradient(90deg, #2563eb, #9333ea);
+}
+
+.radial-box {
+    background: radial-gradient(circle, #f59e0b, #dc2626);
+}
+
+.image-box {
+    background-image: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee");
+    background-size: cover;
+    background-position: center;
+    min-height: 150px;
+}

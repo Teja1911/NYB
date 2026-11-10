@@ -1,0 +1,50 @@
+/* Universal selector */
+* {
+    box-sizing: border-box;
+}
+
+/* Element selector */
+p {
+    color: #333;
+}
+
+/* Class selector */
+.highlight {
+    color: blue;
+}
+
+/* ID selector */
+#unique {
+    color: red;
+}
+
+/* Grouping selector */
+h1, h2, h3 {
+    font-family: Arial, sans-serif;
+}
+
+/* Descendant selector */
+.parent p {
+    background: #e8f0fe;
+}
+
+/* Child selector */
+.parent > p {
+    font-weight: bold;
+}
+
+/* Adjacent sibling */
+.siblings h3 + p {
+    color: green;
+}
+
+/* General sibling */
+.siblings h3 ~ p {
+    text-decoration: underline;
+}
+
+/* Attribute selector */
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid gray;
+}

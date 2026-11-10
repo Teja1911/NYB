@@ -1,0 +1,16 @@
+p {
+    color: green;
+}
+
+.content {
+    color: blue;
+}
+
+#message {
+    color: red;
+}
+
+.parent {
+    color: purple;
+    font-family: Arial, sans-serif;
+}

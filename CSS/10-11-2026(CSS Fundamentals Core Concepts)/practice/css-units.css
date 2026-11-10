@@ -1,0 +1,33 @@
+body {
+    font-size: 16px;
+}
+
+div {
+    background: #dbeafe;
+    margin: 12px 0;
+    padding: 10px;
+}
+
+.pixel {
+    width: 200px;
+}
+
+.percentage {
+    width: 80%;
+}
+
+.em {
+    font-size: 2em;
+}
+
+.rem {
+    font-size: 2rem;
+}
+
+.viewport-width {
+    width: 50vw;
+}
+
+.viewport-height {
+    height: 20vh;
+}

@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
+.description {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    text-align: justify;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.spacing {
+    letter-spacing: 3px;
+    word-spacing: 8px;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
