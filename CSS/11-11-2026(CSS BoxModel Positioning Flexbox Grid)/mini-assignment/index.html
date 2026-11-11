@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="navbar">
+        <h2>WorkSpace</h2>
+        <nav>
+            <a href="#">Dashboard</a>
+            <a href="#">Employees</a>
+            <a href="#">Tasks</a>
+            <a href="#">Reports</a>
+        </nav>
+        <div class="profile">TJ</div>
+    </header>
+
+    <div class="dashboard">
+        <aside class="sidebar">
+            <h3>Menu</h3>
+            <a href="#">Overview</a>
+            <a href="#">My Tasks</a>
+            <a href="#">Employees</a>
+            <a href="#">Projects</a>
+            <a href="#">Settings</a>
+        </aside>
+
+        <main class="main-content">
+            <section class="welcome">
+                <div>
+                    <h1>Dashboard Overview</h1>
+                    <p>Welcome back! Here's your workspace summary.</p>
+                </div>
+                <button>+ Create Task</button>
+            </section>
+
+            <section class="stats">
+                <article class="stat-card">
+                    <p>Total Employees</p>
+                    <h2>120</h2>
+                    <span>Active team members</span>
+                </article>
+
+                <article class="stat-card">
+                    <p>Total Tasks</p>
+                    <h2>85</h2>
+                    <span>Assigned tasks</span>
+                </article>
+
+                <article class="stat-card">
+                    <p>Completed</p>
+                    <h2>62</h2>
+                    <span>Successfully completed</span>
+                </article>
+
+                <article class="stat-card">
+                    <p>Pending</p>
+                    <h2>23</h2>
+                    <span>Tasks in progress</span>
+                </article>
+            </section>
+
+            <section class="content-grid">
+                <article class="panel tasks">
+                    <h2>Recent Tasks</h2>
+
+                    <div class="task-row">
+                        <div>
+                            <h4>Build Login Page</h4>
+                            <p>Assigned to: Teja</p>
+                        </div>
+                        <span class="completed">Completed</span>
+                    </div>
+
+                    <div class="task-row">
+                        <div>
+                            <h4>API Integration</h4>
+                            <p>Assigned to: Rahul</p>
+                        </div>
+                        <span class="pending">Pending</span>
+                    </div>
+
+                    <div class="task-row">
+                        <div>
+                            <h4>Dashboard Design</h4>
+                            <p>Assigned to: Priya</p>
+                        </div>
+                        <span class="completed">Completed</span>
+                    </div>
+                </article>
+
+                <article class="panel activity">
+                    <h2>Employee Activity</h2>
+
+                    <div class="employee">
+                        <span class="avatar">TJ</span>
+                        <div>
+                            <h4>Teja</h4>
+                            <p>Frontend Developer</p>
+                        </div>
+                    </div>
+
+                    <div class="employee">
+                        <span class="avatar">RK</span>
+                        <div>
+                            <h4>Rahul</h4>
+                            <p>Backend Developer</p>
+                        </div>
+                    </div>
+
+                    <div class="employee">
+                        <span class="avatar">PR</span>
+                        <div>
+                            <h4>Priya</h4>
+                            <p>UI Developer</p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <section class="panel project-panel">
+                <h2>Project Progress</h2>
+                <p>Employee Management System</p>
+                <div class="progress">
+                    <div class="progress-value"></div>
+                </div>
+                <p>75% Completed</p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2026 WorkSpace Dashboard. All rights reserved.</p>
+    </footer>
+</body>
+</html>

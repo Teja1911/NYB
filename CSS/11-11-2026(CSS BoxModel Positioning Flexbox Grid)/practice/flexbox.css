@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    margin: 15px 0;
+    background: #e2e8f0;
+}
+
+.container div {
+    padding: 25px;
+    background: #2563eb;
+    color: white;
+}
+
+.row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.column {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.wrap div {
+    flex: 1 1 120px;
+}

@@ -1,0 +1,24 @@
+.block {
+    display: block;
+    background: lightblue;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.inline {
+    display: inline;
+    background: lightgreen;
+    padding: 10px;
+}
+
+.inline-block {
+    display: inline-block;
+    width: 150px;
+    padding: 20px;
+    margin: 10px;
+    background: lightcoral;
+}
+
+.hidden {
+    display: none;
+}

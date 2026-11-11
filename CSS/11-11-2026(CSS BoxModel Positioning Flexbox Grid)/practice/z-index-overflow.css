@@ -1,0 +1,33 @@
+.parent {
+    position: relative;
+    height: 180px;
+}
+
+.box-one, .box-two {
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    padding: 10px;
+}
+
+.box-one {
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+    background: lightblue;
+}
+
+.box-two {
+    top: 60px;
+    left: 80px;
+    z-index: 2;
+    background: orange;
+}
+
+.overflow-box {
+    width: 250px;
+    height: 100px;
+    padding: 10px;
+    border: 2px solid black;
+    overflow: auto;
+}

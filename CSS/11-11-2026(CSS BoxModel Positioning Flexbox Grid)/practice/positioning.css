@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    min-height: 150vh;
+}
+
+.static {
+    position: static;
+    padding: 20px;
+    background: lightblue;
+}
+
+.relative {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    margin: 30px;
+    padding: 10px;
+    background: lightgreen;
+}
+
+.absolute {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    padding: 10px;
+    background: orange;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    padding: 15px;
+    background: purple;
+    color: white;
+}
+
+.space {
+    height: 700px;
+}
+
+.fixed {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 12px;
+}

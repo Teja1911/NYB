@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+/* Navigation */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #1e293b;
+    color: white;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a, .sidebar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover, .sidebar a:hover {
+    color: #93c5fd;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #6366f1;
+    font-weight: bold;
+}
+
+/* Dashboard Layout */
+.dashboard {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    min-height: calc(100vh - 130px);
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 25px 20px;
+    background: #334155;
+}
+
+.main-content {
+    min-width: 0;
+    padding: 25px;
+}
+
+/* Welcome Section */
+.welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.welcome p {
+    margin-top: 8px;
+    color: #64748b;
+}
+
+button {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 6px;
+    background: #4f46e5;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3730a3;
+}
+
+/* Dashboard Cards */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.stat-card, .panel {
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.stat-card h2 {
+    margin: 15px 0 8px;
+    color: #4f46e5;
+    font-size: 28px;
+}
+
+.stat-card p {
+    font-weight: bold;
+}
+
+.stat-card span {
+    color: #64748b;
+    font-size: 12px;
+}
+
+/* Main Content Grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.panel h2 {
+    margin-bottom: 20px;
+    font-size: 19px;
+}
+
+.task-row, .employee {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.task-row p, .employee p {
+    margin-top: 6px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.completed, .pending {
+    padding: 6px 10px;
+    border-radius: 15px;
+    font-size: 11px;
+}
+
+.completed {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+/* Employee Activity */
+.employee {
+    justify-content: flex-start;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #e0e7ff;
+    color: #4338ca;
+    font-weight: bold;
+}
+
+/* Progress */
+.project-panel {
+    margin-top: 25px;
+}
+
+.project-panel p {
+    margin: 12px 0;
+}
+
+.progress {
+    height: 12px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #e2e8f0;
+}
+
+.progress-value {
+    width: 75%;
+    height: 100%;
+    background: #4f46e5;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background: #1e293b;
+    color: white;
+    text-align: center;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+    .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .navbar nav {
+        order: 3;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .welcome {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .task-row {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

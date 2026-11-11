@@ -1,0 +1,25 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+        "header header"
+        "sidebar content"
+        "card card"
+        "footer footer";
+    gap: 12px;
+}
+
+.grid-container div {
+    padding: 20px;
+    background: #dbeafe;
+}
+
+.header { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+.content { grid-area: content; }
+.footer { grid-area: footer; }
+
+.card:nth-of-type(5) {
+    grid-column: 1;
+}
+
