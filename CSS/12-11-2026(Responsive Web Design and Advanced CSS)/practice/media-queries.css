@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f8fafc;
+}
+
+.container {
+  padding: 24px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.card {
+  padding: 40px 20px;
+  background: #dbeafe;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.device-message::after {
+  content: "Desktop view";
+  font-weight: bold;
+}
+
+@media (max-width: 1023px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .device-message::after {
+    content: "Tablet view";
+  }
+}
+
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .device-message::after {
+    content: "Mobile view";
+  }
+}

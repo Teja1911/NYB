@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Images</title>
+  <link rel="stylesheet" href="responsive-images.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Responsive Images</h1>
+
+    <picture>
+      <source
+        media="(max-width: 600px)"
+        srcset="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600">
+      <img
+        src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200"
+        alt="Modern office workspace">
+    </picture>
+
+    <p>The image stays inside its container and adapts to screen width.</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,19 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 30px;
+  background: #f8fafc;
+}
+
+.gradient-card {
+  max-width: 600px;
+  padding: 50px 30px;
+  color: white;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  box-shadow: 0 12px 30px #1e40af30;
+}
+
+.shadow-heading {
+  color: #1e293b;
+  text-shadow: 2px 3px 4px #94a3b8;
+}

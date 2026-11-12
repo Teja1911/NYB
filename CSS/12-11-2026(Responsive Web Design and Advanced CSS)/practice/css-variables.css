@@ -1,0 +1,46 @@
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --surface: #ffffff;
+  --page-bg: #eff6ff;
+  --text: #1e293b;
+  --radius: 14px;
+  --space: 24px;
+  --shadow: 0 8px 24px #0f172a15;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--page-bg);
+  color: var(--text);
+}
+
+.container {
+  padding: var(--space);
+}
+
+.card {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: var(--space);
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+button {
+  background: var(--primary);
+  color: white;
+  border: 0;
+  padding: 12px 20px;
+  border-radius: 8px;
+}
+
+button:hover {
+  background: var(--primary-dark);
+}
