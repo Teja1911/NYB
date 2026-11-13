@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltips and Dropdowns</title>
+    <link rel="stylesheet" href="tooltips-dropdown.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Tooltip and Dropdown Practice</h1>
+
+        <div class="tooltip-wrapper">
+            <button class="info-button" aria-describedby="tooltip">
+                Hover or Focus Me
+            </button>
+            <span class="tooltip" id="tooltip" role="tooltip">
+                This is additional information.
+            </span>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropdown-button">Select Menu ▾</button>
+
+            <div class="dropdown-menu">
+                <a href="#">Profile</a>
+                <a href="#">Settings</a>
+                <a href="#">Logout</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

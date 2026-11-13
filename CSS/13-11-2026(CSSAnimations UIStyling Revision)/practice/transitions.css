@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 25px;
+    background: #f1f5f9;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+}
+
+.action-button {
+    padding: 14px 25px;
+    border: 0;
+    border-radius: 8px;
+    background: #4f46e5;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.action-button:hover {
+    background: #3730a3;
+    transform: scale(1.08);
+}
+
+.transform-card {
+    max-width: 300px;
+    padding: 25px;
+    margin: 35px 0;
+    background: white;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.transform-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px #00000020;
+}
+
+.transform-box {
+    display: grid;
+    place-items: center;
+    width: 120px;
+    height: 120px;
+    background: #c7d2fe;
+    transition: transform 0.4s ease;
+}
+
+.transform-box:hover {
+    transform: rotate(15deg) scale(1.1);
+}
