@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management System</title>
+
+    <link rel="stylesheet" href="StudentManagement.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Management System</h1>
+        <p>Register, manage, search, and view student academic records.</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Student Registration Form -->
+        <section class="form-section">
+
+            <h2>Student Registration</h2>
+
+            <form id="StudentForm">
+
+                <div class="form-group">
+                    <label for="StudentId">Student ID</label>
+                    <input
+                        type="text"
+                        id="StudentId"
+                        placeholder="Enter student ID"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="StudentName">Student Name</label>
+                    <input
+                        type="text"
+                        id="StudentName"
+                        placeholder="Enter student name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="JavaScriptMarks">JavaScript Marks</label>
+                    <input
+                        type="number"
+                        id="JavaScriptMarks"
+                        placeholder="Enter marks out of 100"
+                        min="0"
+                        max="100"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="HTMLMarks">HTML Marks</label>
+                    <input
+                        type="number"
+                        id="HTMLMarks"
+                        placeholder="Enter marks out of 100"
+                        min="0"
+                        max="100"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="CSSMarks">CSS Marks</label>
+                    <input
+                        type="number"
+                        id="CSSMarks"
+                        placeholder="Enter marks out of 100"
+                        min="0"
+                        max="100"
+                        required
+                    >
+                </div>
+
+                <button type="submit" id="SubmitButton">
+                    Register Student
+                </button>
+
+            </form>
+
+            <p id="Message"></p>
+
+        </section>
+
+        <!-- Student Search -->
+        <section class="search-section">
+
+            <h2>Search Student</h2>
+
+            <div class="search-container">
+
+                <input
+                    type="text"
+                    id="SearchStudentId"
+                    placeholder="Enter student ID"
+                >
+
+                <button type="button" id="SearchButton">
+                    Search
+                </button>
+
+                <button type="button" id="ShowAllButton">
+                    Show All
+                </button>
+
+            </div>
+
+            <div id="SearchResult"></div>
+
+        </section>
+
+        <!-- Student Records -->
+        <section class="records-section">
+
+            <h2>Student Records</h2>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Name</th>
+                            <th>JavaScript</th>
+                            <th>HTML</th>
+                            <th>CSS</th>
+                            <th>Total</th>
+                            <th>Percentage</th>
+                            <th>Grade</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="StudentTableBody">
+                        <!-- JavaScript inserts student records here -->
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <p id="EmptyMessage">No student records available.</p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Student Management Program - JavaScript Mini Assignment</p>
+    </footer>
+
+    <script src="StudentManagement.js"></script>
+
+</body>
+</html>

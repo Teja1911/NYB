@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Fundamentals - Learning Dashboard</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6fb;
+            color: #222;
+        }
+
+        header {
+            background: #172554;
+            color: white;
+            padding: 35px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin-bottom: 12px;
+        }
+        header p {
+            color: #dbeafe;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+        .section-title {
+            margin-bottom: 20px;
+            color: #172554;
+        }
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .card h3 {
+            color: #1d4ed8;
+        }
+        .card p {
+            color: #555;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+        .card a {
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            background: #2563eb;
+            color: white;
+            padding: 11px 15px;
+            border-radius: 7px;
+            font-weight: bold;
+        }
+        .card a:hover {
+            background: #1d4ed8;
+        }
+        footer {
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+            background: #172554;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JavaScript Fundamentals</h1>
+        <p>Daily Learning Dashboard | 16 November 2026</p>
+        <p>Learn concepts, complete coding tasks, and build practical applications.</p>
+    </header>
+    <main class="container">
+        <h2 class="section-title">Learning Sections</h2>
+        <section class="dashboard">
+            <article class="card">
+                <h3>01. Concepts</h3>
+                <p>
+                    Understand JavaScript fundamentals, definitions,
+                    syntax, examples, and real-world usage.
+                </p>
+                <a href="./Concept/index.html">Explore Concepts</a>
+            </article>
+            <article class="card">
+                <h3>02. Assigned Tasks</h3>
+                <p>
+                    Practice variables, operators, conditions, loops,
+                    functions, arrays, objects, and programming problems.
+                </p>
+                <a href="./AssignedTask/index.html">View Assigned Tasks</a>
+            </article>
+            <article class="card">
+                <h3>03. Mini Assignment</h3>
+                <p>
+                    Build a Student Management Program using JavaScript.
+                    Register students, calculate marks, assign grades,
+                    and display student records.
+                </p>
+                <a href="./MiniAssignment/StudentManagement.html">
+                    Open Mini Assignment
+                </a>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>JavaScript Fundamentals & Core Concepts - Learning Project</p>
+    </footer>
+</body>
+</html>

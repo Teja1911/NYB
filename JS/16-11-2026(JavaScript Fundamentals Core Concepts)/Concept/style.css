@@ -1,0 +1,212 @@
+
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page styling */
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background: #172554;
+    color: white;
+    padding: 35px 20px;
+    text-align: center;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #dbeafe;
+}
+
+/* Navigation */
+.navigation {
+    background: #1e3a8a;
+    padding: 14px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.navigation a:hover {
+    color: #bfdbfe;
+}
+
+/* Main content */
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Concept cards */
+.concept-section {
+    background: white;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Headings */
+.concept-section h2 {
+    color: #1d4ed8;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #dbeafe;
+}
+
+.concept-section h3 {
+    color: #334155;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Paragraphs and lists */
+.concept-section p {
+    margin-bottom: 12px;
+}
+
+.concept-section ul {
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+
+.concept-section li {
+    margin-bottom: 7px;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    text-align: left;
+}
+
+th {
+    background: #dbeafe;
+    color: #172554;
+}
+
+tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+/* Code examples */
+pre {
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 18px;
+    margin: 15px 0;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+code {
+    font-family: Consolas, monospace;
+}
+
+.code-example {
+    background: #eff6ff;
+    padding: 15px;
+    border-left: 4px solid #2563eb;
+    border-radius: 5px;
+}
+
+/* Practical demonstration */
+.demo-section {
+    border: 2px solid #bfdbfe;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    margin: 10px 8px 10px 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.secondary-button {
+    background: #475569;
+}
+
+.secondary-button:hover {
+    background: #334155;
+}
+
+#ConceptOutput {
+    min-height: 180px;
+    white-space: pre-wrap;
+}
+
+/* Footer */
+footer {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 30px;
+}
+
+/* Responsive layout */
+@media (max-width: 650px) {
+
+    .container {
+        padding: 0 12px;
+    }
+
+    .concept-section {
+        padding: 18px;
+    }
+
+    .navigation {
+        gap: 12px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+    pre {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,567 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Fundamentals - Concepts</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Page Header -->
+    <header class="header">
+        <h1>JavaScript Fundamentals</h1>
+        <p>Concepts, Syntax, Examples and Practical Demonstrations</p>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="navigation">
+        <a href="../index.html">Home</a>
+        <a href="../AssignedTask/index.html">Assigned Tasks</a>
+        <a href="../MiniAssignment/StudentManagement.html">Mini Assignment</a>
+        <a href="../InterviewPreparation/JavaScriptFundamentalsQuestions.md">
+            Interview Preparation
+        </a>
+    </nav>
+
+    <main class="container">
+
+        <!-- Introduction -->
+        <section class="concept-section">
+            <h2>1. Introduction to JavaScript</h2>
+
+            <p>
+                JavaScript is a high-level programming language used
+                to create dynamic and interactive web applications.
+            </p>
+
+            <h3>Why do we use JavaScript?</h3>
+
+            <ul>
+                <li>To make web pages interactive.</li>
+                <li>To handle user events.</li>
+                <li>To validate forms.</li>
+                <li>To update HTML content dynamically.</li>
+                <li>To communicate with APIs.</li>
+                <li>To develop frontend and backend applications.</li>
+            </ul>
+
+            <h3>Role of HTML, CSS and JavaScript</h3>
+
+            <div class="code-example">
+                <p><strong>HTML:</strong> Structure of a webpage.</p>
+                <p><strong>CSS:</strong> Styling and layout of a webpage.</p>
+                <p><strong>JavaScript:</strong> Behaviour and interactivity.</p>
+            </div>
+        </section>
+
+        <!-- Variables -->
+        <section class="concept-section">
+            <h2>2. Variables: var, let and const</h2>
+
+            <p>
+                Variables are containers used to store data values.
+            </p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Keyword</th>
+                        <th>Scope</th>
+                        <th>Reassignment</th>
+                        <th>Redeclaration</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>var</td>
+                        <td>Function</td>
+                        <td>Allowed</td>
+                        <td>Allowed</td>
+                    </tr>
+
+                    <tr>
+                        <td>let</td>
+                        <td>Block</td>
+                        <td>Allowed</td>
+                        <td>Not allowed in same scope</td>
+                    </tr>
+
+                    <tr>
+                        <td>const</td>
+                        <td>Block</td>
+                        <td>Not allowed</td>
+                        <td>Not allowed in same scope</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Syntax</h3>
+
+            <pre><code>
+var StudentName = "Rahul";
+
+let StudentAge = 22;
+
+const CollegeName = "ABC College";
+            </code></pre>
+
+            <p>
+                Use <strong>let</strong> when a variable needs reassignment
+                and <strong>const</strong> when the variable binding should
+                not be reassigned.
+            </p>
+        </section>
+
+        <!-- Data Types -->
+        <section class="concept-section">
+            <h2>3. JavaScript Data Types</h2>
+
+            <p>
+                Data types define the type of value stored in a variable.
+            </p>
+
+            <h3>Primitive Data Types</h3>
+
+            <ul>
+                <li>String</li>
+                <li>Number</li>
+                <li>Boolean</li>
+                <li>Undefined</li>
+                <li>Null</li>
+                <li>BigInt</li>
+                <li>Symbol</li>
+            </ul>
+
+            <h3>Non-Primitive Data Types</h3>
+
+            <ul>
+                <li>Object</li>
+                <li>Array</li>
+                <li>Function</li>
+            </ul>
+
+            <h3>Example</h3>
+
+            <pre><code>
+let StudentName = "Rahul";
+let StudentAge = 22;
+let IsSelected = true;
+let StudentAddress;
+let StudentMarks = null;
+
+console.log(typeof StudentName);
+console.log(typeof StudentAge);
+console.log(typeof IsSelected);
+console.log(typeof StudentAddress);
+console.log(typeof StudentMarks);
+            </code></pre>
+
+            <p>
+                Note: JavaScript returns "object" for
+                <code>typeof null</code>. This is a historical language quirk.
+            </p>
+        </section>
+
+        <!-- Type Conversion -->
+        <section class="concept-section">
+            <h2>4. Type Conversion</h2>
+
+            <p>
+                Type conversion means changing a value from one data type
+                to another.
+            </p>
+
+            <h3>String Conversion</h3>
+            <pre><code>
+let Age = 25;
+
+let Result = String(Age);
+
+console.log(Result);
+console.log(typeof Result);
+            </code></pre>
+
+            <h3>Number Conversion</h3>
+            <pre><code>
+let Value = "100";
+
+let Result = Number(Value);
+
+console.log(Result);
+console.log(typeof Result);
+            </code></pre>
+
+            <h3>Boolean Conversion</h3>
+            <pre><code>
+let Value = 1;
+
+let Result = Boolean(Value);
+
+console.log(Result);
+            </code></pre>
+        </section>
+
+        <!-- Operators -->
+        <section class="concept-section">
+            <h2>5. Operators and Expressions</h2>
+
+            <p>
+                Operators are symbols used to perform operations on values.
+            </p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Operator Type</th>
+                        <th>Examples</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Arithmetic</td>
+                        <td>+, -, *, /, %, **</td>
+                    </tr>
+
+                    <tr>
+                        <td>Assignment</td>
+                        <td>=, +=, -=, *=</td>
+                    </tr>
+
+                    <tr>
+                        <td>Comparison</td>
+                        <td>==, ===, !=, !==, &gt;, &lt;</td>
+                    </tr>
+
+                    <tr>
+                        <td>Logical</td>
+                        <td>&amp;&amp;, ||, !</td>
+                    </tr>
+
+                    <tr>
+                        <td>Ternary</td>
+                        <td>condition ? value1 : value2</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Example</h3>
+
+            <pre><code>
+let FirstNumber = 20;
+let SecondNumber = 10;
+
+console.log(FirstNumber + SecondNumber);
+console.log(FirstNumber > SecondNumber);
+console.log(FirstNumber === SecondNumber);
+            </code></pre>
+        </section>
+
+        <!-- Conditions -->
+        <section class="concept-section">
+            <h2>6. Conditional Statements</h2>
+
+            <p>
+                Conditional statements execute different blocks of code
+                depending on whether a condition is true or false.
+            </p>
+
+            <h3>Types</h3>
+
+            <ul>
+                <li>if statement</li>
+                <li>if-else statement</li>
+                <li>else-if ladder</li>
+                <li>switch statement</li>
+                <li>ternary operator</li>
+            </ul>
+
+            <h3>Example</h3>
+
+            <pre><code>
+let Marks = 85;
+
+if (Marks >= 90) {
+    console.log("Grade A+");
+}
+else if (Marks >= 80) {
+    console.log("Grade A");
+}
+else {
+    console.log("Grade B or below");
+}
+            </code></pre>
+        </section>
+
+        <!-- Loops -->
+        <section class="concept-section">
+            <h2>7. Loops</h2>
+
+            <p>
+                Loops are used to execute a block of code repeatedly
+                until a condition is satisfied.
+            </p>
+
+            <h3>Types of Loops</h3>
+
+            <ul>
+                <li>for loop</li>
+                <li>while loop</li>
+                <li>do-while loop</li>
+                <li>for...of loop</li>
+                <li>for...in loop</li>
+            </ul>
+
+            <h3>Example</h3>
+
+            <pre><code>
+for (let Number = 1; Number <= 5; Number++) {
+    console.log(Number);
+}
+            </code></pre>
+
+            <h3>Break and Continue</h3>
+
+            <ul>
+                <li><strong>break:</strong> Stops the loop.</li>
+                <li><strong>continue:</strong> Skips the current iteration.</li>
+            </ul>
+        </section>
+
+        <!-- Functions -->
+        <section class="concept-section">
+            <h2>8. Functions</h2>
+
+            <p>
+                A function is a reusable block of code designed
+                to perform a specific task.
+            </p>
+
+            <h3>Function Declaration</h3>
+
+            <pre><code>
+function AddNumbers(FirstNumber, SecondNumber) {
+    return FirstNumber + SecondNumber;
+}
+
+console.log(AddNumbers(10, 20));
+            </code></pre>
+
+            <h3>Function Expression</h3>
+
+            <pre><code>
+const MultiplyNumbers = function(FirstNumber, SecondNumber) {
+    return FirstNumber * SecondNumber;
+};
+
+console.log(MultiplyNumbers(5, 4));
+            </code></pre>
+
+            <h3>Arrow Function</h3>
+
+            <pre><code>
+const SquareNumber = (Number) => {
+    return Number * Number;
+};
+
+console.log(SquareNumber(5));
+            </code></pre>
+
+            <h3>Callback Function</h3>
+
+            <pre><code>
+function DisplayResult(Result) {
+    console.log(Result);
+}
+
+function CalculateSum(A, B, Callback) {
+    let Total = A + B;
+    Callback(Total);
+}
+
+CalculateSum(10, 20, DisplayResult);
+            </code></pre>
+        </section>
+
+        <!-- Arrays -->
+        <section class="concept-section">
+            <h2>9. Arrays</h2>
+
+            <p>
+                An array stores multiple values in a single variable.
+                Array indexing starts from zero.
+            </p>
+
+            <h3>Example</h3>
+
+            <pre><code>
+const Students = ["Rahul", "Priya", "Kiran"];
+
+console.log(Students[0]);
+
+Students.push("Anil");
+
+console.log(Students);
+            </code></pre>
+
+            <h3>Important Array Methods</h3>
+
+            <ul>
+                <li>push() and pop()</li>
+                <li>shift() and unshift()</li>
+                <li>map()</li>
+                <li>filter()</li>
+                <li>reduce()</li>
+                <li>find() and findIndex()</li>
+                <li>some() and every()</li>
+                <li>sort() and includes()</li>
+            </ul>
+        </section>
+
+        <!-- Objects -->
+        <section class="concept-section">
+            <h2>10. Objects</h2>
+
+            <p>
+                An object stores data in key-value pairs.
+                It can also contain functions called methods.
+            </p>
+
+            <h3>Example</h3>
+
+            <pre><code>
+const Student = {
+    StudentName: "Rahul",
+    StudentAge: 22,
+    Course: "JavaScript",
+
+    DisplayDetails: function() {
+        console.log(this.StudentName);
+        console.log(this.Course);
+    }
+};
+
+console.log(Student.StudentName);
+
+Student.DisplayDetails();
+            </code></pre>
+        </section>
+
+        <!-- Strings -->
+        <section class="concept-section">
+            <h2>11. String Methods</h2>
+
+            <p>
+                String methods are used to work with and manipulate text.
+            </p>
+
+            <ul>
+                <li>toUpperCase()</li>
+                <li>toLowerCase()</li>
+                <li>trim()</li>
+                <li>includes()</li>
+                <li>startsWith()</li>
+                <li>endsWith()</li>
+                <li>slice()</li>
+                <li>substring()</li>
+                <li>replace()</li>
+                <li>split()</li>
+            </ul>
+
+            <pre><code>
+let Message = "  Hello JavaScript  ";
+
+console.log(Message.length);
+console.log(Message.trim());
+console.log(Message.toUpperCase());
+console.log(Message.includes("JavaScript"));
+            </code></pre>
+        </section>
+
+        <!-- Numbers -->
+        <section class="concept-section">
+            <h2>12. Number Methods</h2>
+
+            <p>
+                Number methods help convert, validate, and format numeric values.
+            </p>
+
+            <ul>
+                <li>Number()</li>
+                <li>parseInt()</li>
+                <li>parseFloat()</li>
+                <li>toFixed()</li>
+                <li>Number.isNaN()</li>
+                <li>Number.isInteger()</li>
+                <li>Math.round()</li>
+                <li>Math.floor()</li>
+                <li>Math.ceil()</li>
+                <li>Math.random()</li>
+            </ul>
+
+            <pre><code>
+let Price = 99.567;
+
+console.log(Price.toFixed(2));
+console.log(Math.round(Price));
+console.log(Math.floor(Price));
+console.log(Math.ceil(Price));
+            </code></pre>
+        </section>
+
+        <!-- Practical Demo -->
+        <section class="concept-section demo-section">
+
+            <h2>13. Practical JavaScript Demonstration</h2>
+
+            <p>
+                Click the button to execute JavaScript examples and
+                view their output directly on this page.
+            </p>
+
+            <button id="RunConceptsButton">
+                Run JavaScript Examples
+            </button>
+
+            <button id="ClearOutputButton" class="secondary-button">
+                Clear Output
+            </button>
+
+            <pre id="ConceptOutput">Your output will appear here...</pre>
+
+        </section>
+
+        <!-- Important Points -->
+        <section class="concept-section">
+
+            <h2>14. Important Learning Points</h2>
+
+            <ul>
+                <li>Understand the difference between == and ===.</li>
+                <li>Learn the difference between let, var and const.</li>
+                <li>Practice writing functions without copying code.</li>
+                <li>Understand how arrays and objects store information.</li>
+                <li>Practice conditions and loops with real examples.</li>
+                <li>Understand how callbacks work.</li>
+                <li>Practice converting user input into numbers.</li>
+            </ul>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>JavaScript Fundamentals | Concept Learning Section</p>
+    </footer>
+
+    <script src="JavaScriptConcepts.js"></script>
+
+</body>
+</html>

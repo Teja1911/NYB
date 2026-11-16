@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Assigned Tasks</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6fb;
+            color: #263247;
+        }
+        header {
+            background: #263b80;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+        main {
+            width: min(1000px, 92%);
+            margin: 30px auto;
+        }
+        .task-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 18px;
+        }
+        .task-card {
+            display: block;
+            background: white;
+            padding: 22px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #263b80;
+            box-shadow: 0 3px 12px #00000010;
+            transition: transform 0.2s ease;
+        }
+        .task-card:hover {
+            transform: translateY(-4px);
+        }
+        .task-card h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .task-card p {
+            color: #667085;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JavaScript Assigned Tasks</h1>
+        <p>Fundamentals and Programming Practice</p>
+    </header>
+    <main>
+        <div class="task-container">
+            <a class="task-card" href="./01_VariablesDataTypes/VariablesDataTypes.html">
+                <h2>01. Variables and Data Types</h2>
+                <p>Variable declarations and type conversion.</p>
+            </a>
+            <a class="task-card" href="./02_OperatorsConditions/OperatorsConditions.html">
+                <h2>02. Operators and Conditions</h2>
+                <p>Arithmetic, comparison and conditional logic.</p>
+            </a>
+            <a class="task-card" href="./03_Loops/Loops.html">
+                <h2>03. Loops</h2>
+                <p>For, while and do-while loops.</p>
+            </a>
+            <a class="task-card" href="./04_FunctionsCallbacks/FunctionsCallbacks.html">
+                <h2>04. Functions and Callbacks</h2>
+                <p>Function declarations, expressions and callbacks.</p>
+            </a>
+            <a class="task-card" href="./05_Arrays/Arrays.html">
+                <h2>05. Arrays</h2>
+                <p>Array methods and operations.</p>
+            </a>
+            <a class="task-card" href="./06_Objects/Objects.html">
+                <h2>06. Objects</h2>
+                <p>Object creation and manipulation.</p>
+            </a>
+            <a class="task-card" href="./07_StringMethods/StringMethods.html">
+                <h2>07. String Methods</h2>
+                <p>String manipulation and palindrome.</p>
+            </a>
+            <a class="task-card" href="./08_NumberMethods/NumberMethods.html">
+                <h2>08. Number Methods</h2>
+                <p>Number conversion and Math methods.</p>
+            </a>
+            <a class="task-card" href="./09_BasicPrograms/BasicPrograms.html">
+                <h2>09. Basic Programs</h2>
+                <p>Logic-building programming problems.</p>
+            </a>
+            <a class="task-card" href="./10_ArrayPrograms/ArrayPrograms.html">
+                <h2>10. Array Programs</h2>
+                <p>Array-based programming problems.</p>
+            </a>
+        </div>
+    </main>
+</body>
+</html>
