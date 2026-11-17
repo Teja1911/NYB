@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Data Management System</title>
+    <link rel="stylesheet" href="EmployeeManagement.css">
+</head>
+<body>
+    <header>
+        <h1>Employee Data Management System</h1>
+        <p>Manage employee records using Advanced JavaScript and ES6+</p>
+    </header>
+    <main class="container">
+        <!-- Employee Registration -->
+        <section class="panel">
+            <h2>Register Employee</h2>
+            <form id="EmployeeForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="EmployeeId">Employee ID</label>
+                        <input type="text" id="EmployeeId" placeholder="Example: EMP101" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="EmployeeName">Employee Name</label>
+                        <input type="text" id="EmployeeName" placeholder="Enter employee name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="EmployeeDepartment">Department</label>
+                        <select id="EmployeeDepartment" required>
+                            <option value="">Select department</option>
+                            <option value="Frontend">Frontend</option>
+                            <option value="Backend">Backend</option>
+                            <option value="Testing">Testing</option>
+                            <option value="HR">HR</option>
+                            <option value="Management">Management</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="EmployeeRole">Job Role</label>
+                        <input type="text" id="EmployeeRole" placeholder="Example: React Developer" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="EmployeeSalary">Monthly Salary (₹)</label>
+                        <input type="number" id="EmployeeSalary" min="1" placeholder="Enter salary" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="EmployeeExperience">Experience (Years)</label>
+                        <input type="number" id="EmployeeExperience" min="0" step="0.5" placeholder="Enter experience" required>
+                    </div>
+                </div>
+                <button type="submit">Add Employee</button>
+                <p id="Message" aria-live="polite"></p>
+            </form>
+        </section>
+        <!-- Summary -->
+        <section class="summary-grid">
+            <article class="summary-card">
+                <h3>Total Employees</h3>
+                <p id="TotalEmployees">0</p>
+            </article>
+            <article class="summary-card">
+                <h3>Total Monthly Salary</h3>
+                <p id="TotalSalary">₹0</p>
+            </article>
+            <article class="summary-card">
+                <h3>Average Salary</h3>
+                <p id="AverageSalary">₹0</p>
+            </article>
+        </section>
+        <!-- Search and Filters -->
+        <section class="panel">
+            <h2>Search and Filter Employees</h2>
+            <div class="controls-grid">
+                <div class="form-group">
+                    <label for="SearchInput">Search by ID or Name</label>
+                    <input type="text" id="SearchInput" placeholder="Search employee...">
+                </div>
+                <div class="form-group">
+                    <label for="DepartmentFilter">Filter by Department</label>
+                    <select id="DepartmentFilter">
+                        <option value="All">All Departments</option>
+                        <option value="Frontend">Frontend</option>
+                        <option value="Backend">Backend</option>
+                        <option value="Testing">Testing</option>
+                        <option value="HR">HR</option>
+                        <option value="Management">Management</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="SortFilter">Sort by Salary</label>
+                    <select id="SortFilter">
+                        <option value="default">Default Order</option>
+                        <option value="lowToHigh">Low to High</option>
+                        <option value="highToLow">High to Low</option>
+                    </select>
+                </div>
+            </div>
+            <button type="button" id="ResetFiltersButton" class="secondary-button">
+                Reset Filters
+            </button>
+        </section>
+        <!-- Employee Table -->
+        <section class="panel">
+            <h2>Employee Records</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Department</th>
+                            <th>Role</th>
+                            <th>Salary</th>
+                            <th>Experience</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="EmployeeTableBody"></tbody>
+                </table>
+            </div>
+            <p id="EmptyMessage">No employee records available.</p>
+        </section>
+        <!-- Salary Increment -->
+        <section class="panel">
+            <h2>Salary Increment Calculator</h2>
+            <div class="controls-grid">
+                <div class="form-group">
+                    <label for="IncrementEmployee">Select Employee</label>
+                    <select id="IncrementEmployee">
+                        <option value="">Select employee</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="IncrementPercentage">Increment Percentage</label>
+                    <input type="number" id="IncrementPercentage" min="0" max="100" placeholder="Example: 10">
+                </div>
+            </div>
+            <button type="button" id="CalculateIncrementButton">
+                Calculate Revised Salary
+            </button>
+            <p id="IncrementResult" aria-live="polite"></p>
+        </section>
+        <!-- Department Grouping -->
+        <section class="panel">
+            <h2>Department-wise Employee Grouping</h2>
+            <div id="DepartmentGroups" class="department-grid">
+                <p>No department data available.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Employee Data Management System | Advanced JavaScript and ES6+</p>
+    </footer>
+    <script src="EmployeeManagement.js"></script>
+</body>
+</html>
