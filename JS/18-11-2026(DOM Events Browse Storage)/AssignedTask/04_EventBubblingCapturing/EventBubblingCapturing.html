@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling and Capturing</title>
+    <style>
+        #Grandparent {
+            padding: 30px;
+            background: #dbeafe;
+        }
+        #Parent {
+            padding: 30px;
+            background: #bfdbfe;
+        }
+        #Child {
+            padding: 20px;
+            background: #93c5fd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Event Bubbling and Capturing</h1>
+    <p>Click the innermost box and observe the event order.</p>
+    <div id="Grandparent">
+        Grandparent
+        <div id="Parent">
+            Parent
+            <button id="Child">Child - Click Me</button>
+        </div>
+    </div>
+    <button id="ClearButton">Clear Output</button>
+    <pre id="Output"></pre>
+    <script src="EventBubblingCapturing.js"></script>
+</body>
+</html>

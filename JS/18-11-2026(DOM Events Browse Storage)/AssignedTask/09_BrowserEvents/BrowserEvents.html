@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Events</title>
+    <style>
+        body {
+            min-height: 1600px;
+            font-family: Arial, sans-serif;
+        }
+        #ScrollArea {
+            margin-top: 30px;
+            padding: 20px;
+            background: #dbeafe;
+        }
+    </style>
+</head>
+<body>
+    <h1>Browser Events</h1>
+    <p>Resize the browser, scroll the page or change network connectivity.</p>
+    <p id="WindowSize"></p>
+    <p id="ScrollPosition"></p>
+    <p id="NetworkStatus"></p>
+    <p id="VisibilityStatus"></p>
+    <div id="ScrollArea">Scroll down to test the scroll event.</div>
+    <pre id="Output">Browser event output...</pre>
+    <script src="BrowserEvents.js"></script>
+</body>
+</html>

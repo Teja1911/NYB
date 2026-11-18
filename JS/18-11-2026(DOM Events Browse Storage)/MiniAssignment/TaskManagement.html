@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management Application</title>
+    <link rel="stylesheet" href="TaskManagement.css">
+</head>
+<body>
+    <header>
+        <h1>Task Management Application</h1>
+        <p>Organize your daily work and track your progress.</p>
+    </header>
+    <main class="container">
+        <!-- Task registration form -->
+        <section class="panel">
+            <h2 id="FormHeading">Create New Task</h2>
+            <form id="TaskForm">
+                <div class="form-group">
+                    <label for="TaskTitle">Task Title</label>
+                    <input
+                        type="text"
+                        id="TaskTitle"
+                        placeholder="Enter task title"
+                        maxlength="80"
+                        required
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="TaskDescription">Description</label>
+                    <textarea
+                        id="TaskDescription"
+                        placeholder="Enter task description"
+                        rows="3"
+                    ></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="TaskPriority">Priority</label>
+                    <select id="TaskPriority" required>
+                        <option value="">Select priority</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" id="SubmitButton">Add Task</button>
+                    <button type="button" id="CancelEditButton" class="secondary-button" hidden>
+                        Cancel Edit
+                    </button>
+                </div>
+                <p id="FormMessage" aria-live="polite"></p>
+            </form>
+        </section>
+        <!-- Task statistics -->
+        <section class="summary-grid">
+            <article class="summary-card">
+                <h3>Total Tasks</h3>
+                <p id="TotalTasks">0</p>
+            </article>
+            <article class="summary-card">
+                <h3>Pending Tasks</h3>
+                <p id="PendingTasks">0</p>
+            </article>
+            <article class="summary-card">
+                <h3>Completed Tasks</h3>
+                <p id="CompletedTasks">0</p>
+            </article>
+        </section>
+        <!-- Search and filter controls -->
+        <section class="panel">
+            <h2>Manage Tasks</h2>
+            <div class="controls">
+                <div class="form-group">
+                    <label for="SearchInput">Search Task</label>
+                    <input
+                        type="search"
+                        id="SearchInput"
+                        placeholder="Search by task title..."
+                    >
+                </div>
+                <div class="form-group">
+                    <label for="StatusFilter">Filter by Status</label>
+                    <select id="StatusFilter">
+                        <option value="All">All Tasks</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Completed">Completed</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="PriorityFilter">Filter by Priority</label>
+                    <select id="PriorityFilter">
+                        <option value="All">All Priorities</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                </div>
+            </div>
+            <button type="button" id="ResetFiltersButton" class="secondary-button">
+                Reset Filters
+            </button>
+        </section>
+        <!-- Dynamic task list -->
+        <section class="panel">
+            <div class="list-heading">
+                <h2>My Tasks</h2>
+                <span id="TaskCount">0 tasks</span>
+            </div>
+            <div id="TaskList" class="task-list"></div>
+
+            <p id="EmptyMessage">No tasks available. Create your first task.</p>
+        </section>
+    </main>
+    <footer>
+        <p>Task Management Application | DOM Manipulation and Browser Storage</p>
+    </footer>
+    <script src="TaskManagement.js"></script>
+</body>
+</html>
