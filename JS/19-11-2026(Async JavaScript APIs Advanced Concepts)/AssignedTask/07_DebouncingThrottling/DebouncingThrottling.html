@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Debouncing and Throttling</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 25px;
+        }
+        input {
+            padding: 10px;
+            width: 280px;
+        }
+        .box {
+            height: 150px;
+            overflow-y: auto;
+            border: 1px solid #777;
+            margin-top: 20px;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Debouncing and Throttling</h1>
+    <h3>Debouncing Search</h3>
+    <input id="searchInput" placeholder="Type to search...">
+    <p id="searchOutput"></p>
+    <h3>Throttling Scroll</h3>
+    <div class="box" id="scrollBox">
+        <p>Scroll inside this box to test throttling.</p>
+        <div style="height: 700px;"></div>
+    </div>
+    <p id="scrollOutput"></p>
+    <script src="./DebouncingThrottling.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management Application</title>
+    <link rel="stylesheet" href="./ProductManagement.css">
+</head>
+<body>
+    <header class="header">
+        <div>
+            <h1>Product Management</h1>
+            <p>Manage products using REST API operations</p>
+        </div>
+        <button id="refreshButton" class="secondary-button">
+            Refresh Products
+        </button>
+    </header>
+    <main class="container">
+        <!-- Product statistics -->
+        <section class="stats">
+            <div class="stat-card">
+                <h3>Total Products</h3>
+                <p id="totalProducts">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Categories</h3>
+                <p id="totalCategories">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Average Price</h3>
+                <p id="averagePrice">$0.00</p>
+            </div>
+        </section>
+        <!-- Product form -->
+        <section class="panel">
+            <h2 id="formTitle">Add New Product</h2>
+            <form id="productForm">
+                <input type="hidden" id="productId">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="productName">Product Name</label>
+                        <input
+                            type="text"
+                            id="productName"
+                            placeholder="Enter product name"
+                            required
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="productPrice">Price</label>
+                        <input
+                            type="number"
+                            id="productPrice"
+                            min="0.01"
+                            step="0.01"
+                            placeholder="Enter price"
+                            required
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="productCategory">Category</label>
+                        <input
+                            type="text"
+                            id="productCategory"
+                            placeholder="Enter category"
+                            required
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="productStock">Stock</label>
+                        <input
+                            type="number"
+                            id="productStock"
+                            min="0"
+                            placeholder="Enter stock"
+                            required
+                        >
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" id="submitButton">
+                        Add Product
+                    </button>
+                    <button type="button" id="cancelButton" class="secondary-button">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </section>
+        <!-- Search and filtering -->
+        <section class="toolbar">
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search products..."
+            >
+            <select id="categoryFilter">
+                <option value="all">All Categories</option>
+            </select>
+            <select id="sortFilter">
+                <option value="default">Default Order</option>
+                <option value="low">Price: Low to High</option>
+                <option value="high">Price: High to Low</option>
+                <option value="name">Name: A to Z</option>
+            </select>
+        </section>
+        <!-- API status -->
+        <p id="statusMessage" class="status" aria-live="polite">
+            Loading products...
+        </p>
+        <!-- Product list -->
+        <section id="productContainer" class="product-grid"></section>
+    </main>
+    <script src="./ProductManagement.js"></script>
+</body>
+</html>
